@@ -7,11 +7,21 @@ describe('Live: placesAll', () => {
   });
 });
 
-describe('Live: placeById', () => {
+describe('Live: placeShort', () => {
   test('Some props', async () => {
-    const place = await atlasobscura.placeById(46288);
+    const place = await atlasobscura.placeShort(46288);
     expect(place.city).toBe('Chinle');
     expect(place.id).toBe(46288);
+    expect((place as any).description).toBe(undefined);
+  });
+});
+
+describe('Live: placeFull', () => {
+  test('Some props', async () => {
+    const place = await atlasobscura.placeFull(46288);
+    expect(place.city).toBe('Chinle');
+    expect(place.id).toBe(46288);
+    expect((place as any).description?.length).toBeGreaterThan(0);
   });
 });
 

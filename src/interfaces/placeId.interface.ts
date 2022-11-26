@@ -1,6 +1,6 @@
 import { Coordinates } from './global';
 
-export interface PlaceById {
+export interface PlaceShort {
   id: number;
   title: string;
   subtitle: string;
@@ -13,8 +13,8 @@ export interface PlaceById {
   thumbnail_url: string;
   thumbnail_url_3x2: string;
   coordinates: Coordinates;
-  nearby_places: PlaceById[];
-  nearby_foods: PlaceById[];
+  nearby_places: PlaceShort[];
+  nearby_foods: PlaceShort[];
 }
 
 export interface PlaceExtend {
@@ -27,4 +27,4 @@ export interface Tag {
   link: string;
 }
 
-export interface Place extends PlaceById, PlaceExtend { }
+export interface Place extends PlaceShort, PlaceExtend { }

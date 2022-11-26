@@ -27,7 +27,8 @@ npm install atlas-obscura-api --save
 
 - [All places](#All-places)
 - [Search](#Search)
-- [Show place by ID](#Show-place-by-ID)
+- [Show place by ID (short)](#Show-place-by-ID)
+- [Show place by ID (full)](#Show-place-by-ID)
 
 ### All Places
 
@@ -115,13 +116,17 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
 
 ### Show place by ID
 
-> Get place by id
+#### Short version (one quick request)
+
+> Get place by id (short version)
+
+````javascript
 
 ```javascript
 import { atlasobscura } from 'atlas-obscura-api';
 
-atlasobscura.placeById(494).then((place) => console.log(place));
-```
+atlasobscura.placeShort(494).then((place) => console.log(place));
+````
 
 #### Results
 
@@ -143,6 +148,20 @@ atlasobscura.placeById(494).then((place) => console.log(place));
   nearby_foods: []
 }
 ```
+
+#### Full version (two internal requests)
+
+> Get place by id (FULL version)
+
+```javascript
+import { atlasobscura } from 'atlas-obscura-api';
+
+atlasobscura.placeFull(494).then((place) => console.log(place));
+```
+
+#### Results
+
+Same as short but with full description, tags and more, ... (TBD)
 
 ## Used by
 

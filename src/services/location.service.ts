@@ -1,6 +1,6 @@
 import { Coordinates } from 'interfaces/global';
 import { LocationResult } from 'interfaces/locations.interface';
-import { PlaceById, PlaceExtend } from 'interfaces/placeId.interface';
+import { PlaceExtend, PlaceShort } from 'interfaces/placeId.interface';
 import { PlacesAll } from 'interfaces/places-all.interface';
 import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers';
@@ -27,11 +27,11 @@ export class PlacesScraper {
     return parseResults<LocationResult>(data);
   }
 
-  public async placeById(id: number): Promise<PlaceById> {
+  public async placeByIdShort(id: number): Promise<PlaceShort> {
     const url = urlPlaceId(id);
     const data = await fetchPage(url);
 
-    let place: PlaceById = null;
+    let place: PlaceShort = null;
 
     try {
       place = JSON.parse(data);
@@ -41,7 +41,7 @@ export class PlacesScraper {
     return place;
   }
 
-  public async placeByIdFull(url: string): Promise<PlaceExtend> {
+  public async placeFull(url: string): Promise<PlaceExtend> {
     const data = await fetchPage(url);
     const html = parse(data);
 
