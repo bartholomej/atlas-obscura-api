@@ -1,6 +1,6 @@
 import { Coordinates } from 'interfaces/global';
 import { LocationResult } from 'interfaces/locations.interface';
-import { PlaceById } from 'interfaces/placeId.interface';
+import { PlaceById, PlaceExtend } from 'interfaces/placeId.interface';
 import { PlacesAll } from 'interfaces/places-all.interface';
 import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers';
@@ -39,5 +39,20 @@ export class PlacesScraper {
       console.error('Error parsing placeById', id);
     }
     return place;
+  }
+
+  public async placeByIdFull(url: string): Promise<PlaceExtend> {
+    const data = await fetchPage(url);
+    const html = parse(data);
+
+    const descriptions = html.querySelectorAll('#place-body p').map((p) => p.innerHTML);
+
+    const tags = html.querySelectorAll('.item-tags a.itemTags__link').map((x) => {
+      return {
+        title: x.innerHTML.trim(),
+        link: x.attributes.href
+      };
+    });
+    return { description: descriptions, tags: tags };
   }
 }

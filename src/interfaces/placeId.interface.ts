@@ -16,3 +16,15 @@ export interface PlaceById {
   nearby_places: PlaceById[];
   nearby_foods: PlaceById[];
 }
+
+export interface PlaceExtend {
+  description?: string[];
+  tags?: Tag[];
+}
+
+export interface Tag {
+  title: string;
+  link: string;
+}
+
+export interface Place extends PlaceById, PlaceExtend { }

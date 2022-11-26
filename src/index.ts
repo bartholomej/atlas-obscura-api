@@ -1,5 +1,5 @@
 import { Coordinates } from 'interfaces/global';
-import { PlaceById } from 'interfaces/placeId.interface';
+import { Place, PlaceById } from 'interfaces/placeId.interface';
 import { PlacesAll } from 'interfaces/places-all.interface';
 import { LocationResult } from './interfaces/locations.interface';
 import { PlacesScraper } from './services/location.service';
@@ -17,6 +17,12 @@ export class AtlasObscura {
 
   public async placeById(id: number): Promise<PlaceById> {
     return this.locationService.placeById(id);
+  }
+
+  public async placeBySlug(id: number): Promise<Place> {
+    const place = await this.locationService.placeById(id);
+    const placeRich = await this.locationService.placeByIdFull(place.url);
+    return { ...place, ...placeRich };
   }
 }
 
