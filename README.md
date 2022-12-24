@@ -161,11 +161,12 @@ atlasobscura.placeFull(494).then((place) => console.log(place));
 
 #### Results
 
-Same as short but with full description, tags and more, ... (TBD)
+Same as short but with full description, tags, directions and more, ... (TBD)
 
 ## Used by
 
-🤷
+- Atlas Obscura Offline mobile app (Android, iOS)
+- 🤷
 
 ## Development
 

@@ -2,7 +2,7 @@ import { atlasobscura } from './src';
 
 // Parse Atlas Obscura
 atlasobscura
-  .placeById(494)
+  .placeFull(494)
   .then((place) => {
     console.log(place);
   })

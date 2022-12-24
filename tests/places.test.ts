@@ -22,6 +22,7 @@ describe('Live: placeFull', () => {
     expect(place.city).toBe('Chinle');
     expect(place.id).toBe(46288);
     expect((place as any).description?.length).toBeGreaterThan(0);
+    expect((place as any).directions?.length).toBeGreaterThan(0);
   });
 });
 

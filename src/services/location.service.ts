@@ -47,12 +47,17 @@ export class PlacesScraper {
 
     const descriptions = html.querySelectorAll('#place-body p').map((p) => p.innerHTML);
 
+    const directions = html
+      .querySelectorAll('.DDP__direction-copy p')
+      .map((p) => p.innerHTML)
+      .filter((x) => x !== '');
+
     const tags = html.querySelectorAll('.item-tags a.itemTags__link').map((x) => {
       return {
         title: x.innerHTML.trim(),
         link: x.attributes.href
       };
     });
-    return { description: descriptions, tags: tags };
+    return { description: descriptions, directions: directions, tags: tags };
   }
 }

@@ -20,6 +20,7 @@ export interface PlaceShort {
 export interface PlaceExtend {
   description?: string[];
   tags?: Tag[];
+  directions?: string[];
 }
 
 export interface Tag {
