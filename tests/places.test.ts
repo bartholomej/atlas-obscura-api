@@ -21,8 +21,10 @@ describe('Live: placeFull', () => {
     const place = await atlasobscura.placeFull(46288);
     expect(place.city).toBe('Chinle');
     expect(place.id).toBe(46288);
-    expect((place as any).description?.length).toBeGreaterThan(0);
-    expect((place as any).directions?.length).toBeGreaterThan(0);
+    expect(place.description?.length).toBeGreaterThan(0);
+    expect(place.directions?.length).toBeGreaterThan(0);
+    expect(place.images?.length).toBeGreaterThan(0);
+    expect(place.imageCover).toContain('https://');
   });
 });
 

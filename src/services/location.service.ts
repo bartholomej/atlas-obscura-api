@@ -5,7 +5,7 @@ import { PlacesAll } from 'interfaces/places-all.interface';
 import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers';
 import { parseResults } from '../utils';
-import { urlPlaceId, urlSearch, URL_PLACES_ALL } from '../vars';
+import { URL_PLACES_ALL, urlPlaceId, urlSearch } from '../vars';
 
 export class PlacesScraper {
   public async placesAll(): Promise<PlacesAll[]> {
@@ -58,6 +58,15 @@ export class PlacesScraper {
         link: x.attributes.href
       };
     });
-    return { description: descriptions, directions: directions, tags: tags };
+
+    const imageCover = (
+      html.querySelector('.js-contains-mobile-lightbox-link img') as unknown as HTMLImageElement
+    )?.getAttribute('data-src');
+
+    const images = html
+      .querySelectorAll('.js-item-gallery figure a[data-lightbox-src]')
+      .map((x) => x.getAttribute('data-lightbox-src'));
+
+    return { description: descriptions, directions, tags, imageCover, images };
   }
 }

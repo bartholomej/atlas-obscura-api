@@ -21,6 +21,8 @@ export interface PlaceExtend {
   description?: string[];
   tags?: Tag[];
   directions?: string[];
+  imageCover?: string;
+  images?: string[];
 }
 
 export interface Tag {
