@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { urlPlaceId, urlSearch } from './../src/vars';
 
 describe('Vars id url', () => {

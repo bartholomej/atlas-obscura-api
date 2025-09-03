@@ -1,3 +1,4 @@
+import { beforeAll, describe, expect, test } from 'vitest';
 import { atlasobscura } from '../src';
 import { Place } from '../src/interfaces/placeId.interface';
 
