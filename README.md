@@ -209,6 +209,43 @@ atlasobscura.placeFull(494).then((place) => console.log(place));
 }
 ```
 
+## 📦 Docker
+
+You can use this library in Docker.
+
+We have [prepared a Docker image](https://hub.docker.com/r/bartholomej/atlas-obscura-api) for you.
+
+### Prebuilt image
+
+```bash
+docker pull bartholomej/atlas-obscura-api
+```
+
+### Build & run your own image
+
+> Build image
+
+```bash
+docker build -t atlas-obscura-api .
+```
+
+> Run image on port 3000
+
+```bash
+docker run -p 3000:3000 atlas-obscura-api
+```
+
+> Open http://localhost:3000
+
+### API endpoints
+
+> Some examples
+
+- `/movie/535121`
+- `/search/quentin+tarantino`
+- `/creator/2120`
+- `/user-ratings/912-bart`
+
 ## Used By
 
 - Atlas Obscura Offline mobile app (Android, iOS)
