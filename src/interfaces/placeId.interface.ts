@@ -8,7 +8,7 @@ export interface PlaceShort {
   country: string;
   location: string;
   url: string;
-  hide_from_maps?: boolean;
+  hide_from_maps?: string;
   physical_status: string;
   thumbnail_url: string;
   thumbnail_url_3x2: string;
@@ -30,4 +30,4 @@ export interface Tag {
   link: string;
 }
 
-export interface Place extends PlaceShort, PlaceExtend { }
+export interface Place extends PlaceShort, PlaceExtend {}

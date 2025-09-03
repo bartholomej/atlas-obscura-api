@@ -35,6 +35,9 @@ export class PlacesScraper {
 
     try {
       place = JSON.parse(data);
+      if (place && typeof place.hide_from_maps === 'string') {
+        (place as any).hide_from_maps = place.hide_from_maps === 'true';
+      }
     } catch (error) {
       console.error('Error parsing placeById', id);
     }
@@ -45,27 +48,32 @@ export class PlacesScraper {
     const data = await fetchPage(url);
     const html = parse(data);
 
-    const descriptions = html.querySelectorAll('#place-body p').map((p) => p.innerHTML);
+    const descriptions = html.querySelectorAll('.place-body p').map((p) => p.innerHTML);
 
-    const directions = html
-      .querySelectorAll('.DDP__direction-copy p')
-      .map((p) => p.innerHTML)
-      .filter((x) => x !== '');
+    const sectionDirections = Array.from(html.querySelectorAll('section')).find((sec) => {
+      const h2 = sec.querySelector('h2');
+      return h2 && h2.textContent.trim() === 'Know Before You Go';
+    });
+    const directions = sectionDirections
+      ? Array.from(sectionDirections.querySelectorAll('p')).map((p) => p.textContent.trim())
+      : [];
 
-    const tags = html.querySelectorAll('.item-tags a.itemTags__link').map((x) => {
+    const tags = html.querySelectorAll('.aon-pill-badge-component').map((x) => {
       return {
-        title: x.innerHTML.trim(),
+        title: x.querySelector('.aon-pill-badge-text')?.innerHTML.trim(),
         link: x.attributes.href
       };
     });
 
-    const imageCover = (
-      html.querySelector('.js-contains-mobile-lightbox-link img') as unknown as HTMLImageElement
-    )?.getAttribute('data-src');
+    const slides = html.querySelectorAll('.swiper-slide');
+    const images = Array.from(slides)
+      .map((slide) => {
+        const img = slide.querySelector('img');
+        return img ? img.getAttribute('src') : null;
+      })
+      .filter(Boolean);
 
-    const images = html
-      .querySelectorAll('.js-item-gallery figure a[data-lightbox-src]')
-      .map((x) => x.getAttribute('data-lightbox-src'));
+    const imageCover = images[0];
 
     return { description: descriptions, directions, tags, imageCover, images };
   }

@@ -10,7 +10,7 @@
     "build": "tsc",
     "postbuild": "npm-prepare-dist -s postinstall -s prepare",
     "tsc": "tsc",
-    "demo": "ts-node demo",
+    "demo": "tsx demo",
     "lint": "eslint ./src/**/**/* --fix",
     "test": "jest",
     "postinstall": "yarn husky install",
@@ -46,7 +46,7 @@
     "pretty-quick": "^3.1.3",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.19.4",
     "typescript": "^5.1.6"
   },
   "repository": {
