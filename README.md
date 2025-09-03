@@ -5,7 +5,7 @@
 
 # Atlas Obscura API (Scraper)
 
-> JavaScript NPM library for scraping **Atlas Obscura ([atlasobscura.com](atlasobscura.com))** [unofficial]
+> JavaScript NPM library for scraping **Atlas Obscura ([atlasobscura.com](https://atlasobscura.com))** [unofficial]
 >
 > - Browser + Node.js (SSR)
 > - JavaScript / TypeScript
@@ -17,7 +17,9 @@
 >   - Docker container
 >   - ...
 
-## 📦 Install
+## 📦 Installation
+
+Install the library using npm, yarn, or your preferred package manager:
 
 ```bash
 npm install atlas-obscura-api --save
@@ -25,16 +27,16 @@ npm install atlas-obscura-api --save
 
 ## 🚀 Usage and Examples
 
-> Explore how to use the library with practical code snippets and sample outputs below.
+Explore how to use the library with practical code snippets and sample outputs below:
 
-- [All places](#All-places)
-- [Search](#Search)
-- [Show place by ID (short)](#Show-place-by-ID)
-- [Show place by ID (full)](#Show-place-by-ID)
+- [All places](#all-places)
+- [Search](#search)
+- [Show place by ID (short)](#short-version-one-quick-request)
+- [Show place by ID (full)](#full-detail-two-internal-requests)
 
 ### All Places
 
-Give me all places locations
+> Retrieve all places locations
 
 ```javascript
 import { atlasobscura } from 'atlas-obscura-api';
@@ -116,9 +118,9 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
 ];
 ```
 
-### Show place by ID
+### Show Place by ID
 
-#### Short version (one quick request)
+#### Short Version (One Quick Request)
 
 > Get place by id (short version)
 
@@ -149,7 +151,7 @@ atlasobscura.placeShort(494).then((place) => console.log(place));
 }
 ```
 
-#### Full detail (two internal requests)
+#### Full Detail (Two Internal Requests)
 
 > Get place by ID (FULL version).
 >
@@ -163,51 +165,101 @@ atlasobscura.placeFull(494).then((place) => console.log(place));
 
 #### Results
 
-Same as short but with full description, tags, directions and more, ... (TBD)
+```javascript
+{
+  id: 494,
+  title: 'Bodie State Historic Park',
+  subtitle: 'Standing in a state of "arrested decay," this ghost town allows for a detailed peek into Gold Rush life in an unusually harsh climate.',
+  city: 'Bridgeport',
+  country: 'United States',
+  location: 'Bridgeport, California',
+  url: 'https://www.atlasobscura.com/places/bodie-state-historical-park',
+  hide_from_maps: false,
+  physical_status: '',
+  thumbnail_url: 'https://img.atlasobscura.com/KaOCwrZAjNgS3LMOK28iuTxHDnMsl3Yjy0L_bYpfF1I/rs:fill:200:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
+  thumbnail_url_3x2: 'https://img.atlasobscura.com/aH-Qf5bAn0PE1Y6gf0b1xHdteWwXY0G99dMtlMEdWVk/rs:fill:204:136:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
+  coordinates: { lat: 38.208804, lng: -119.014163 },
+  description: [
+    'It was once the most lawless town in <a class="destination-link place-destination-link" href="https://www.atlasobscura.com/things-to-do/california">California</a>, a place where the fire bell ringing out the ages of those being laid to rest seemed to never stop its toll.',
+    "Today, what's left of Bodie is an eerie shell of the rough-and-tumble Gold Rush town, a window into a time long lost. Located in a very uniquely difficult climate of a &nbsp;desolate, high altitude plateau in the mountains but not in the woods, Bodie was not for the weak of heart—or feeble of constitutions.",
+    'Nestled in the Bodie Hills, east of the Sierra Nevada mountains just north of <a href="https://www.atlasobscura.com/places/mono-lake">Mono Lake</a>, Bodie grew quickly from a quiet town of 500 people to a rowdy mining city. Its population exploded during the second boom of the California gold rush and the beginning of the Nevada silver rush. By 1879, Bodie boasted a population of 10,000 and had 65 saloons, 50 mining companies, a thriving red-light district in the north end of town, and the worst reputation in the state.',
+    `Despite its nasty reputation, gold- and silver-seekers came from every corner of the country to this environment to "see the elephant," as heading West was called. Bodie's promise of gold and silver fortunes even attracted the likes of railroad tycoon Leland Stanford. With fortune hunters pouring in from all over the world, opium dens, brothels and gambling dens popped up for every flavor of wild west entertainment. They came for the gold and stayed for the party.`,
+    'Perhaps predictably, the mines quickly reached full capacity, and soon the mining companies cut their losses and closed down. Just as fast as Bodie had boomed, it busted, and the population had plummeted below 100 by 1888. Devoted locals held on until the 1920s, when Standard Mining closed down, but despite popular belief, Bodie was never completely abandoned. A few stragglers held down the fort until Bodie was absorbed as a National Landmark in 1962.',
+    'Today the windswept streets of Bodie are open to the public. It is the best-preserved ghost town in California, with about 200 structures remaining (about 5% of its original glory), along with rusted-out cars and machinery and boarded-up mines. Many of the building interiors still contain original artifacts and cannot be entered. The state is now restoring many of the buildings, as well as building more tourist-friendly walkways and restroom facilities.',
+    'Generally closed during the winter, the most reasonable access to Bodie is dusty highway 270, from highway 395. Call ahead during the swing months between winter and summer to check accessibility. Sometimes, a gate 1.5 miles out keeps away vehicles and advises hikers that the road is not fit to drive on.'
+  ],
+  directions: [
+    'The Bodie Foundation runs a number of events every year. These include Friends of Bodie Day, which includes many historical reenactments; ghost walks; and photo workshops. The Stamp Mill, the only remaining industrial structure, is accessible only by guided tours. These tours can book up quickly. See Bodie Foundation link below for all listings. The park is northeast of Yosemite, 13 miles east of Highway 395 on Bodie Road (Hwy 270), seven miles south of Bridgeport.',
+    'Before you set out to visit Bodie, there are a few things you should consider. Because of its altitude Bodie is very cold. Temperatures drop below freezing point 300 days a year. Dress accordingly.',
+    'There is no gas station and no food for sale. So fill up your tank and pack a lunch.',
+    'If you love photography, bring all your gear with you.'
+  ],
+  tags: [
+    { title: 'Abandoned', link: '/categories/abandoned' },
+    { title: 'Mining', link: '/categories/mining' },
+    { title: 'Ghost Towns', link: '/categories/ghost-towns' },
+    { title: 'Gold Rush', link: '/categories/gold-rush' },
+    { title: 'Ruins', link: '/categories/ruins' }
+  ],
+  imageCover: 'https://img.atlasobscura.com/Z7fkZefihgyRxzYQkbuv_xrdta4jxvASv_qBAfW_nYU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
+  images: [
+    'https://img.atlasobscura.com/Z7fkZefihgyRxzYQkbuv_xrdta4jxvASv_qBAfW_nYU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
+    'https://img.atlasobscura.com/a9V41OvE1zN7VchlVSGWtBSAcxfBT6GKrh-2UNbjzRU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85dHR4/cDZiajVkNThlN2Zk/ZWQzMDNiMTA0MzI1/X0lNR185NDIyLlBO/Rw.jpg'
+  ]
+}
+```
 
-## Used by
+## Used By
 
 - Atlas Obscura Offline mobile app (Android, iOS)
 - 🤷
 
 ## Development
 
-### Developing and debugging library
+### Developing and Debugging Library
+
+Start the development server:
 
 ```bash
 yarn start
 ```
 
-### Run demo locally
+### Run Demo Locally
 
-You can find and modify it in [`./demo.ts`](https://github.com/bartholomej/atlas-obscura-api/blob/master/demo.ts) file
+You can find and modify it in [`./demo.ts`](https://github.com/bartholomej/atlas-obscura-api/blob/master/demo.ts) file:
 
 ```bash
 yarn demo
 ```
 
-## 📝 Development (notes for me)
+## 📝 Development Notes
 
 ### Publish Stable
 
-```shell
+```bash
 yarn release:patch
 # yarn release:minor
 # yarn release:major
 ```
 
-### Publish next channel
+### Publish Next Channel
 
 1. Bump version `-beta.0` in `package.json`
-2. `yarn release:beta`
+2. Run:
+
+```bash
+yarn release:beta
+```
 
 ## Contribution
 
-I welcome you to customize this according to your needs ;)
+Contributions are welcome! Feel free to customize this library according to your needs.
 
-Pull requests for any improvements would be great!
+Pull requests for any improvements are greatly appreciated!
 
-## ⭐️ Show your support
+## ⭐️ Show Your Support
+
+If this project helped you, consider giving it a ⭐️!
 
 Give a ⭐️ if this project helped you!
 
@@ -227,8 +279,8 @@ Copyright &copy; 2025 [Lukas Bartak](http://bartweb.cz)
 
 Proudly powered by nature 🗻, wind 💨, tea 🍵 and beer 🍺 ;)
 
-**This is unofficial, experimental, made for fun and it has nothing to do with Atlas Obscura ❤️ itself**
+**This is unofficial, experimental, made for fun, and has nothing to do with Atlas Obscura ❤️ itself.**
 
 All contents are licensed under the [MIT license].
 
-[mit license]: LICENSE
+[MIT license]: LICENSE
