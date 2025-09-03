@@ -1,4 +1,4 @@
-import { Coordinates } from 'interfaces/global';
+import { Coordinates, FetchOptions } from 'interfaces/global';
 import { LocationResult } from 'interfaces/locations.interface';
 import { PlaceExtend, PlaceShort } from 'interfaces/placeId.interface';
 import { PlacesAll } from 'interfaces/places-all.interface';
@@ -8,8 +8,8 @@ import { parseResults } from '../utils';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch } from '../vars';
 
 export class PlacesScraper {
-  public async placesAll(): Promise<PlacesAll[]> {
-    const response = await fetchPage(URL_PLACES_ALL);
+  public async placesAll(options?: FetchOptions): Promise<PlacesAll[]> {
+    const response = await fetchPage(URL_PLACES_ALL, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.all_places = (.*?);/);
@@ -17,9 +17,9 @@ export class PlacesScraper {
     return parseResults<PlacesAll[]>(data);
   }
 
-  public async search(coords: Coordinates, page = 1): Promise<LocationResult> {
+  public async search(coords: Coordinates, page = 1, options?: FetchOptions): Promise<LocationResult> {
     const url = urlSearch(coords, page);
-    const response = await fetchPage(url);
+    const response = await fetchPage(url, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.place_search = (.*?);/);
@@ -27,9 +27,9 @@ export class PlacesScraper {
     return parseResults<LocationResult>(data);
   }
 
-  public async placeByIdShort(id: number): Promise<PlaceShort> {
+  public async placeByIdShort(id: number, options?: FetchOptions): Promise<PlaceShort> {
     const url = urlPlaceId(id);
-    const data = await fetchPage(url);
+    const data = await fetchPage(url, options?.headers);
 
     let place: PlaceShort = null;
 
@@ -44,8 +44,8 @@ export class PlacesScraper {
     return place;
   }
 
-  public async placeFull(url: string): Promise<PlaceExtend> {
-    const data = await fetchPage(url);
+  public async placeFull(url: string, options?: FetchOptions): Promise<PlaceExtend> {
+    const data = await fetchPage(url, options?.headers);
     const html = parse(data);
 
     const descriptions = html.querySelectorAll('.place-body p').map((p) => p.innerHTML);
