@@ -14,16 +14,18 @@
 >   - AWS λ (lambda function)
 >   - Chrome extension
 >   - React native app
+>   - Docker container
 >   - ...
 
-## Install
+## 📦 Install
 
 ```bash
 npm install atlas-obscura-api --save
-# yarn add atlas-obscura-api
 ```
 
-## Usage and examples
+## 🚀 Usage and Examples
+
+> Explore how to use the library with practical code snippets and sample outputs below.
 
 - [All places](#All-places)
 - [Search](#Search)
@@ -82,8 +84,8 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
       'https://img.atlasobscura.com/YmNZy_5DUKw21Ppt5B4Ik8zo4qjrc9RkkgT1tnAghcE/rs:fill:200:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8yMTky/MDAyOTQxXzEzNDEw/OTQxMDguanBn.jpg',
     url: '/places/cathedral-our-lady-angels',
     id: 1370,
-    hide_from_maps: 'false',
-    coordinates: [Object],
+    hide_from_maps: false,
+    coordinates: { lat: 34.05765, lng: -118.244944 },
     distance_from_query: '0.38'
   },
   {
@@ -94,8 +96,8 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
       'https://img.atlasobscura.com/6XpPQSE2YVsqTDOuvfx9ZHsYY0NfmX7oLzEUL87DL4A/rs:fill:200:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xMmI0/MzBkMDJjZjc2MjBj/ODJfbGIxLmpwZw.jpg',
     url: '/places/last-bookstore',
     id: 6159,
-    hide_from_maps: 'false',
-    coordinates: [Object],
+    hide_from_maps: false,
+    coordinates: { lat: 34.047738, lng: -118.249422 },
     distance_from_query: '0.45'
   },
   {
@@ -107,8 +109,8 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
       'https://img.atlasobscura.com/27GLJ0vkGogC-l1AK5CuJKxS5FrBcNrcOROTWja4FAc/rs:fill:200:200:1/g:ce/c:2483:1655:nowe:2:126/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80Mjg4/ZWJjZC0zYmNhLTQw/MTgtYTMzOC0wMTkz/M2FjNzVmZGIxMmQ4/MmVlYTgyY2IwMTM4/NTZfSU1HXzIwMTgw/ODI5XzE0NTE0NS5q/cGc.jpg',
     url: '/places/wells-fargo-history-museum-los-angeles',
     id: 28174,
-    hide_from_maps: 'false',
-    coordinates: [Object],
+    hide_from_maps: false,
+    coordinates: { lat: 34.05283, lng: -118.25191 },
     distance_from_query: '0.47'
   }
 ];
@@ -120,13 +122,11 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
 
 > Get place by id (short version)
 
-````javascript
-
 ```javascript
 import { atlasobscura } from 'atlas-obscura-api';
 
 atlasobscura.placeShort(494).then((place) => console.log(place));
-````
+```
 
 #### Results
 
@@ -139,7 +139,7 @@ atlasobscura.placeShort(494).then((place) => console.log(place));
   country: 'United States',
   location: 'Bridgeport, California',
   url: 'https://www.atlasobscura.com/places/bodie-state-historical-park',
-  hide_from_maps: 'false',
+  hide_from_maps: false,
   physical_status: '',
   thumbnail_url: 'https://img.atlasobscura.com/DzPFF3feclAXS5apzZq6HqIgaKUSxGzIEKTfCpnfKxY/rs:fill:200:200:1/g:ce/c:815:543:nowe:0:633/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
   thumbnail_url_3x2: 'https://img.atlasobscura.com/uCGcoetx8YfBtMOBo4oe1_6wUF7CM8AOK3L04aN9cg0/rs:fill:204:136:1/g:ce/c:815:543:nowe:0:633/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85MDY0/ZDNkODljYjdmNjI0/ZWViMzA0NjU0ZjM4/ZGI5MTYzODVkZTRh/LmpwZw.jpg',
@@ -149,9 +149,11 @@ atlasobscura.placeShort(494).then((place) => console.log(place));
 }
 ```
 
-#### Full version (two internal requests)
+#### Full detail (two internal requests)
 
-> Get place by id (FULL version)
+> Get place by ID (FULL version).
+>
+> Beware: it makes two requests internally
 
 ```javascript
 import { atlasobscura } from 'atlas-obscura-api';
@@ -184,7 +186,7 @@ You can find and modify it in [`./demo.ts`](https://github.com/bartholomej/atlas
 yarn demo
 ```
 
-## Development (notes for me)
+## 📝 Development (notes for me)
 
 ### Publish Stable
 
@@ -211,7 +213,7 @@ Give a ⭐️ if this project helped you!
 
 Or if you are brave enough consider [making a donation](https://github.com/sponsors/bartholomej) for some 🍺 or 🍵 ;)
 
-## Privacy Policy
+## 🛡️ Privacy Policy
 
 I DO NOT STORE ANY DATA. PERIOD.
 
@@ -219,9 +221,9 @@ I physically can't. I have nowhere to store it. I don't even have a server datab
 
 That's why, with atlas obscura api, what happens on your device stays on your device till disappear.
 
-## License
+## 📝 License
 
-Copyright &copy; 2022 [Lukas Bartak](http://bartweb.cz)
+Copyright &copy; 2025 [Lukas Bartak](http://bartweb.cz)
 
 Proudly powered by nature 🗻, wind 💨, tea 🍵 and beer 🍺 ;)
 
