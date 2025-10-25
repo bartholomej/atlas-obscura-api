@@ -1,4 +1,4 @@
-import { Coordinates } from './global';
+import { Coordinates } from './global.js';
 
 export interface LocationResult {
   total: Total;

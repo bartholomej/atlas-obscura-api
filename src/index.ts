@@ -1,8 +1,8 @@
-import { Coordinates, FetchOptions } from './interfaces/global';
-import { LocationResult } from './interfaces/locations.interface';
-import { Place, PlaceShort } from './interfaces/placeId.interface';
-import { PlacesAll } from './interfaces/places-all.interface';
-import { PlacesScraper } from './services/location.service';
+import { Coordinates, FetchOptions } from './interfaces/global.js';
+import { LocationResult } from './interfaces/locations.interface.js';
+import { Place, PlaceShort } from './interfaces/placeId.interface.js';
+import { PlacesAll } from './interfaces/places-all.interface.js';
+import { PlacesScraper } from './services/location.service.js';
 
 export class AtlasObscura {
   constructor(private locationService: PlacesScraper) { }

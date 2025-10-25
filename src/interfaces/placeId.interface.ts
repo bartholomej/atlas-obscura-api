@@ -1,4 +1,4 @@
-import { Coordinates } from './global';
+import { Coordinates } from './global.js';
 
 export interface PlaceShort {
   id: number;
@@ -30,4 +30,4 @@ export interface Tag {
   link: string;
 }
 
-export interface Place extends PlaceShort, PlaceExtend {}
+export interface Place extends PlaceShort, PlaceExtend { }
