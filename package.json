@@ -7,8 +7,7 @@
   "scripts": {
     "start": "tsc -w",
     "prebuild": "rimraf dist",
-    "build": "tsc",
-    "postbuild": "npm-prepare-dist -s postinstall -s prepare",
+    "build": "tsc && npm-prepare-dist -s postinstall -s prepare",
     "tsc": "tsc",
     "demo": "tsx demo",
     "lint": "eslint ./src/**/**/* --fix",
@@ -80,5 +79,6 @@
   "license": "MIT",
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
-  }
+  },
+  "packageManager": "yarn@4.10.3"
 }
