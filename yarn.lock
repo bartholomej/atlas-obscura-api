@@ -1502,7 +1502,7 @@ __metadata:
     prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     tsx: "npm:^4.20.6"
-    typescript: "npm:^5.9.3"
+    typescript: "npm:^6.0.0-dev.20251025"
     vitest: "npm:^4.0.3"
   languageName: unknown
   linkType: soft
@@ -4340,23 +4340,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.9.3":
-  version: 5.9.3
-  resolution: "typescript@npm:5.9.3"
+"typescript@npm:^6.0.0-dev.20251025":
+  version: 6.0.0-dev.20251025
+  resolution: "typescript@npm:6.0.0-dev.20251025"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
+  checksum: 10c0/8a6d40031c070644bc513bd38c5c6da3076639141fb226b78ec5d3ca1df04f4bd83436978026cafb19f27d0d5b934cd273495eb78c070f1a93b86ab9d53f7791
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>":
-  version: 5.9.3
-  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
+"typescript@patch:typescript@npm%3A^6.0.0-dev.20251025#optional!builtin<compat/typescript>":
+  version: 6.0.0-dev.20251025
+  resolution: "typescript@patch:typescript@npm%3A6.0.0-dev.20251025#optional!builtin<compat/typescript>::version=6.0.0-dev.20251025&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
+  checksum: 10c0/e72bd136abd3c559de2462b34be0e3e66aadaf9fb6e60e35672b789157179c649680f3243c40cc6b5a9bcae8894cf8e306ea34b017f1fd3685b042e9420c2273
   languageName: node
   linkType: hard
 

@@ -3,7 +3,6 @@
     "target": "es2024",
     "lib": ["dom"],
     "types": ["node"],
-    "baseUrl": "./src",
     "esModuleInterop": true,
     "module": "commonjs",
     "strictNullChecks": false,
