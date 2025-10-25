@@ -1,7 +1,7 @@
-import { Coordinates, FetchOptions } from 'interfaces/global';
-import { Place, PlaceShort } from 'interfaces/placeId.interface';
-import { PlacesAll } from 'interfaces/places-all.interface';
+import { Coordinates, FetchOptions } from './interfaces/global';
 import { LocationResult } from './interfaces/locations.interface';
+import { Place, PlaceShort } from './interfaces/placeId.interface';
+import { PlacesAll } from './interfaces/places-all.interface';
 import { PlacesScraper } from './services/location.service';
 
 export class AtlasObscura {

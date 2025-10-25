@@ -1,11 +1,11 @@
-import { Coordinates, FetchOptions } from 'interfaces/global';
-import { LocationResult } from 'interfaces/locations.interface';
-import { PlaceExtend, PlaceShort } from 'interfaces/placeId.interface';
-import { PlacesAll } from 'interfaces/places-all.interface';
 import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers';
 import { parseResults } from '../utils';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch } from '../vars';
+import { Coordinates, FetchOptions } from './../interfaces/global';
+import { LocationResult } from './../interfaces/locations.interface';
+import { PlaceExtend, PlaceShort } from './../interfaces/placeId.interface';
+import { PlacesAll } from './../interfaces/places-all.interface';
 
 export class PlacesScraper {
   public async placesAll(options?: FetchOptions): Promise<PlacesAll[]> {
