@@ -2,36 +2,36 @@ import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers/index.js';
 import { parseResults } from '../utils.js';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch } from '../vars.js';
-import { Coordinates, FetchOptions } from './../interfaces/global.js';
-import { LocationResult } from './../interfaces/locations.interface.js';
-import { PlaceExtend, PlaceShort } from './../interfaces/placeId.interface.js';
-import { PlacesAll } from './../interfaces/places-all.interface.js';
+import { AOCoordinates, AOFetchOptions } from './../interfaces/global.js';
+import { AOLocationResult } from './../interfaces/locations.interface.js';
+import { AOPlaceExtend, AOPlaceShort } from './../interfaces/placeId.interface.js';
+import { AOPlacesAll } from './../interfaces/places-all.interface.js';
 
 export class PlacesScraper {
-  public async placesAll(options?: FetchOptions): Promise<PlacesAll[]> {
+  public async placesAll(options?: AOFetchOptions): Promise<AOPlacesAll[]> {
     const response = await fetchPage(URL_PLACES_ALL, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.all_places = (.*?);/);
 
-    return parseResults<PlacesAll[]>(data);
+    return parseResults<AOPlacesAll[]>(data);
   }
 
-  public async search(coords: Coordinates, page = 1, options?: FetchOptions): Promise<LocationResult> {
+  public async search(coords: AOCoordinates, page = 1, options?: AOFetchOptions): Promise<AOLocationResult> {
     const url = urlSearch(coords, page);
     const response = await fetchPage(url, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.place_search = (.*?);/);
 
-    return parseResults<LocationResult>(data);
+    return parseResults<AOLocationResult>(data);
   }
 
-  public async placeByIdShort(id: number, options?: FetchOptions): Promise<PlaceShort> {
+  public async placeByIdShort(id: number, options?: AOFetchOptions): Promise<AOPlaceShort> {
     const url = urlPlaceId(id);
     const data = await fetchPage(url, options?.headers);
 
-    let place: PlaceShort = null;
+    let place: AOPlaceShort = null;
 
     try {
       place = JSON.parse(data);
@@ -44,7 +44,7 @@ export class PlacesScraper {
     return place;
   }
 
-  public async placeFull(url: string, options?: FetchOptions): Promise<PlaceExtend> {
+  public async placeFull(url: string, options?: AOFetchOptions): Promise<AOPlaceExtend> {
     const data = await fetchPage(url, options?.headers);
     const html = parse(data);
 
