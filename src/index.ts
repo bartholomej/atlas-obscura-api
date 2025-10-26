@@ -27,4 +27,4 @@ export class AtlasObscura {
 }
 
 const locationScraper = new PlacesScraper();
-export const atlasobscura = new AtlasObscura(locationScraper);
+export const atlasobscura: AtlasObscura = new AtlasObscura(locationScraper);

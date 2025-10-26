@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc -w",
     "prebuild": "rimraf dist",
-    "build": "tsdown",
+    "build": "tsdown --config-loader unconfig",
     "tsc": "tsc",
     "demo": "tsx demo",
     "lint": "eslint ./src/**/**/* --fix",
@@ -46,6 +46,7 @@
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
+    "rolldown": "1.0.0-beta.44",
     "tsdown": "^0.15.10",
     "tsx": "^4.20.6",
     "typescript": "^6.0.0-dev.20251025",
@@ -79,5 +80,14 @@
     "*.ts": "eslint --cache --fix"
   },
   "packageManager": "yarn@4.10.3",
-  "main": "./index.js"
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  }
 }

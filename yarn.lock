@@ -1695,6 +1695,7 @@ __metadata:
     node-html-parser: "npm:^7.0.1"
     prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
+    rolldown: "npm:1.0.0-beta.44"
     tsdown: "npm:^0.15.10"
     tsx: "npm:^4.20.6"
     typescript: "npm:^6.0.0-dev.20251025"
