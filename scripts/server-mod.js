@@ -9,4 +9,4 @@ content = content.replace(/\.\/src\/index\.js/g, './index.mjs');
 
 fs.writeFileSync(filePath, content, 'utf-8');
 
-console.log(`Imports ${filePath} fixed successfully.`);
+console.log(`Import references in ${filePath} fixed successfully.`);
