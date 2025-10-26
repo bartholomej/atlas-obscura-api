@@ -1,7 +1,13 @@
 import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
-import packageJson from './package.json';
-import { atlasobscura } from './src';
+import { readFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+import { atlasobscura } from './src/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJson = JSON.parse(readFileSync(join(__dirname, 'package.json'), 'utf-8'));
 
 type Severity = 'info' | 'warn' | 'error' | 'success';
 

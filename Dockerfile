@@ -1,28 +1,36 @@
-FROM node:24-alpine
-
-ENV NODE_ENV=production
+# Build stage
+FROM node:24-alpine AS build
 
 WORKDIR /usr/src/app
 
-# Copy package.json and yarn.lock
-COPY package.json yarn.lock .yarnrc.yml ./
+COPY package.json yarn.lock .yarnrc.yml tsconfig.json ./
 
-# Enable Corepack and Yarn 4
 RUN corepack enable \
-    && corepack prepare yarn@4 --activate \
-    && yarn --version
+    && corepack prepare yarn@4 --activate
 
-# Install production dependencies
-RUN yarn workspaces focus --production \
-  && yarn add express dotenv tsx \
-  && yarn cache clean
+RUN yarn
 
-# Copy source code
-COPY src ./src
-COPY server.ts ./server.ts
+COPY . .
 
-# Expose port
+RUN yarn build && yarn build:server
+
+# Production stage
+FROM node:24-alpine AS production
+
+WORKDIR /usr/src/app
+ENV NODE_ENV=production
+
+COPY --from=build /usr/src/app/dist ./
+
+COPY .yarnrc.yml ./
+
+RUN corepack enable \
+    && corepack prepare yarn@4 --activate
+
+RUN yarn workspaces focus --production  \
+    && yarn add express dotenv \
+    && yarn cache clean
+
 EXPOSE 3000
 
-# Start the app
-CMD ["yarn", "tsx", "server.ts"]
+CMD ["node", "server.mjs"]
