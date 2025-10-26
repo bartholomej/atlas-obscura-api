@@ -5,12 +5,12 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"atlas-obscura-api@npm:4.0.0-next.1":
-  version: 4.0.0-next.1
-  resolution: "atlas-obscura-api@npm:4.0.0-next.1"
+"atlas-obscura-api@npm:4.0.0-next.2":
+  version: 4.0.0-next.2
+  resolution: "atlas-obscura-api@npm:4.0.0-next.2"
   dependencies:
     node-html-parser: "npm:^7.0.1"
-  checksum: 10c0/ad769f79954733eeeb03ef95071f187e3cdbf34374d4d8ac1c0ebe8baab840e7a96c5b2cf7827c5c471b47f6b1a30859bd7f184276c0a28f2ca0e064ad1de91d
+  checksum: 10c0/c03f1f7d54059ad97aaad84bb563fc843089e90271e398381471eeea0b2a95f77d6605980195c3d28ddc7533e3d7bbe234e4906efc5d3ba3fb748bf7dd121a7b
   languageName: node
   linkType: hard
 
@@ -86,6 +86,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esm-example@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "esm-example@workspace:."
+  dependencies:
+    atlas-obscura-api: "npm:4.0.0-next.2"
+  languageName: unknown
+  linkType: soft
+
 "he@npm:1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
@@ -113,11 +121,3 @@ __metadata:
   checksum: 10c0/5fee7ff309727763689cfad844d979aedd2204a817fbaaf0e1603794a7c20db28548d7b024692f953557df6ce4a0ee4ae46cd8ebd9b36cfb300b9226b567c479
   languageName: node
   linkType: hard
-
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    atlas-obscura-api: "npm:4.0.0-next.1"
-  languageName: unknown
-  linkType: soft
