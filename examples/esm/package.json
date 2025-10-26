@@ -1,0 +1,11 @@
+{
+  "name": "esm-example",
+  "type": "module",
+  "scripts": {
+    "build": "node index.js",
+    "build:ts": "npx tsx index.ts"
+  },
+  "dependencies": {
+    "atlas-obscura-api": "4.0.0-next.1"
+  }
+}
