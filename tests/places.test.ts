@@ -1,17 +1,17 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { atlasobscura } from '../src';
-import { Place } from '../src/interfaces/placeId.interface';
+import { atlasObscura } from '../src';
+import { AOPlace } from '../src/interfaces/placeId.interface';
 
 describe('Live: placesAll', () => {
   test('More than some number', async () => {
-    const places = await atlasobscura.placesAll();
+    const places = await atlasObscura.placesAll();
     expect(places.length).toBeGreaterThan(23000);
   });
 });
 
 describe('Live: placeShort', () => {
   test('Some props', async () => {
-    const place = await atlasobscura.placeShort(46288);
+    const place = await atlasObscura.placeShort(46288);
     expect(place.city).toBe('Chinle');
     expect(place.id).toBe(46288);
     expect((place as any).description).toBe(undefined);
@@ -19,10 +19,10 @@ describe('Live: placeShort', () => {
 });
 
 describe('Live: placeFull', () => {
-  let place: Place;
+  let place: AOPlace;
 
   beforeAll(async () => {
-    place = await atlasobscura.placeFull(46288);
+    place = await atlasObscura.placeFull(46288);
   });
 
   test('ID', async () => {
@@ -82,7 +82,7 @@ describe('Live: placeFull', () => {
 
 describe('Live: search', () => {
   test('Test some props', async () => {
-    const places = await atlasobscura.search({ lat: 50.08, lng: 14.42 });
+    const places = await atlasObscura.search({ lat: 50.08, lng: 14.42 });
     expect(places.results.find((p) => p.title.includes('Prague Astronomical Clock'))?.id).toBe(139);
     expect(places.total.value).toBeGreaterThan(10);
   });

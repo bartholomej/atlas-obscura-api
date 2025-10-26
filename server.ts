@@ -3,7 +3,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import { readFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { atlasobscura } from './src/index.js';
+import { atlasObscura } from './src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -126,7 +126,7 @@ app.get(['/search/', '/search/:lat/'], (req, res) => {
 
 app.get(Endpoint.PLACE_SHORT, async (req, res) => {
   try {
-    const place = await atlasobscura.placeShort(+req.params.id);
+    const place = await atlasObscura.placeShort(+req.params.id);
     res.json(place);
     logMessage('success', { error: null, message: `${Endpoint.PLACE_SHORT}: ${req.params.id}` }, req);
   } catch (error) {
@@ -138,7 +138,7 @@ app.get(Endpoint.PLACE_SHORT, async (req, res) => {
 
 app.get(Endpoint.PLACE_FULL, async (req, res) => {
   try {
-    const result = await atlasobscura.placeFull(+req.params.id);
+    const result = await atlasObscura.placeFull(+req.params.id);
     res.json(result);
     logMessage('success', { error: null, message: `${Endpoint.PLACE_FULL}: ${req.params.id}` }, req);
   } catch (error) {
@@ -150,7 +150,7 @@ app.get(Endpoint.PLACE_FULL, async (req, res) => {
 
 app.get(Endpoint.SEARCH, async (req, res) => {
   try {
-    const result = await atlasobscura.search({ lat: +req.params.lat, lng: +req.params.lng });
+    const result = await atlasObscura.search({ lat: +req.params.lat, lng: +req.params.lng });
     res.json(result);
     logMessage('success', { error: null, message: `${Endpoint.SEARCH}: ${req.params.lat},${req.params.lng}` }, req);
   } catch (error) {
@@ -162,7 +162,7 @@ app.get(Endpoint.SEARCH, async (req, res) => {
 
 app.get(Endpoint.PLACES_ALL, async (_, res) => {
   try {
-    const result = await atlasobscura.placesAll();
+    const result = await atlasObscura.placesAll();
     res.json(result);
     logMessage('success', { error: null, message: `${Endpoint.PLACES_ALL}` });
   } catch (error) {

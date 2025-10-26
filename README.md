@@ -39,9 +39,9 @@ Explore how to use the library with practical code snippets and sample outputs b
 > Retrieve all places locations
 
 ```javascript
-import { atlasobscura } from 'atlas-obscura-api';
+import { atlasObscura } from 'atlas-obscura-api';
 
-atlasobscura.placesAll().then((places) => console.log(places));
+atlasObscura.placesAll().then((places) => console.log(places));
 ```
 
 #### Results
@@ -68,9 +68,9 @@ atlasobscura.placesAll().then((places) => console.log(places));
 > Search places by coordinates
 
 ```javascript
-import { atlasobscura } from 'atlas-obscura-api';
+import { atlasObscura } from 'atlas-obscura-api';
 
-atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.log(search));
+atlasObscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.log(search));
 ```
 
 #### Results
@@ -125,9 +125,9 @@ atlasobscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
 > Get place by id (short version)
 
 ```javascript
-import { atlasobscura } from 'atlas-obscura-api';
+import { atlasObscura } from 'atlas-obscura-api';
 
-atlasobscura.placeShort(494).then((place) => console.log(place));
+atlasObscura.placeShort(494).then((place) => console.log(place));
 ```
 
 #### Results
@@ -158,9 +158,9 @@ atlasobscura.placeShort(494).then((place) => console.log(place));
 > Beware: it makes two requests internally
 
 ```javascript
-import { atlasobscura } from 'atlas-obscura-api';
+import { atlasObscura } from 'atlas-obscura-api';
 
-atlasobscura.placeFull(494).then((place) => console.log(place));
+atlasObscura.placeFull(494).then((place) => console.log(place));
 ```
 
 #### Results
