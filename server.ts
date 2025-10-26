@@ -144,7 +144,7 @@ app.get(Endpoint.PLACE_FULL, async (req, res) => {
 
 app.get(Endpoint.SEARCH, async (req, res) => {
   try {
-    const result = await atlasobscura.search({ lat: req.params.lat, lng: req.params.lng });
+    const result = await atlasobscura.search({ lat: +req.params.lat, lng: +req.params.lng });
     res.json(result);
     logMessage('success', { error: null, message: `${Endpoint.SEARCH}: ${req.params.lat},${req.params.lng}` }, req);
   } catch (error) {
