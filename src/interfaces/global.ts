@@ -1,6 +1,6 @@
-export interface Coordinates {
+export interface AOCoordinates {
   lat: number;
   lng: number;
 }
 
-export type FetchOptions = { headers?: Headers };
+export type AOFetchOptions = { headers?: Headers };

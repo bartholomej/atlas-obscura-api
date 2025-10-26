@@ -70,3 +70,5 @@ typings/
 functions/*
 firebase*
 .firebase*
+examples/**/output.html
+examples/**/.yarn/install-state.gz

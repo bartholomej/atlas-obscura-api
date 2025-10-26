@@ -1,6 +1,6 @@
-import { Coordinates } from './global.js';
+import { AOCoordinates } from './global.js';
 
-export interface PlaceShort {
+export interface AOPlaceShort {
   id: number;
   title: string;
   subtitle: string;
@@ -12,22 +12,22 @@ export interface PlaceShort {
   physical_status: string;
   thumbnail_url: string;
   thumbnail_url_3x2: string;
-  coordinates: Coordinates;
-  nearby_places: PlaceShort[];
-  nearby_foods: PlaceShort[];
+  coordinates: AOCoordinates;
+  nearby_places: AOPlaceShort[];
+  nearby_foods: AOPlaceShort[];
 }
 
-export interface PlaceExtend {
+export interface AOPlaceExtend {
   description?: string[];
-  tags?: Tag[];
+  tags?: AOTag[];
   directions?: string[];
   imageCover?: string;
   images?: string[];
 }
 
-export interface Tag {
+export interface AOTag {
   title: string;
   link: string;
 }
 
-export interface Place extends PlaceShort, PlaceExtend { }
+export interface AOPlace extends AOPlaceShort, AOPlaceExtend { }

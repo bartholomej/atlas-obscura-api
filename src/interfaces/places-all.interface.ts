@@ -1,5 +1,5 @@
-import { Coordinates } from './global.js';
+import { AOCoordinates } from './global.js';
 
-export interface PlacesAll extends Coordinates {
+export interface AOPlacesAll extends AOCoordinates {
   id: number;
 }

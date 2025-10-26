@@ -1,0 +1,12 @@
+{
+  "name": "cjs-example",
+  "type": "commonjs",
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:ts",
+    "build:cjs": "node index.js",
+    "build:ts": "npx tsx index.ts"
+  },
+  "dependencies": {
+    "atlas-obscura-api": "4.0.0-next.2"
+  }
+}

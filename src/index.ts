@@ -1,25 +1,25 @@
-import { Coordinates, FetchOptions } from './interfaces/global.js';
-import { LocationResult } from './interfaces/locations.interface.js';
-import { Place, PlaceShort } from './interfaces/placeId.interface.js';
-import { PlacesAll } from './interfaces/places-all.interface.js';
+import { AOCoordinates, AOFetchOptions } from './interfaces/global.js';
+import { AOLocationResult } from './interfaces/locations.interface.js';
+import { AOPlace, AOPlaceShort } from './interfaces/placeId.interface.js';
+import { AOPlacesAll } from './interfaces/places-all.interface.js';
 import { PlacesScraper } from './services/location.service.js';
 
 export class AtlasObscura {
   constructor(private locationService: PlacesScraper) { }
 
-  public async search(coords: Coordinates, options?: FetchOptions): Promise<LocationResult> {
+  public async search(coords: AOCoordinates, options?: AOFetchOptions): Promise<AOLocationResult> {
     return this.locationService.search(coords, 1, options);
   }
 
-  public async placesAll(options?: FetchOptions): Promise<PlacesAll[]> {
+  public async placesAll(options?: AOFetchOptions): Promise<AOPlacesAll[]> {
     return this.locationService.placesAll(options);
   }
 
-  public async placeShort(id: number, options?: FetchOptions): Promise<PlaceShort> {
+  public async placeShort(id: number, options?: AOFetchOptions): Promise<AOPlaceShort> {
     return this.locationService.placeByIdShort(id, options);
   }
 
-  public async placeFull(id: number, options?: FetchOptions): Promise<Place> {
+  public async placeFull(id: number, options?: AOFetchOptions): Promise<AOPlace> {
     const place = await this.locationService.placeByIdShort(id, options);
     const placeRich = await this.locationService.placeFull(place.url, options);
     return { ...place, ...placeRich };
@@ -27,4 +27,5 @@ export class AtlasObscura {
 }
 
 const locationScraper = new PlacesScraper();
-export const atlasobscura = new AtlasObscura(locationScraper);
+export const atlasObscura: AtlasObscura = new AtlasObscura(locationScraper);
+export type * from './interfaces/index.js';

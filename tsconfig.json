@@ -15,7 +15,8 @@
     "resolveJsonModule": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "isolatedDeclarations": true
   },
   "include": ["src"],
   "exclude": ["dist/**/*", "*/tests/**/*"]

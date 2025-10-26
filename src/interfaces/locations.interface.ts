@@ -1,16 +1,16 @@
-import { Coordinates } from './global.js';
+import { AOCoordinates } from './global.js';
 
-export interface LocationResult {
-  total: Total;
+export interface AOLocationResult {
+  total: AOTotal;
   per_page: number;
   current_page: number;
   location: string;
   q: string;
-  coordinates: Coordinates;
-  results: Location[];
+  coordinates: AOCoordinates;
+  results: AOLocation[];
 }
 
-export interface Location {
+export interface AOLocation {
   title: string;
   subtitle: string;
   location: string;
@@ -18,11 +18,11 @@ export interface Location {
   url: string;
   id: number;
   hide_from_maps?: string;
-  coordinates: Coordinates;
+  coordinates: AOCoordinates;
   distance_from_query: string;
 }
 
-export interface Total {
+export interface AOTotal {
   value: number;
   relation: string;
 }
