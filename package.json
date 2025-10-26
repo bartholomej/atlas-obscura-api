@@ -22,7 +22,6 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "cross-fetch": "^4.1.0",
     "node-html-parser": "^7.0.1"
   },
   "devDependencies": {

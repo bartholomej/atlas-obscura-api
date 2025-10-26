@@ -1,5 +1,3 @@
-import fetch from 'cross-fetch';
-
 const USER_AGENTS: string[] = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0',
   'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0',
@@ -9,20 +7,25 @@ const USER_AGENTS: string[] = [
   'Mozilla/5.0 (Linux; Android 11; M2101K7BNY Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.70 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/369.0.0.7.111;]'
 ];
 
-const headers = {
+const DEFAULT_HEADERS = {
   'User-Agent': USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)],
-  'Cache-Control': 'no-cache'
+  'Cache-Control': 'no-cache',
 };
 
 export const fetchPage = async (url: string, headersCustom?: Headers): Promise<string> => {
   try {
-    const response = await fetch(url, { headers: { ...headers, ...headersCustom }, credentials: 'omit' });
-    if (response.status >= 400 && response.status < 600) {
+    const response = await fetch(url, {
+      headers: { ...DEFAULT_HEADERS, ...headersCustom },
+      credentials: 'omit'
+    });
+
+    if (!response.ok) {
       throw new Error(`atlas-obscura-api: Bad response ${response.status} for url: ${url}`);
     }
+
     return await response.text();
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    console.error('fetchPage error:', error);
     return 'Error';
   }
 };
