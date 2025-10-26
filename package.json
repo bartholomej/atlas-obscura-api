@@ -2,12 +2,11 @@
   "name": "atlas-obscura-api",
   "version": "3.2.0",
   "description": "Atlas Obscura API in JavaScript. NPM library for scrapping atlasobscura.com",
-  "main": "index.js",
   "author": "BART! <bart@bartweb.cz>",
   "scripts": {
     "start": "tsc -w",
     "prebuild": "rimraf dist",
-    "build": "tsc && npm-prepare-dist -s postinstall -s prepare",
+    "build": "tsdown",
     "tsc": "tsc",
     "demo": "tsx demo",
     "lint": "eslint ./src/**/**/* --fix",
@@ -45,9 +44,9 @@
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
-    "npm-prepare-dist": "^0.5.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
+    "tsdown": "^0.15.10",
     "tsx": "^4.20.6",
     "typescript": "^6.0.0-dev.20251025",
     "vitest": "^4.0.3"
@@ -79,5 +78,6 @@
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.10.3",
+  "main": "./index.js"
 }
