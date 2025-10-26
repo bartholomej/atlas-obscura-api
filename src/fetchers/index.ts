@@ -1,10 +1,15 @@
 const USER_AGENTS: string[] = [
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0',
-  'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0',
   'Dalvik/2.1.0 (Linux; U; Android 8.1.0; C6L Build/OPM2.171019.012)',
   'Mozilla/5.0 (Windows; Windows NT 10.0; x64) AppleWebKit/537.50 (KHTML, like Gecko) Chrome/48.0.2572.385 Safari/537.9 Edge/8.37913',
-  'Mozilla/5.0 (Linux; Android 12; SM-A127F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.104 Mobile Safari/537.36 Instagram 243.0.0.16.111 Android (31/12; 300dpi; 720x1467; samsung; SM-A127F; a12s; exynos850; in_ID; 382290496)',
-  'Mozilla/5.0 (Linux; Android 11; M2101K7BNY Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.70 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/369.0.0.7.111;]'
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14E5239e Safari/602.1',
+  'Dalvik/2.1.0 (Linux; U; Android 11; SM-A505GT Build/RP1A.200720.012)',
+  'Mozilla/5.0 (Windows NT 10.3;; en-US) AppleWebKit/602.25 (KHTML, like Gecko) Chrome/54.0.2457.241 Safari/534.5 Edge/9.65405',
+  'Mozilla/5.0 (Windows; U; Windows NT 10.4; x64) AppleWebKit/536.41 (KHTML, like Gecko) Chrome/53.0.3535.112 Safari/600.5 Edge/14.39786',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 8_4_0; like Mac OS X) AppleWebKit/601.9 (KHTML, like Gecko)  Chrome/47.0.2876.394 Mobile Safari/600.5',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 7_6_3; like Mac OS X) AppleWebKit/602.24 (KHTML, like Gecko)  Chrome/54.0.3204.297 Mobile Safari/537.0',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 10_9_6; like Mac OS X) AppleWebKit/601.4 (KHTML, like Gecko)  Chrome/55.0.2808.105 Mobile Safari/600.4',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 8_2_1; like Mac OS X) AppleWebKit/600.14 (KHTML, like Gecko)  Chrome/50.0.3808.259 Mobile Safari/534.1',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 10_4_2; like Mac OS X) AppleWebKit/534.21 (KHTML, like Gecko)  Chrome/47.0.3531.351 Mobile Safari/533.0'
 ];
 
 const DEFAULT_HEADERS = {
