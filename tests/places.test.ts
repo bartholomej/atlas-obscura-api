@@ -87,3 +87,13 @@ describe('Live: search', () => {
     expect(places.total.value).toBeGreaterThan(10);
   });
 });
+
+describe('Live: user', () => {
+  test('Test some props', async () => {
+    const user = await atlasObscura.user('bartholomej');
+    expect(user.id).toBe(251656);
+    expect(user.places?.length).toBeGreaterThan(50);
+    expect(user.places?.some((place) => place.title.includes('Okunoshima'))).toBe(true);
+  });
+});
+
