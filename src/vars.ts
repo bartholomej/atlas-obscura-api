@@ -7,3 +7,6 @@ export const urlSearch = (coord: { lat: number; lng: number }, page?: number): s
 
 export const urlPlaceId = (id: number): string =>
   `https://www.atlasobscura.com/places/${id}.json?place_only=1`;
+
+export const urlUser = (name: string): string =>
+  `https://www.atlasobscura.com/users/${name}`;

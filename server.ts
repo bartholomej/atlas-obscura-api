@@ -59,14 +59,16 @@ enum Errors {
   PLACE_FETCH_FAILED = 'PLACE_FETCH_FAILED',
   SEARCH_FETCH_FAILED = 'SEARCH_FETCH_FAILED',
   PLACES_FETCH_FAILED = 'PLACES_FETCH_FAILED',
-  PAGE_NOT_FOUND = 'PAGE_NOT_FOUND'
+  PAGE_NOT_FOUND = 'PAGE_NOT_FOUND',
+  USER_FETCH_FAILED = 'USER_FETCH_FAILED'
 }
 
 enum Endpoint {
   PLACES_ALL = '/places-all',
   SEARCH = '/search/:lat/:lng',
   PLACE_SHORT = '/place-short/:id',
-  PLACE_FULL = '/place-full/:id'
+  PLACE_FULL = '/place-full/:id',
+  USER = '/user/:id'
 }
 
 const app = express();
@@ -168,6 +170,18 @@ app.get(Endpoint.PLACES_ALL, async (_, res) => {
   } catch (error) {
     const log: ErrorLog = { error: Errors.PLACES_FETCH_FAILED, message: 'Failed to fetch places data: ' + error };
     logMessage('error', log, undefined);
+    res.status(500).json(log);
+  }
+});
+
+app.get(Endpoint.USER, async (req, res) => {
+  try {
+    const user = await atlasObscura.user(req.params.id);
+    res.json(user);
+    logMessage('success', { error: null, message: `${Endpoint.USER}: ${req.params.id}` }, req);
+  } catch (error) {
+    const log: ErrorLog = { error: Errors.USER_FETCH_FAILED, message: 'Failed to fetch user data: ' + error };
+    logMessage('error', log, req);
     res.status(500).json(log);
   }
 });
