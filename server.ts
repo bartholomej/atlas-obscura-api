@@ -1,3 +1,4 @@
+import cors from 'cors';
 import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
 import { readFileSync } from 'fs';
@@ -72,6 +73,17 @@ enum Endpoint {
 }
 
 const app = express();
+
+// --- CORS ---
+const corsOrigins = process.env.CORS_ORIGINS
+  ? process.env.CORS_ORIGINS.split(',')
+  : [];
+
+app.use(cors({
+  origin: corsOrigins,
+  credentials: true
+}));
+
 const port = process.env.PORT || 3000;
 
 // --- Config ---

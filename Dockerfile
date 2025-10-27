@@ -28,7 +28,7 @@ RUN corepack enable \
     && corepack prepare yarn@4 --activate
 
 RUN yarn workspaces focus --production  \
-    && yarn add express dotenv \
+    && yarn add express dotenv cors \
     && yarn cache clean
 
 EXPOSE 3000
