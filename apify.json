@@ -1,0 +1,30 @@
+{
+  "name": "atlas-obscura-api",
+  "version": "0.0.1",
+  "main": "dist/apify-actor.js",
+  "buildTag": "latest",
+  "actorClass": "javascript",
+  "compatibility": "1.0",
+  "title": "Atlas Obscura API",
+  "description": "Atlas Obscura scraper",
+  "categories": [
+    "scraping"
+  ],
+  "input": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "query": {
+        "type": "string"
+      },
+      "tag": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action"
+    ]
+  }
+}
