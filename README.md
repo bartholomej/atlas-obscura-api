@@ -7,14 +7,17 @@
 
 > JavaScript NPM library for scraping **Atlas Obscura ([atlasobscura.com](https://atlasobscura.com))** [unofficial]
 >
-> - Browser + Node.js (SSR)
+> - Browser + Node.js
 > - JavaScript / TypeScript
+> - ESM + CJS support
 > - You can use in:
+>   - Serverless functions
 >   - Firebase function
 >   - AWS λ (lambda function)
 >   - Chrome extension
 >   - React native app
 >   - Docker container
+>   - Node.js app
 >   - ...
 
 ## 📦 Installation
@@ -33,6 +36,7 @@ Explore how to use the library with practical code snippets and sample outputs b
 - [Search](#search)
 - [Show place by ID (short)](#short-version-one-quick-request)
 - [Show place by ID (full)](#full-detail-two-internal-requests)
+- [User](#user)
 
 ### All Places
 
@@ -209,6 +213,62 @@ atlasObscura.placeFull(494).then((place) => console.log(place));
 }
 ```
 
+#### User
+
+> Get user by nickname
+
+```javascript
+import { atlasObscura } from 'atlas-obscura-api';
+
+atlasObscura.user('bartholomej').then((user) => console.log(user));
+```
+
+#### Results
+
+```javascript
+{
+  "id": 251656,
+  "places": [
+    {
+      "id": 15078,
+      "title": "Roskilde Viking Ship Museum ",
+      "subtitle": "Nordic giants resurrected from the sea and restored to their former greatness.",
+      "url": "https://www.atlasobscura.com/places/roskilde-viking-ship-museum",
+      "location": "Roskilde, Denmark",
+      "thumbnail_url": "https://img.atlasobscura.com/DjHjzdzd3l7b8AN47HKwpt8GYmG83Yo2pVJdmr2bhWY/rs:fill:200:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xODRm/NTFjYjAzMzM3OTFh/ZTBfSU1HXzAyODcu/SlBH.jpg",
+      "coordinates": {
+        "lat": 55.649645,
+        "lng": 12.077977
+      }
+    },
+    {
+      "id": 58990,
+      "title": "Grave of the Hel-Horse",
+      "subtitle": "According to legend, this is the burial place of a mythical three-legged death omen horse.",
+      "url": "https://www.atlasobscura.com/places/grave-of-the-hel-horse-roskilde",
+      "location": "Roskilde, Denmark",
+      "thumbnail_url": "https://img.atlasobscura.com/5jjvXXDD7Mravpa0EZiIluytCKiQYjfl_EtPakLaK-Q/rs:fill:200:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9jYjk1/MjBjMy01NjNlLTRj/ZjItOTY4Yi1iNmY5/MGY5ZWFkZjZiY2Zi/NmE2NTgwYWQ5NGFl/ZTJfMjAyNDA1MThf/MTIwMDIyLmpwZw.jpg",
+      "coordinates": {
+        "lat": 55.642489,
+        "lng": 12.079727
+      }
+    },
+    {
+      "id": 51651,
+      "title": "Kamo River Turtle Stepping Stones ",
+      "subtitle": "These turtle-shaped concrete stepping stones provide a unique river crossing in central Kyoto. ",
+      "url": "https://www.atlasobscura.com/places/kamogawa-river-turtle-stepping-stones",
+      "location": "Kyoto, Japan",
+      "thumbnail_url": "https://img.atlasobscura.com/XmjRSPUfP2jQwVQrLFRckpb_UPUTCuDWJ8zqZJt9Wfc/rs:fill:200:200:1/g:ce/c:2997:1998:nowe:4:1914/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85ZDEz/M2FiMi0xMWFkLTQ5/ODgtYThiYy1hYmI3/N2E0NTBhNzc3MDNl/M2FjMjcyOTJmMjQ3/MTlfN0MxRUJFMUYt/REU1Ni00M0VBLTg0/ODctN0U4MEZGMDVD/RDNDLmpwZWc.jpg",
+      "coordinates": {
+        "lat": 35.029859,
+        "lng": 135.771764
+      }
+    }
+  ]
+}
+```
+
 ## 📦 Docker
 
 You can use this library in Docker.
@@ -241,15 +301,16 @@ docker run -p 3000:3000 atlas-obscura-api
 
 > Some examples
 
-- `/movie/535121`
-- `/search/quentin+tarantino`
-- `/creator/2120`
-- `/user-ratings/912-bart`
+- `/places-all`
+- `/search/prague`
+- `/place-short/465`
+- `/place-full/456`
+- `/user/bartholomej`
 
 ## Used By
 
-- Atlas Obscura Offline mobile app (Android, iOS)
-- 🤷
+- Mobile app: Atlas Obscura: Offline → [Play Store](https://play.google.com/store/apps/details?id=com.aquasoup.atlasobscura)
+- Chrome extension: Atlas Obscura Tabs → [Chrome Web Store](https://chromewebstore.google.com/detail/atlas-obscura-tabs-unoffi/jdbhojildmiebfbfepepcampalojdpdc)
 
 ## Development
 
