@@ -83,7 +83,7 @@ describe('Live: placeFull', () => {
 describe('Live: search', () => {
   test('Test some props', async () => {
     const places = await atlasObscura.search({ lat: 50.08, lng: 14.42 });
-    expect(places.results.find((p) => p.title.includes('Prague Astronomical Clock'))?.id).toBe(139);
+    expect(places.results.find((p) => p.title.includes('Kafka'))?.id).toBe(18715);
     expect(places.total.value).toBeGreaterThan(10);
   });
 });
@@ -96,4 +96,3 @@ describe('Live: user', () => {
     expect(user.places?.some((place) => place.title.includes('Okunoshima'))).toBe(true);
   });
 });
-
