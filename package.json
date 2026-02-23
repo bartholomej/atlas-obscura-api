@@ -1,6 +1,6 @@
 {
   "name": "atlas-obscura-api",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Atlas Obscura API in JavaScript. NPM library for scrapping atlasobscura.com",
   "author": "BART! <bart@bartweb.cz>",
   "type": "module",
