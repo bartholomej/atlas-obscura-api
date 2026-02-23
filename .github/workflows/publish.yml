@@ -1,69 +1,66 @@
 name: 🚀 Publish Package
 
-on:
-  push:
-    tags:
-      - 'v*'
+on: push
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  npm_publish:
-    name: 📦 NPM Publish
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v6
+  # npm_publish:
+  #   name: 📦 NPM Publish
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 📥 Checkout code
+  #       uses: actions/checkout@v6
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          registry-url: 'https://registry.npmjs.org'
+  #     - name: 🟢 Setup Node.js
+  #       uses: actions/setup-node@v6
+  #       with:
+  #         node-version: 24
+  #         registry-url: 'https://registry.npmjs.org'
 
-      - name: 🔋 Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-
+  #     - name: 🔋 Cache node modules
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: node_modules
+  #         key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-build-
 
-      - name: 🛠️ Enable Corepack & Yarn 4
-        run: |
-          corepack enable
-          corepack prepare yarn@4 --activate
+  #     - name: 🛠️ Enable Corepack & Yarn 4
+  #       run: |
+  #         corepack enable
+  #         corepack prepare yarn@4 --activate
 
-      - name: 📥 Install dependencies
-        run: yarn install
+  #     - name: 📥 Install dependencies
+  #       run: yarn install
 
-      - name: 🏗️ Build application
-        run: yarn build
+  #     - name: 🏗️ Build application
+  #       run: yarn build
 
-      - name: 🧪 Run tests
-        run: yarn test --coverage
+  #     - name: 🧪 Run tests
+  #       run: yarn test --coverage
 
-      - name: 📊 Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          fail_ci_if_error: true
-          verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  #     - name: 📊 Upload coverage to Codecov
+  #       uses: codecov/codecov-action@v5
+  #       with:
+  #         fail_ci_if_error: true
+  #         verbose: true
+  #       env:
+  #         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-      - name: Publish NPM
-        if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
-        run: cd dist && npm publish --access public
+  #     - name: Publish NPM
+  #       if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
+  #       run: cd dist && npm publish --access public
 
-      - name: Publish NPM BETA
-        if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == true
-        run: cd dist && npm publish --access public --tag beta
+  #     - name: Publish NPM BETA
+  #       if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == true
+  #       run: cd dist && npm publish --access public --tag beta
 
   docker_publish:
     name: 🐳 Docker Multi-Arch Build
-    needs: npm_publish
+    # needs: npm_publish
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout code
@@ -75,7 +72,6 @@ jobs:
         with:
           images: ${{ vars.DOCKERHUB_USERNAME }}/atlas-obscura-api
           tags: |
-            type=semver,pattern={{version}}
             type=raw,value=latest,enable=${{ !contains(github.ref, 'beta') }}
             type=raw,value=beta,enable=${{ contains(github.ref, 'beta') }}
 
