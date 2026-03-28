@@ -88,11 +88,12 @@ describe('Live: search', () => {
   });
 });
 
-describe('Live: user', () => {
-  test('Test some props', async () => {
-    const user = await atlasObscura.user('bartholomej');
-    expect(user.id).toBe(251656);
-    expect(user.places?.length).toBeGreaterThan(50);
-    expect(user.places?.some((place) => place.title.includes('Okunoshima'))).toBe(true);
-  });
-});
+// // CF JS challange is activated
+// describe('Live: user', () => {
+//   test('Test some props', async () => {
+//     const user = await atlasObscura.user('bartholomej');
+//     expect(user.id).toBe(251656);
+//     expect(user.places?.length).toBeGreaterThan(50);
+//     expect(user.places?.some((place) => place.title.includes('Okunoshima'))).toBe(true);
+//   });
+// });
