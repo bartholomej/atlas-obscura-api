@@ -46,6 +46,9 @@ Explore how to use the library with practical code snippets and sample outputs b
 import { atlasObscura } from 'atlas-obscura-api';
 
 atlasObscura.placesAll().then((places) => console.log(places));
+
+// const places = await atlasObscura.placesAll();
+// console.log(places);
 ```
 
 #### Results
@@ -75,6 +78,9 @@ atlasObscura.placesAll().then((places) => console.log(places));
 import { atlasObscura } from 'atlas-obscura-api';
 
 atlasObscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.log(search));
+
+// const search = await atlasObscura.search({ lat: 34.0522, lng: -118.2437 });
+// console.log(search);
 ```
 
 #### Results
@@ -132,6 +138,9 @@ atlasObscura.search({ lat: 34.0522, lng: -118.2437 }).then((search) => console.l
 import { atlasObscura } from 'atlas-obscura-api';
 
 atlasObscura.placeShort(494).then((place) => console.log(place));
+
+// const place = await atlasObscura.placeShort(494);
+// console.log(place);
 ```
 
 #### Results
@@ -165,6 +174,9 @@ atlasObscura.placeShort(494).then((place) => console.log(place));
 import { atlasObscura } from 'atlas-obscura-api';
 
 atlasObscura.placeFull(494).then((place) => console.log(place));
+
+// const place = await atlasObscura.placeFull(494);
+// console.log(place);
 ```
 
 #### Results
@@ -221,6 +233,9 @@ atlasObscura.placeFull(494).then((place) => console.log(place));
 import { atlasObscura } from 'atlas-obscura-api';
 
 atlasObscura.user('bartholomej').then((user) => console.log(user));
+
+// const user = await atlasObscura.user('bartholomej');
+// console.log(user);
 ```
 
 #### Results
