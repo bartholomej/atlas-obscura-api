@@ -5,7 +5,9 @@ WORKDIR /usr/src/app
 
 COPY package.json yarn.lock .yarnrc.yml tsconfig.json ./
 
-RUN corepack enable \
+# Node 25+ no longer ships Corepack
+RUN npm install -g corepack@0.36.0 \
+    && corepack enable \
     && corepack prepare yarn@4 --activate
 
 RUN yarn
@@ -22,13 +24,15 @@ ENV NODE_ENV=production
 
 COPY --from=build /usr/src/app/dist ./
 
-COPY .yarnrc.yml ./
+# Hono is bundled into server.js; the lockfile pins the library's runtime dependencies
+COPY .yarnrc.yml yarn.lock ./
 
-RUN corepack enable \
+# Node 25+ no longer ships Corepack
+RUN npm install -g corepack@0.36.0 \
+    && corepack enable \
     && corepack prepare yarn@4 --activate
 
-RUN yarn workspaces focus --production  \
-    && yarn add hono@^4.13.20 @hono/node-server@^2.1.11 \
+RUN yarn workspaces focus --production \
     && yarn cache clean
 
 EXPOSE 3000

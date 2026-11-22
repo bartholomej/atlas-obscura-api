@@ -8,7 +8,7 @@
     "start": "tsc -w",
     "prebuild": "rimraf dist",
     "build": "tsdown && cp README.md dist/ && cp LICENSE dist/",
-    "build:server": "esbuild ./server/node.ts --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.js",
+    "build:server": "esbuild ./server/node.ts --bundle --platform=node --format=esm --external:got-scraping --external:node-html-parser --sourcemap --outfile=dist/server.js",
     "server": "tsx server/node.ts",
     "worker:dev": "wrangler dev",
     "worker:deploy": "wrangler deploy",
