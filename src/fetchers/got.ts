@@ -1,6 +1,7 @@
 import { gotScraping } from 'got-scraping';
+import { FetchPage } from './types.js';
 
-export const fetchPage = async (url: string, headersCustom?: Record<string, string>): Promise<string> => {
+export const fetchPage: FetchPage = async (url, headersCustom) => {
   try {
     const response = await gotScraping({
       url,

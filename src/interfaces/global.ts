@@ -3,4 +3,4 @@ export interface AOCoordinates {
   lng: number;
 }
 
-export type AOFetchOptions = { headers?: Headers };
+export type AOFetchOptions = { headers?: Record<string, string> };

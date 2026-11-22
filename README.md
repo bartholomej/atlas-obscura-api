@@ -28,6 +28,13 @@ Install the library using npm, yarn, or your preferred package manager:
 npm install atlas-obscura-api --save
 ```
 
+### Node.js vs. React Native / browser
+
+The import is the same everywhere. Node.js gets a build that fetches with
+[got-scraping](https://github.com/apify/got-scraping). React Native (Metro) and browser bundlers pick a
+build that uses plain `fetch` through the `react-native` and `browser` export conditions, so got-scraping
+never ends up in a mobile or web bundle.
+
 ## 🚀 Usage and Examples
 
 Explore how to use the library with practical code snippets and sample outputs below:

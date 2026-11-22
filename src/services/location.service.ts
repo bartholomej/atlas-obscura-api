@@ -1,5 +1,5 @@
 import { parse } from 'node-html-parser';
-import { fetchPage } from '../fetchers/index.js';
+import { FetchPage } from '../fetchers/types.js';
 import { AOUser } from '../interfaces/user.interface.js';
 import { parsePlacesAll, parseResults } from '../utils.js';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch, urlUser } from '../vars.js';
@@ -9,14 +9,16 @@ import { AOPlaceExtend, AOPlaceShort } from './../interfaces/placeId.interface.j
 import { AOPlacesAll } from './../interfaces/places-all.interface.js';
 
 export class PlacesScraper {
+  constructor(private readonly fetchPage: FetchPage) { }
+
   public async placesAll(options?: AOFetchOptions): Promise<AOPlacesAll[]> {
-    const response = await fetchPage(URL_PLACES_ALL, options?.headers);
+    const response = await this.fetchPage(URL_PLACES_ALL, options?.headers);
     return parsePlacesAll(response);
   }
 
   public async search(coords: AOCoordinates, page = 1, options?: AOFetchOptions): Promise<AOLocationResult> {
     const url = urlSearch(coords, page);
-    const response = await fetchPage(url, options?.headers);
+    const response = await this.fetchPage(url, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.place_search = (.*?);/);
@@ -26,7 +28,7 @@ export class PlacesScraper {
 
   public async placeByIdShort(id: number, options?: AOFetchOptions): Promise<AOPlaceShort> {
     const url = urlPlaceId(id);
-    const data = await fetchPage(url, options?.headers);
+    const data = await this.fetchPage(url, options?.headers);
 
     let place: AOPlaceShort = null;
 
@@ -42,7 +44,7 @@ export class PlacesScraper {
   }
 
   public async placeFull(url: string, options?: AOFetchOptions): Promise<AOPlaceExtend> {
-    const data = await fetchPage(url, options?.headers);
+    const data = await this.fetchPage(url, options?.headers);
     const html = parse(data);
 
     const descriptions = html.querySelectorAll('.place-body p').map((p) => p.innerHTML);
@@ -77,7 +79,7 @@ export class PlacesScraper {
 
   public async user(user: string, options?: AOFetchOptions): Promise<AOUser> {
     const url = urlUser(user);
-    const response = await fetchPage(url, options?.headers);
+    const response = await this.fetchPage(url, options?.headers);
     const html = parse(response).innerHTML;
 
     const data = html.match(/AtlasObscura\.user_profile = (.*?);/);

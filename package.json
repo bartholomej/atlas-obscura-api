@@ -86,9 +86,17 @@
     "*.ts": "eslint --cache --fix"
   },
   "packageManager": "yarn@4.10.3",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "react-native": "./dist/index.fetch.js",
+  "browser": "./dist/index.fetch.js",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./dist/index.fetch.js",
+      "browser": "./dist/index.fetch.js",
+      "default": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   }
 }
