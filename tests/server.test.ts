@@ -59,6 +59,48 @@ describe('Server (Hono)', () => {
     expect((await res.json()).title).toBe('Canyon de Chelly');
   });
 
+  test('place-short, and a 502 when there is nothing to return', async () => {
+    const res = await app.request('/place-short/46288');
+    expect(res.status).toBe(200);
+    expect(ao.placeShort).toHaveBeenCalledWith(46288);
+
+    ao.placeShort.mockResolvedValue(null);
+    const empty = await app.request('/place-short/46288');
+    expect(empty.status).toBe(502);
+    expect((await empty.json()).error).toBe(Errors.PLACE_FETCH_FAILED);
+  });
+
+  test('search passes numeric coordinates, upstream errors are a 502', async () => {
+    const res = await app.request('/search/50.08/14.42');
+    expect(res.status).toBe(200);
+    expect(ao.search).toHaveBeenCalledWith({ lat: 50.08, lng: 14.42 });
+
+    ao.search.mockRejectedValue(new Error('upstream down'));
+    const failed = await app.request('/search/50.08/14.42');
+    expect(failed.status).toBe(502);
+    expect((await failed.json()).error).toBe(Errors.SEARCH_FETCH_FAILED);
+  });
+
+  test('user, and a 502 when there is nothing to return', async () => {
+    const res = await app.request('/user/bart');
+    expect(res.status).toBe(200);
+    expect(ao.user).toHaveBeenCalledWith('bart');
+
+    ao.user.mockResolvedValue(null);
+    const empty = await app.request('/user/bart');
+    expect(empty.status).toBe(502);
+    expect((await empty.json()).error).toBe(Errors.USER_FETCH_FAILED);
+  });
+
+  test('VERBOSE logs successful requests', async () => {
+    await app.request('/places-all');
+    expect(console.log).not.toHaveBeenCalled();
+
+    vi.stubEnv('VERBOSE', 'true');
+    await app.request('/places-all');
+    expect(console.log).toHaveBeenCalledWith(expect.stringContaining('/places-all'));
+  });
+
   test('place-full upstream error is a 502', async () => {
     ao.placeFull.mockRejectedValue(new TypeError("Cannot read properties of null (reading 'url')"));
     const res = await app.request('/place-full/1');
@@ -71,9 +113,17 @@ describe('Server (Hono)', () => {
     expect(place.status).toBe(404);
     expect((await place.json()).message).toContain('/place-full/1234');
 
+    const short = await app.request('/place-short');
+    expect(short.status).toBe(404);
+    expect((await short.json()).message).toContain('/place-short/1234');
+
     const lat = await app.request('/search/50.08');
     expect(lat.status).toBe(404);
     expect((await lat.json()).message).toContain('Longitude is missing');
+
+    const both = await app.request('/search');
+    expect(both.status).toBe(404);
+    expect((await both.json()).message).toContain('/search/50.08/14.42');
   });
 
   test('Unknown route', async () => {
