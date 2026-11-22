@@ -133,8 +133,9 @@ describe('Real atlasobscura.com pages', () => {
       { title: 'Statues', link: '/categories/statues' },
       { title: 'Art', link: '/categories/art' }
     ]);
-    expect(place.images).toHaveLength(24);
-    expect(place.images.every((src) => src.startsWith('https://img.atlasobscura.com/'))).toBe(true);
+    // The carousel, the lightbox and the thumbnails show the same 8 photos; only the carousel size is kept
+    expect(place.images).toHaveLength(8);
+    expect(place.images.every((src) => src.includes('/rt:fit/h:400/'))).toBe(true);
     expect(place.imageCover).toBe(place.images[0]);
     expect(place).toMatchSnapshot();
   });

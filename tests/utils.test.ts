@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { parsePlacesAll } from '../src/utils';
+import { parsePlacesAll, uniqueImages } from '../src/utils';
 
 describe('parsePlacesAll', () => {
   test('Tuples from the map endpoint', () => {
@@ -28,5 +28,27 @@ describe('parsePlacesAll', () => {
   test('JSON that is not a list returns null', () => {
     expect(parsePlacesAll('null')).toBe(null);
     expect(parsePlacesAll('{"error":"nope"}')).toBe(null);
+  });
+});
+
+describe('uniqueImages', () => {
+  const photo = (size: string, file: string) =>
+    `https://img.atlasobscura.com/sig${file}${size}/${size}/q:81/sm:1/scp:1/ar:1/${file}/cy5qcGc.jpg`;
+
+  test('Keeps the first size of each photo', () => {
+    const urls = [
+      photo('h:400', 'aHR0cHM6Ly9h'),
+      photo('h:400', 'aHR0cHM6Ly9i'),
+      photo('w:1200', 'aHR0cHM6Ly9h'),
+      photo('w:1200', 'aHR0cHM6Ly9i'),
+      photo('fill:80', 'aHR0cHM6Ly9a')
+    ];
+    expect(uniqueImages(urls)).toEqual([urls[0], urls[1], urls[4]]);
+  });
+
+  test('URLs without an encoded source are compared as they are', () => {
+    expect(
+      uniqueImages(['https://x.org/1.jpg', 'https://x.org/2.jpg', 'https://x.org/1.jpg'])
+    ).toEqual(['https://x.org/1.jpg', 'https://x.org/2.jpg']);
   });
 });

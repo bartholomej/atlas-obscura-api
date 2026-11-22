@@ -1,7 +1,7 @@
 import { parse } from 'node-html-parser';
 import { FetchPage } from '../fetchers/types.js';
 import { AOUser } from '../interfaces/user.interface.js';
-import { parsePlacesAll, parseResults } from '../utils.js';
+import { parsePlacesAll, parseResults, uniqueImages } from '../utils.js';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch, urlUser } from '../vars.js';
 import { AOCoordinates, AOFetchOptions } from './../interfaces/global.js';
 import { AOLocationResult } from './../interfaces/locations.interface.js';
@@ -72,12 +72,14 @@ export class PlacesScraper {
     });
 
     const slides = html.querySelectorAll('.swiper-slide');
-    const images = Array.from(slides)
-      .map((slide) => {
-        const img = slide.querySelector('img');
-        return img ? img.getAttribute('src') : null;
-      })
-      .filter(Boolean);
+    const images = uniqueImages(
+      Array.from(slides)
+        .map((slide) => {
+          const img = slide.querySelector('img');
+          return img ? img.getAttribute('src') : null;
+        })
+        .filter(Boolean)
+    );
 
     const imageCover = images[0];
 

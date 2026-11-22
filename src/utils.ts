@@ -50,3 +50,24 @@ export const parseResults = <T>(matches: RegExpMatchArray): T => {
   }
   return locations;
 };
+
+// img.atlasobscura.com URLs end with the original file as base64 ("aHR0c" is "http"), whatever the size
+const imageSource = (url: string): string => {
+  const parts = url.split('/');
+  const start = parts.findIndex((part) => part.startsWith('aHR0c'));
+  return start < 0 ? url : parts.slice(start).join('/');
+};
+
+/**
+ * A place page shows every photo three times: in the carousel, the lightbox and its thumbnails.
+ * Keeps the first size of each, which is the carousel one.
+ */
+export const uniqueImages = (urls: string[]): string[] => {
+  const seen = new Set<string>();
+  return urls.filter((url) => {
+    const source = imageSource(url);
+    if (seen.has(source)) return false;
+    seen.add(source);
+    return true;
+  });
+};
