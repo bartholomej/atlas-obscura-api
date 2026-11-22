@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, test, vi } from 'vitest';
 import { AtlasObscura } from '../src/atlas-obscura';
 import { PlacesScraper } from '../src/services/location.service';
@@ -100,5 +101,45 @@ describe('AtlasObscura with an injected fetcher (no network)', () => {
         '<script>AtlasObscura.place_search = {oops;</script>'
     });
     expect(await client.search({ lat: 36.13, lng: -109.47 })).toBe(null);
+  });
+});
+
+// Saved from atlasobscura.com (scripts, styles and forms removed), so a parser upgrade is checked
+// against real markup and not only the minimal pages above
+describe('Real atlasobscura.com pages', () => {
+  const mock = (name: string) => readFileSync(new URL(`./mocks/${name}`, import.meta.url), 'utf8');
+  const scraper = new PlacesScraper(async (url) =>
+    url.includes('/search') ? mock('search-page.html') : mock('place-page.html')
+  );
+
+  test('placeFull', async () => {
+    const place = await scraper.placeFull('https://www.atlasobscura.com/places/the-six-white-mice');
+
+    expect(place.description).toHaveLength(3);
+    expect(place.description[0]).toMatch(/^One of Bratislava's major shopping malls/);
+    expect(place.directions).toEqual([]);
+    expect(place.tags).toEqual([
+      { title: 'Fairytales', link: '/categories/fairytales' },
+      { title: 'Sculptures', link: '/categories/sculptures' },
+      { title: 'Statues', link: '/categories/statues' },
+      { title: 'Art', link: '/categories/art' }
+    ]);
+    expect(place.images).toHaveLength(24);
+    expect(place.images.every((src) => src.startsWith('https://img.atlasobscura.com/'))).toBe(true);
+    expect(place.imageCover).toBe(place.images[0]);
+    expect(place).toMatchSnapshot();
+  });
+
+  test('search', async () => {
+    const result = await scraper.search({ lat: 50.08, lng: 14.42 });
+
+    expect(result.results).toHaveLength(15);
+    expect(result.results[0]).toMatchObject({
+      id: 18715,
+      title: "Hlava Franze Kafky (Franz Kafka's Head)",
+      coordinates: { lat: 50.08178, lng: 14.421206 },
+      distance_from_query: '0.13'
+    });
+    expect(result).toMatchSnapshot();
   });
 });

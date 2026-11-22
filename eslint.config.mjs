@@ -7,7 +7,7 @@ import globals from 'globals';
 
 export default defineConfig([
   {
-    ignores: ['dist/', 'coverage/', '.wrangler/', 'examples/', 'mocks/', 'tests/mocks/']
+    ignores: ['dist/', 'coverage/', '.wrangler/', 'examples/', 'tests/mocks/']
   },
   {
     // Flat config lints only .js by default; without this no TypeScript file was ever linted

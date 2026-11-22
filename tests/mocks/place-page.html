@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html lang="en">
+<body
+    class="false
+           font-ao-sans h-full"
+    data-js-forms-disabled
+    data-controller="analytics icons csrf scroll alert"
+    data-action="aon-event:alert->alert#toast"
+      data-turbo="false"
+    >
+    <div data-aaad='true' data-aa-adunit='/22181265/atlasobscura_1x1' class="adapex-1x1"></div>
+  <section
+  class=" advertisement-shadow hidden sm:flex min-h-[70px] py-2 sm:min-h-[250px] sm:py-0 items-center justify-center"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_970v_1" data-aaad="true" data-aa-device="[&quot;desktop&quot;, &quot;tablet&quot;]"></div>
+</section>
+  <section
+  class=" advertisement-shadow sm:hidden flex min-h-[70px] py-2 sm:min-h-[250px] sm:py-0 items-center justify-center"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_mob_320v_1" data-aaad="true" data-aa-device="[&quot;mobile&quot;]"></div>
+</section>
+    <div class="min-h-full">
+      <nav id="navbar-component" class="bg-white relative z-[9999]" data-controller=" aon--navbar--nav-component">
+  <div
+    class="mx-auto w-full"
+    data-action="mouseleave->aon--navbar--nav-component#hideAllPopdowns"
+  >
+    <div class="flex h-[55px] md:h-[75px]">
+      <a
+        href="/"
+        aria-label="Return to the Atlas Obscura home page"
+        data-action="mouseover->aon--navbar--nav-component#hideAllPopdowns"
+        class="border-ao-lightgray flex max-w-[280px] flex-auto items-center justify-center border-y sm:border-r sm:p-2"
+      >
+        <i
+          class="flex-item ao-icon ao-icon-atlas-icon text-ao-khaki hover:animate-tada text-[31px]"
+        ></i>
+        <i
+          class="flex-item ao-icon ao-icon-atlas-logo-alt text-ao-brown relative -left-[3px] text-[45px]"
+        ></i>
+      </a>
+      <div
+        class="border-ao-lightgray flex grow justify-center border-y"
+        data-action="debounced:mouseleave->aon--navbar--nav-component#hide"
+      >
+        <div
+          class="text-base mdplus:text-[1.125rem] hidden md:flex md:space-x-1"
+        >
+            <a data-turbo="false" data-popdown-target="[data-places-menu]" data-action="mouseenter-&gt;aon--navbar--nav-component#show" aria-expanded="false" aria-haspopup="true" class="inline-flex px-1 md:px-2 mdplus:px-5 group items-center navbar-link navbar-link-active" aria-current="page" href="/articles/all-places-in-the-atlas-on-one-map">
+              <span
+                class="border-[#bbd0ca] group-hover:border-[#bbd0ca] border-b-4 border-transparent pt-[2px]"
+              >
+                Places
+              </span>
+</a>            <a data-turbo="true" data-popdown-target="[data-foods-menu]" data-action="mouseenter-&gt;aon--navbar--nav-component#show" aria-expanded="false" aria-haspopup="true" class="inline-flex px-1 md:px-2 mdplus:px-5 group items-center navbar-link navbar-link-inactive" href="/gastro">
+              <span
+                class="false group-hover:border-[#e8ddcc] border-b-4 border-transparent pt-[2px]"
+              >
+                Foods
+              </span>
+</a>            <a data-turbo="false" data-popdown-target="[data-stories-menu]" data-action="mouseenter-&gt;aon--navbar--nav-component#show" aria-expanded="false" aria-haspopup="true" class="inline-flex px-1 md:px-2 mdplus:px-5 group items-center navbar-link navbar-link-inactive" href="/articles">
+              <span
+                class="false group-hover:border-[#b3cbd8] border-b-4 border-transparent pt-[2px]"
+              >
+                Stories
+              </span>
+</a>            <a data-turbo="true" data-action="analytics#sendEvent" data-ga-event-category="Nav Menu" data-ga-event-action="Clicked Newsletters Link" aria-haspopup="false" class="inline-flex px-1 md:px-2 mdplus:px-5 group items-center navbar-link navbar-link-inactive" href="/newsletters">
+              <span
+                class="false group-hover:border-[#b3cbd8] border-b-4 border-transparent pt-[2px]"
+              >
+                Newsletters
+              </span>
+</a>        </div>
+      </div>
+      <div class="flex" data-controller="aon--navbar--search-component">
+        <button
+          data-controller="apparate"
+          data-apparate-target="trigger"
+          data-apparate-subject-selector="#profile-dropdown"
+          tabindex="0"
+          type="button"
+          id="user-menu-button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="border-ao-lightgray hidden flex-none justify-center border-y border-l hover:border-b-transparent sm:w-20 sm:items-center md:flex"
+          data-action="mouseenter->apparate#appear mouseenter->aon--navbar--nav-component#hideAllPopdowns mouseleave->apparate#vanish"
+        >
+          <div class="relative">
+            <div class="h-[35px] w-[35px] rounded-full bg-white text-sm">
+              <span class="sr-only">Open user menu</span>
+                <a
+                  href="/sign-in"
+                  class="flex h-full w-full items-center justify-center overflow-hidden rounded-full leading-none"
+                >
+                  <i class="fa-light fa-user hover:text-ao-rust text-2xl"></i>
+                  <span class="sr-only">Sign In</span>
+                </a>
+            </div>
+            <div
+              id="profile-dropdown"
+              data-transition-enter="transition transform ease-out duration-200"
+              data-transition-enter-start="opacity-0"
+              data-transition-enter-end="opacity-100"
+              data-transition-leave="transition transform ease-out duration-150"
+              data-transition-leave-start="opacity-100"
+              data-transition-leave-end="opacity-0"
+              class="border-ao-lightgray absolute -right-6 z-50 mr-px mt-[20px] hidden w-64 origin-top-right border-x border-b bg-white text-left opacity-0 shadow-sm"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu-button"
+              tabindex="-1"
+            >
+                <div class="text-center">
+                  <a data-turbo="false" data-turbo-prefetch="false" class="block user-menu-link py-3 border-b border-[#e7e7e7]" role="menuitem" tabindex="-1" href="/sign-in">Sign In</a>
+                  <a rel="nofollow" data-turbo="false" class="block user-menu-link py-3" role="menuitem" tabindex="-1" href="/join">Join</a>
+                </div>
+            </div>
+          </div>
+        </button>
+        <button
+          id="aon--navbar--open-search-button"
+          aria-hidden="true"
+          class="hidden"
+          data-action="aon--navbar--search-component#showSearch"
+          data-search-panel="#search-panel"
+        >
+          Force Open Search
+        </button>
+        <button
+          id="aon--navbar--search-button"
+          type="button"
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="true"
+          data-action="click->aon--navbar--search-component#showSearch mouseenter->aon--navbar--nav-component#hideAllPopdowns analytics#sendEvent"
+          data-ga-event-category="Nav Menu"
+          data-ga-event-action="Clicked Search Button"
+          data-search-panel="#search-panel"
+          class="border-ao-lightgray hover:text-ao-rust flex w-12 flex-none items-center justify-center border-y border-l md:w-[75px]"
+        >
+          <i
+            class="fa-light fa-magnifying-glass icon-search text-xl md:text-2xl"
+          ></i>
+        </button>
+        <div
+          class="border-ao-lightgray bg-ao-brown flex w-12 items-center justify-center border-l md:hidden"
+        >
+          <button
+            id="mobile-nav-button"
+            type="button"
+            data-action="aon--navbar--nav-component#toggleMobile"
+            class="hover:text-ao-brown inline-flex items-center justify-center rounded-md text-white hover:bg-gray-100 focus:outline-none focus:ring-0"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <turbo-frame id="popdown-places" src="/aon/navbar_popdowns/places" target="_top">
+  <div
+    data-controller="aon--navbar--popdown-places-component"
+    data-popdown
+    data-places-menu
+    data-action="mouseleave->aon--navbar--nav-component#hide"
+    class="popdown-menu absolute hidden h-auto w-full justify-center"
+  >
+      <div
+        class="bg-ao-green-100 h-40 w-full flex-initial justify-between px-2 pt-6 pb-9"
+      >
+        Loading...
+      </div>
+  </div>
+</turbo-frame>
+    <turbo-frame id="popdown-foods" src="/aon/navbar_popdowns/foods" target="_top">
+  <div
+    data-popdown
+    data-foods-menu
+    data-action="mouseleave->aon--navbar--nav-component#hide"
+    class="popdown-menu bg-ao-brown-100 absolute hidden h-auto w-full justify-center"
+  >
+      <div
+        class="bg-ao-brown-100 h-40 w-full flex-initial justify-between px-2 pt-6 pb-9"
+      >
+        Loading...
+      </div>
+  </div>
+</turbo-frame>
+    <turbo-frame id="popdown-stories" src="/aon/navbar_popdowns/stories" target="_top">
+  <div
+    data-popdown
+    data-stories-menu
+    data-action="mouseleave->aon--navbar--nav-component#hide"
+    data-transition-enter="transition transform ease-out duration-200"
+    data-transition-enter-start="opacity-0"
+    data-transition-enter-end="opacity-100"
+    data-transition-leave="transition transform ease-out duration-150"
+    data-transition-leave-start="opacity-100"
+    data-transition-leave-end="opacity-0"
+    class="popdown-menu absolute hidden h-auto w-full justify-center"
+  >
+      <div
+        class="bg-ao-blue-100 h-40 w-full flex-initial justify-between px-2 pt-6 pb-9"
+      >
+        Loading...
+      </div>
+  </div>
+</turbo-frame>
+  </div>
+  <div id="search-panel" class="hidden">
+  <div
+    data-controller="aon--navbar--search-component"
+    class="pointer-events-none fixed top-0 z-[9999] flex h-screen w-full flex-col"
+  >
+    <button
+      aria-label="Close search"
+      data-close-search-button
+      data-action="aon--navbar--search-component#hideSearch"
+      data-search-panel="#search-panel"
+      class="border-ao-lightgray hover:text-ao-rust icon-menu-close pointer-events-auto
+              absolute top-0 right-12 flex h-[55px] w-12 items-center justify-center
+              border-l bg-gray-100 text-sm text-gray-900 md:right-0 md:h-[75px]
+              md:w-[75px]"
+    >
+      <i class="fa-light fa-xmark text-xl md:text-2xl"></i>
+    </button>
+    <div class="h-[54px] shrink-0 bg-transparent md:h-[74px]"></div>
+    <div class="pointer-events-none flex grow justify-center bg-gray-100">
+      <div class="ao-container mdplus:px-4 flex justify-center">
+        <div
+          class="mdplus:px-0 pointer-events-auto w-full max-w-[800px] px-2 lg:w-[960px] lg:max-w-[960px]"
+        >
+          <div class="flex justify-center">
+            <div
+              class="search-bar mt-3 hidden w-full self-center rounded bg-white p-2 shadow-lg shadow-black/30 md:mt-11"
+              data-animate-me
+              data-transition-enter="transition-all transform-gpu ease-out duration-500"
+                data-transition-enter-start="mt-40 md:-mt-px md:w-3/4"
+            >
+            </div>
+          </div>
+          <div
+            class="hidden pt-3 md:pt-6"
+            data-animate-me
+            data-transition-enter="transition-all ease-out duration-500"
+            data-transition-enter-start="transform-gpu opacity-0 md:mt-60"
+            data-transition-enter-end="transform-gpu opacity-100"
+          >
+            <div
+              data-search-results-background
+              data-no-results-class="w-full"
+              data-results-class="w-full bg-white shadow-lg shadow-black/30"
+              class="w-full bg-white shadow-lg shadow-black/30"
+            >
+              <div
+  data-search-results-canvas
+  data-transition-enter="transition-all transform ease-out duration-500"
+  data-transition-enter-start="relative top-8 opacity-0"
+  data-transition-enter-end="relative top-0 opacity-100"
+  class="hidden scrollbar-default h-[600px] overflow-y-scroll overscroll-y-none p-6 md:h-[780px]"
+>
+  <turbo-frame data-search-results-frame="true" id="search-results" target="_top">
+    <div
+      data-controller="aon--navbar--search-results-component"
+      data-search-results-panel
+      id="search-results-panel"
+      data-search-results-href="/aon/navbar_popdowns/search?q=query"
+    >
+        <div
+          class="mt-8 text-center"
+          data-search-results-empty="true"
+        >
+          <p
+            class="text-ao-charcoal-300 mb-4 text-4xl font-semibold tracking-wider"
+          >
+            No search results found for<br />
+            &ldquo;&rdquo;
+          </p>
+          <p
+            class="text-ao-charcoal-300 text-xl font-normal leading-none tracking-wide"
+          >
+            Make sure words are spelled correctly.
+          </p>
+          <p
+            class="text-ao-charcoal-300 text-xl font-normal leading-none tracking-wide"
+          >
+            Try searching for a travel destination.
+          </p>
+        </div>
+    </div>
+</turbo-frame></div>
+              <div data-static-links-panel>
+                <div class="flex md:block">
+                  <a
+                    href="/search/search_nearby"
+                    data-turbo="false"
+                    class="flex w-full items-center border-r border-b border-[#e7e7e7] px-3 py-3 text-left text-base font-semibold tracking-wide text-gray-900 hover:bg-[#0000000d] md:border-r-0 md:py-4 md:px-6 md:text-[1.313rem]"
+                  >
+                    <i class="fa-light fa-location-arrow text-ao-rust"></i>
+                    <span class="ml-2.5 leading-none md:leading-normal">
+                      Places near me
+                    </span>
+                  </a>
+                  <a
+                    href="/random"
+                    data-turbo="false"
+                    class="flex w-full items-center border-b border-[#e7e7e7] px-3 py-3 text-left text-base font-semibold tracking-wide text-gray-900 hover:bg-[#0000000d] md:py-4 md:px-6 md:text-[1.313rem]"
+                  >
+                    <i class="fa-light fa-shuffle text-ao-rust"></i>
+                    <span class="ml-2.5 leading-none md:leading-normal">
+                      Random place
+                    </span>
+                  </a>
+                </div>
+                <section class="mt-1 w-full px-3 py-3 md:px-6 md:py-4">
+                  <h3
+                    class=" pb-4 text-sm font-semibold uppercase tracking-widest text-gray-500"
+                  >
+                    Popular Destinations
+                  </h3>
+                  <ul
+                    class="text-xl font-semibold leading-7 tracking-wider text-gray-900"
+                  >
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/paris-france">Paris</a>
+                      </li>
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/london-england">London</a>
+                      </li>
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/new-york">New York</a>
+                      </li>
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/berlin-germany">Berlin</a>
+                      </li>
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/rome-italy">Rome</a>
+                      </li>
+                      <li>
+                        <a class="hover:underline decoration-gray-300" href="/things-to-do/los-angeles-california">Los Angeles</a>
+                      </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div
+    class="border-ao-warm-gray-dark hidden border-b-4 bg-[#e7e7e7] md:hidden"
+    id="mobile-menu"
+    data-transition-enter="transition-[max-height] ease-out duration-300 origin-top overflow-y-hidden"
+    data-transition-enter-start="max-h-0"
+    data-transition-enter-end="max-h-[800px]"
+    data-transition-leave="transition-[max-height] ease-out duration-100 origin-top overflow-y-hidden"
+    data-transition-leave-start="max-h-[800px]"
+    data-transition-leave-end="max-h-0"
+  >
+    <div class="mx-8">
+  <div role="menu" aria-orientation="vertical" class="mb-2 space-y-1 pt-4 pb-4">
+      <a data-turbo="false" class="mobile-menu-link mobile-nav-active" aria-current="page" href="/articles/all-places-in-the-atlas-on-one-map">
+        <span>Places</span>
+</a>      <a data-turbo="true" class="mobile-menu-link mobile-nav-inactive" href="/gastro">
+        <span>Foods</span>
+</a>      <a data-turbo="false" class="mobile-menu-link mobile-nav-inactive" href="/articles">
+        <span>Stories</span>
+</a>      <a data-turbo="true" data-action="analytics#sendEvent" data-ga-event-category="Nav Menu" data-ga-event-action="Clicked Newsletters Link" class="mobile-menu-link mobile-nav-inactive" href="/newsletters">
+        <span>Newsletters</span>
+</a>  </div>
+    <div
+      class="text-ao-khaki border-ao-lightgray mt-2 flex w-full border-t pt-6 text-right text-sm font-semibold uppercase tracking-[0.12em]"
+    >
+      <a data-turbo="false" class="block border-ao-lightgray border-r pr-3 text-ao-brown text-lg hover:text-ao-khaki" role="menuitem" tabindex="-1" href="/sign-in">
+        <i class="fa fa-user mr-1"></i>
+        Sign In
+</a>      <a rel="nofollow" data-turbo="false" class="block pl-3 text-ao-brown text-lg hover:text-ao-khaki" role="menuitem" tabindex="-1" href="/join">Join</a>
+    </div>
+  <div role="menu" aria-orientation="vertical" class="mt-2 space-y-1 pb-3">
+  </div>
+</div>
+  </div>
+</nav>
+      <div id="page-and-footer">
+        <main>
+  <div class="aon-container-fluid mb-10 bg-gray-100 py-5 md:hidden">
+    <div class="flex gap-4">
+  <a
+    href="/search/search_nearby"
+    data-turbo="false"
+    class="flex grow items-center justify-center gap-3 rounded border border-gray-900 bg-gray-900 py-3 px-4 text-center text-sm text-white hover:bg-gray-700"
+  >
+    <span class="flex-none text-gray-300">
+    </span>
+    <span class="flex-none aon-subtitle-smallest">
+      Places near me
+    </span>
+  </a>
+  <a
+    href="/random"
+    data-turbo="false"
+    class="flex grow items-center justify-center gap-3 rounded border border-gray-900 bg-white py-3 px-4 text-center text-sm text-gray-900 hover:bg-gray-200"
+  >
+    <span class="flex-none text-gray-600">
+    </span>
+    <span class="flex-none aon-subtitle-smallest">
+      Random place
+    </span>
+  </a>
+</div>
+  </div>
+  <div class="aon-container-fluid">
+    <turbo-frame id="publication_status"></turbo-frame>
+      <header class="md:mt-10">
+        <sl-breadcrumb class="aon-breadcrumbs">
+  <i class="fa-light fa-chevron-right" slot="separator"></i>
+  <sl-breadcrumb-item
+    class="aon-breadcrumb-link"
+    href="/"
+  >
+    <i class="fa-light fa-home"></i>
+  </sl-breadcrumb-item>
+  <sl-breadcrumb-item
+    class="aon-breadcrumb-link"
+    href="/destinations"
+  >
+    All
+  </sl-breadcrumb-item>
+      <sl-breadcrumb-item
+        class="aon-breadcrumb-link"
+          href="/things-to-do/slovakia"
+      >
+        Slovakia
+      </sl-breadcrumb-item>
+      <sl-breadcrumb-item
+        class="aon-breadcrumb-link"
+          href="/things-to-do/bratislava-slovakia"
+      >
+        Bratislava
+      </sl-breadcrumb-item>
+  <sl-breadcrumb-item class="aon-breadcrumb-active">
+    ‘The Six White Mice’
+  </sl-breadcrumb-item>
+</sl-breadcrumb>
+        <div class="md:aon-grid my-10 md:items-center">
+          <div
+            class="flex flex-col items-start gap-6 md:col-span-5 md:gap-8 lg:col-span-7 lg:gap-10"
+          >
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-col gap-3">
+                <h1 class="aon-heading-smaller text-gray-900">
+                  ‘The Six White Mice’
+                </h1>
+                <h2 class="aon-body-big text-gray-600">
+                  A series of bronze circus performers spread throughout a Slovakian shopping center.
+                </h2>
+                <h3 class="aon-label-big order-first text-gray-900">
+                  Bratislava, Slovakia
+                </h3>
+              </div>
+            </div>
+            <div
+              class="flex w-full flex-col sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div class="aon--byline-avatar-component flex items-center gap-4">
+  <div class="aon--avatar-group-component shrink-0">
+    <span class="aon--avatar-component large has-image">
+    <img
+      src="https://img.atlasobscura.com/BIXcz0ePXnX5Gtpe5T3Pt2SJoAwpb-6yQQJGEnUFoyQ/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDI0LzAyLzExLzIz/LzE1LzQyL2U0YTVl/ZmM4LTc0ZmYtNGI3/YS05Njc1LTRmNTI2/ZTU2NWQ3Ny9EU0Nf/MDUyMi5qcGVn.jpg"
+      alt="Fred Cherrygarden profile photo"
+      class="h-full w-full object-cover"
+      loading="lazy"
+    />
+</span>
+</div>
+  <div>
+    <div
+      class="aon-label-smaller text-gray-500 mb-2"
+    >
+      Added By
+    </div>
+    <div
+      class="aon-heading-tiniest text-gray-900 leading-none"
+    >
+        <a class="animate-underline md:hover:bg-underline" data-turbo="false" data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Byline" data-ga-event-action="Clicked On: fred-cherrygarden" data-ga-event-label="@PATH@" href="/users/fred-cherrygarden/places-added">Fred Cherrygarden</a>
+    </div>
+  </div>
+</div>
+              <div class="hidden sm:flex sm:gap-2">
+                <button
+  data-controller="aon--social--facebook-button-component"
+  data-action="aon--social--facebook-button-component#share"
+  class="flex items-center bg-gray-50 p-3 rounded-sm hover:bg-gray-100 h-10 w-10"
+>
+  <i class="fa-brands fa-facebook text-base text-gray-900"></i>
+  <span class="sr-only">Share</span>
+</button>
+                <button
+  data-controller="aon--social--twitter-button-component"
+  data-action="aon--social--twitter-button-component#share"
+  data-share-text="%40atlasobscura"
+  class="flex items-center bg-gray-50 p-3 rounded-sm hover:bg-gray-100 h-10 w-10"
+>
+  <i class="fa-brands fa-x-twitter text-base text-gray-900"></i>
+  <span class="sr-only">Tweet</span>
+</button>
+                <a
+  href="mailto:?subject=%E2%80%98The%20Six%20White%20Mice%E2%80%99&amp;body=%E2%80%98The%20Six%20White%20Mice%E2%80%99%20-%20A%20series%20of%20bronze%20circus%20performers%20spread%20throughout%20a%20Slovakian%20shopping%20center.%20%0A%0Ahttps%3A%2F%2Fwww.atlasobscura.com%2Fplaces%2Fthe-six-white-mice?utm_source=share_by_email%26utm_medium=email%26utm_campaign=mailto_share"
+  target="_blank"
+  class="inline-flex items-center bg-gray-50 p-3 rounded-sm hover:bg-gray-100 h-10 w-10"
+  data-controller="aon--social--email-button-component"
+  data-action="aon--social--email-button-component#recordShare"
+  data-aon--social--email-button-component-url-value="https://www.atlasobscura.com/aon/shares"
+  data-aon--social--email-button-component-shareable-id-value="46606"
+  data-aon--social--email-button-component-shareable-type-value="Place"
+>
+  <i class="fa-solid fa-envelope text-base text-gray-900"></i>
+  <span class="sr-only">Email</span>
+</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden md:col-span-3 md:-mt-24 md:block lg:col-span-3 lg:col-start-10"
+          >
+            <div class="flex flex-row gap-6"
+  data-controller="activity-streams list-buttons aon--places--button-group-component"
+  data-action="
+  activity-streams--button:marked@window->aon--places--button-group-component#incrementCount activity-streams--button:unmarked@window->aon--places--button-group-component#decrementCount
+  drawer-component:listUpdated@window->aon--places--button-group-component#updateListCount"
+  data-list-buttons-url-value="/aon/current_user_lists.json"
+  data-activity-streams-url-value="/aon/activity_buttons/activity_streams"
+  data-activity-streams-mark-url-value="/aon/activity_buttons/activity_streams/mark"
+  data-activity-streams-unmark-url-value="/aon/activity_buttons/activity_streams/unmark"
+  data-activity-streams-join-url-value="/join">
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-controller="aon--activity-streams--button-component" data-action="click->aon--activity-streams--button-component#redirectIfGuest aon-toggle-button:toggled->aon--activity-streams--button-component#handleToggled aon-event:activityButtonToggled->analytics#handleAtlasAction" data-aon--activity-streams--button-component-marked-value="false" data-aon--activity-streams--button-component-mark-id-value="place_46606" data-aon--activity-streams--button-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--activity-streams--button-component-resource-id-value="46606" data-aon--activity-streams--button-component-resource-type-value="Place" data-aon--activity-streams--button-component-kind-value="has-done" data-aon--activity-streams--button-component-source-value="Place Page"
+  data-activity-streams-target="button"
+  class="activity-streams--button"
+>
+    <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked click->aon--toggle-button-component#toggle" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="I've Been Here" data-aon--toggle-button-component-inactive-title-value="Been Here?" data-aon--toggle-button-component-active-tooltip-value="I've Been Here" data-aon--toggle-button-component-inactive-tooltip-value="Been Here?" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="as-button-has-done-place_46606"
+      class="aon-toggle-button activity-button btn-aon has-done large "
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="ao-icon ao-icon-flag-full block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number data-aon--places--button-group-component-target="hasDoneCount" class="aon-heading-tiny text-gray-900" value="177"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Been Here</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-controller="aon--activity-streams--button-component" data-action="click->aon--activity-streams--button-component#redirectIfGuest aon-toggle-button:toggled->aon--activity-streams--button-component#handleToggled aon-event:activityButtonToggled->analytics#handleAtlasAction" data-aon--activity-streams--button-component-marked-value="false" data-aon--activity-streams--button-component-mark-id-value="place_46606" data-aon--activity-streams--button-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--activity-streams--button-component-resource-id-value="46606" data-aon--activity-streams--button-component-resource-type-value="Place" data-aon--activity-streams--button-component-kind-value="wants-to" data-aon--activity-streams--button-component-source-value="Place Page"
+  data-activity-streams-target="button"
+  class="activity-streams--button"
+>
+    <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked click->aon--toggle-button-component#toggle" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="I Want to Visit" data-aon--toggle-button-component-inactive-title-value="Want to Visit?" data-aon--toggle-button-component-active-tooltip-value="I Want to Visit" data-aon--toggle-button-component-inactive-tooltip-value="Want to Visit?" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="as-button-wants-to-place_46606"
+      class="aon-toggle-button activity-button btn-aon wants-to large "
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="ao-icon ao-icon-small-star-full block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number 
+      data-aon--places--button-group-component-target="wantsToCount" class="aon-heading-tiny text-gray-900" value="101"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Want to go</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-user-lists-popup-component
+  class="inline-block"
+  data-controller="aon--lists-popup-component" data-action="aon-toggle-button:clicked->aon--lists-popup-component#triggerDrawer" data-aon--lists-popup-component-lists-index-url-value="/aon/current_user_lists?create_list=true&popup=true&resource_sgid=eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--lists-popup-component-loaded-value="false" data-aon--lists-popup-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--lists-popup-component-resource-id-value="46606" data-aon--lists-popup-component-resource-type-value="Place"
+>
+  <div
+    data-list-button-id="lists-popup-button-place-46606"
+    data-list-buttons-target="button"
+    data-list-buttons-listable-id="46606"
+    data-list-buttons-listable-type="place"
+    class="lists-popup--anchor inline-block"
+  >
+      <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="Add to List" data-aon--toggle-button-component-inactive-title-value="Add to List" data-aon--toggle-button-component-active-tooltip-value="Add to List" data-aon--toggle-button-component-inactive-tooltip-value="Add to List" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="lists-popup-button-place-46606"
+      class="aon-toggle-button activity-button list-button btn-aon in-list large"
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="fa-light fa-list block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+  </div>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number 
+      data-aon--places--button-group-component-target="listCount"
+      class="aon-heading-tiny text-gray-900" value="37"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Added to list</span>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </header>
+        <section>
+            <div class="aon--image-carousel-component w-full flex flex-col" role="region" aria-roledescription="carousel" data-controller=" aon--image-carousel-component" data-aon--image-carousel-component-clickable-images-value="true">
+  <div class="carousel w-full relative" style="height: 400px" data-aon--image-carousel-component-target="carousel">
+    <button class="custom-swiper-button-prev carousel-nav invisible" aria-label="Previous slide" data-aon--image-carousel-component-target="prevButton">
+      <i class="fa-thin fa-chevron-right"></i>
+</button>
+    <button class="custom-swiper-button-next carousel-nav invisible" aria-label="Next slide" data-aon--image-carousel-component-target="nextButton">
+      <i class="fa-thin fa-chevron-right"></i>
+</button>
+    <div class="swiper skeleton">
+      <div class="swiper-wrapper hidden">
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="1 of 8" data-index="0">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/p6r-gpyqFBUtXMqOKsEgwWeOuDB8qeuIaAR9FP_W_bg/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/ZMPTijSX-9cfx9JK5rqDhmGFbddI9urQWefI-QN1-HQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" aria-describedby="caption-sid-dad08a05" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/ZMPTijSX-9cfx9JK5rqDhmGFbddI9urQWefI-QN1-HQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-dad08a05">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Yulia, the trapeze artist.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="2 of 8" data-index="1">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/YMNPePUThc-0NJQLp6rko0YvYl743vz_FRNjhEf6SHc/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/SM8o9hf73RntgXsPu85C1KzJL5zxNJBt4EoDC_1UirY/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-ea5d565a" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/SM8o9hf73RntgXsPu85C1KzJL5zxNJBt4EoDC_1UirY/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-ea5d565a">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Olga the stilt-walker and Pat the fire-eater.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="3 of 8" data-index="2">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/MePPt_Z627jMVKgBRDvZp0fL2t3Piz8JXn2bFOmiGLQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/WxOOKKqw3WLqsUc2eC7WjLaiGF3_jSbYItqEnJDrq_c/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-63e0e4ae" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/WxOOKKqw3WLqsUc2eC7WjLaiGF3_jSbYItqEnJDrq_c/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-63e0e4ae">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Isabelle, the tightrope walker.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="4 of 8" data-index="3">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/TxsQRQHBAD8HqqE1ldNgf2ywrZ43LCx_dCP4Nz2PtZY/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/1vnPa5njorkQYak-91LbX-Rh6X9sTn_IrE68KltJte8/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-1ae59325" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/1vnPa5njorkQYak-91LbX-Rh6X9sTn_IrE68KltJte8/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-1ae59325">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Olga.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="5 of 8" data-index="4">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/gRTkfRSgZublFdM6JcNhdGsm3OZmNxs728oN8DPeusk/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/fP2KL7-plE2XJ8T6PuIDtskrecMphuwsbC9pPTtBwuU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-c1f69a49" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/fP2KL7-plE2XJ8T6PuIDtskrecMphuwsbC9pPTtBwuU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-c1f69a49">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Zip, one of Isabelle&#39;s brothers.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 599px; height: 400px;" role="group" aria-roledescription="slide" aria-label="6 of 8" data-index="5">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/CWVWBxPR_yYfHL5rZVprVZtSNAbZzs7X1M-58CJ830Q/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/lei-7OgVZT5sd2FFXGLQDsjJhE-ngPYHCsJdgFoZlmc/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 599px;" loading="lazy" aria-describedby="caption-sid-efac2c20" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/lei-7OgVZT5sd2FFXGLQDsjJhE-ngPYHCsJdgFoZlmc/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-efac2c20">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Isabelle.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="7 of 8" data-index="6">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/aV0nDYZaAIcI8xWPTTtr05eyYNDWDIitfkz64joNTyU/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/F9jcUDejmaQRGbekAU6-6IO6Kds4bBnCRR4YgQKaKe8/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-fdf2ad18" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/F9jcUDejmaQRGbekAU6-6IO6Kds4bBnCRR4YgQKaKe8/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-fdf2ad18">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Teo the handyman.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>
+          <div class="swiper-slide flex-col" style="width: 600px; height: 400px;" role="group" aria-roledescription="slide" aria-label="8 of 8" data-index="7">
+            <picture>
+              <source srcset="https://img.atlasobscura.com/J5DMsdDKwjf0h7213Dov_pqFo_WHTKvYzltwvdHkRC8/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.webp" type="image/webp" />
+              <source srcset="https://img.atlasobscura.com/Th4PQVl4EFkDeL8d0kNXIpPlMSKlFWk3ahMgKiVYpAQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+              <img class="clickable" style="height: 400px; width: 600px;" loading="lazy" aria-describedby="caption-sid-eb0a6a76" data-action="click-&gt;aon--image-carousel-component#handleImageClick" src="https://img.atlasobscura.com/Th4PQVl4EFkDeL8d0kNXIpPlMSKlFWk3ahMgKiVYpAQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+              <template class="caption">
+                <div class="aon--image-caption-component" id="caption-sid-eb0a6a76">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      ‘The Six White Mice’
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+              </template>
+</div>      </div>
+    </div>
+</div>
+    <div class="w-full text-left flex items-center" data-aon--image-carousel-component-target="caption">
+      <span aria-hidden="true" class="hidden">CAPTION</span>
+</div></div>
+          <div class="aon--lightbox-gallery-component" data-controller="aon--lightbox-gallery-component">
+  <sl-dialog class="lightbox-dialog" label="Image Gallery" data-action="sl-show-&gt;aon--lightbox-gallery-component#initLightbox" data-aon--lightbox-gallery-component-target="dialog">
+    <div class="lightbox-content flex h-full flex-col">
+      <div class="main-image-container min-h-0 flex-1">
+        <div
+          class="swiper main-swiper h-full w-full"
+          data-aon--lightbox-gallery-component-target="mainSwiper"
+        >
+          <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/fuJzzKrSTkMD7INauDfLEaLSETRNiRQKgZSw9rwoU1M/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/pdRwrJWseMAzf7OIDF2M1rTpqKV2LGMn9UU0OSLCjZQ/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/pdRwrJWseMAzf7OIDF2M1rTpqKV2LGMn9UU0OSLCjZQ/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Yulia, the trapeze artist.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/5YtjPD3X3Cri4z1aRqBPlB3KUUxp4l3tGNVQFvM-HE8/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/ruIeqZzwa3aNQQDTk3GWSZTewRnQKeDgBCgUI4nmbJs/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/ruIeqZzwa3aNQQDTk3GWSZTewRnQKeDgBCgUI4nmbJs/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Olga the stilt-walker and Pat the fire-eater.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/ROQC-Ym7WF_RSo093LbDIZF1SmOBuXeB1tdH1scSU6U/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/xQ-sI7l_6PVoxG35TpE-bsMS-WhPcO4B9FVeP7t_e74/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/xQ-sI7l_6PVoxG35TpE-bsMS-WhPcO4B9FVeP7t_e74/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Isabelle, the tightrope walker.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/-x62dhe35UBB5V2E5xz6wl8439GSP8USgsKHy_TFniA/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/TRTBHnFrqpBkNdDfyXdIfzfTF54V0q9MhPpbH9M88hw/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/TRTBHnFrqpBkNdDfyXdIfzfTF54V0q9MhPpbH9M88hw/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Olga.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/RuhuYHZrZkcpp_oIJNx_DkKXX35U2w-9B4ufdvZ4iic/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/3BR2y3OhSEuSpxvG-c3NqFdZdNNXg4gXBRMccu7XgRk/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/3BR2y3OhSEuSpxvG-c3NqFdZdNNXg4gXBRMccu7XgRk/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Zip, one of Isabelle&#39;s brothers.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/MXi1Yv8DjaCuISfdbJ1NE4wGkeGGxrRe_tuV-XtmDYE/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/TNb8_LLg096ljiqnwlPPboq4Ge2dtbNcXj_TTQF9y8Y/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/TNb8_LLg096ljiqnwlPPboq4Ge2dtbNcXj_TTQF9y8Y/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Isabelle.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/hPngAOrC4UEoFjPslCE-wgJbBQRi4c56ddwdVLfGTzg/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/9CJCO4MxyMYLeM2hcajAhz_gtV9ao48iizBC0boAZfQ/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/9CJCO4MxyMYLeM2hcajAhz_gtV9ao48iizBC0boAZfQ/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      Teo the handyman.
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div
+                  class="flex h-full w-full flex-col items-center justify-center"
+                >
+                  <div class="slide-image-container">
+                    <picture>
+                      <source
+                        srcset="https://img.atlasobscura.com/5EuM_4CCdhA3etINjIOcpl9HUtfCRHifuFfRfit2bKM/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="https://img.atlasobscura.com/U5ZCkaXfLsNkwUILLwYh2B4Dp7I4wPmCUA_Wzt9gZE8/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+                      <img src="https://img.atlasobscura.com/U5ZCkaXfLsNkwUILLwYh2B4Dp7I4wPmCUA_Wzt9gZE8/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+                    </picture>
+                  </div>
+                  <div class="caption-container text-center">
+                    <div class="aon--image-caption-component">
+  <div class="caption-wrapper text-gray-500 mt-1 aon-subtitle-micro">
+    <span>
+      ‘The Six White Mice’
+    </span>
+    &nbsp;
+    <a class="underline hover:text-gray-600" href="/users/fred-cherrygarden">Fred Cherrygarden / Atlas Obscura User</a></div></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="thumbnail-strip flex-none justify-center sm:flex">
+        <div
+          class="swiper thumb-swiper w-full max-w-full"
+          data-aon--lightbox-gallery-component-target="thumbSwiper"
+        >
+          <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="0"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/jU38DFgu6jITuH5CKoQ966NXJLxGbarmy_RCz0RTs94/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/owxW3CaUJKPdtDQkvuEvj44kDVzZ7DQDpzuLByVTqqI/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/jU38DFgu6jITuH5CKoQ966NXJLxGbarmy_RCz0RTs94/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/jU38DFgu6jITuH5CKoQ966NXJLxGbarmy_RCz0RTs94/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYjVj/OGNlZC02OWRlLTQz/MDEtYTAyOS0zNmI0/OGJkMTUxOTJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkIyRURFMjAt/QUU1OS00RUExLTk5/OEMtNjFBOTIzQzY4/Mjk5LmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="1"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/ID_5NQOzTxjFPeTRX9-k0oTdBUwdFncoiepqJa05GVg/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/bb1alwDlPArZ0vMjANfro3Og0RyZ3W59lZ5eVpDnABM/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/ID_5NQOzTxjFPeTRX9-k0oTdBUwdFncoiepqJa05GVg/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/ID_5NQOzTxjFPeTRX9-k0oTdBUwdFncoiepqJa05GVg/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hZmFl/MTAwNi1lYWI2LTRj/NzQtOWI4Ni1mOTgz/ZjA5YzBiMGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMUEwRDlBMjkt/QkRFNS00NDZCLTg2/RjEtRjFBQTc4OEU0/ODRBLmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="2"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/icaRF7Duj93eoJCWCc8tWVMuN15ley31QLpO3otlK70/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/D-7n2fngVEzyZycetigcTXAn6ehj3wFiFrOeAxCL2KA/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/icaRF7Duj93eoJCWCc8tWVMuN15ley31QLpO3otlK70/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/icaRF7Duj93eoJCWCc8tWVMuN15ley31QLpO3otlK70/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80ZTMx/N2VlNS02YWU0LTRj/NmUtOGFmOC02NzE3/NDAwNzViYWRkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQ0NCRkVDMzAt/MDA3QS00NDlFLThE/QUMtN0JFODBCRTM3/QUE2LmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="3"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/AIF5G8ML5FvcuN4M0h79jm1nmfyU1lAGXe3WZbSLbwU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/_xw3NAekt6WvvqQ5HSs9c0PNZz5Npe7ggcNGxWYzLgw/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/AIF5G8ML5FvcuN4M0h79jm1nmfyU1lAGXe3WZbSLbwU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/AIF5G8ML5FvcuN4M0h79jm1nmfyU1lAGXe3WZbSLbwU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hYjYw/NDJjYy0wMDE5LTQ5/ZmEtOTk4Zi01NjY0/NmM3Njk1MmZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfODc2OERDRkIt/RjE2Qy00MzA3LUIw/OTYtQjY2RjFBOURB/NEY2LmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="4"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/erHxXcW8op4gRVO75qBUyX7w_Zei8l0nrz0rDt7SFM8/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/908AUqOPu2I2iNpAD1MFtqOmde0yWN2vkcVRYLD3DT0/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/erHxXcW8op4gRVO75qBUyX7w_Zei8l0nrz0rDt7SFM8/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/erHxXcW8op4gRVO75qBUyX7w_Zei8l0nrz0rDt7SFM8/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8xNDhi/YTA2Mi1mOGZhLTQ5/MGMtYWFhZi05YTc0/OWRjN2Y3YWZkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkMwRTlEMkIt/QjdBMC00RjM0LUE5/N0MtNjc3MkFGRjI5/NjZGLmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="5"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/v0viucAR30hR4Q2-AfwevTPKRgPKCxF8-HBm05rpEkI/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/bDMd9Z6KitPbfmOHyPIv_vbqpJgnM6pAPDjM0fxwrYw/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/v0viucAR30hR4Q2-AfwevTPKRgPKCxF8-HBm05rpEkI/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/v0viucAR30hR4Q2-AfwevTPKRgPKCxF8-HBm05rpEkI/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kN2Jm/YzdmMS0wYmIyLTQy/ODMtOGUxNy04MmUy/YTk2ZDQxYTVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfNkU3MzE2RjYt/Mzg1MS00QTAwLTk3/M0QtNzNBQ0I5QjU1/MzM0LmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="6"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/eZWCUpV6HniI8QHlUI0jGHs-OSTvaoRnM_EECFoxtsU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/mWlcao5U7FXRXqs6wdomjpD_I7HB7FShNJNNGLUU9-8/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/eZWCUpV6HniI8QHlUI0jGHs-OSTvaoRnM_EECFoxtsU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/eZWCUpV6HniI8QHlUI0jGHs-OSTvaoRnM_EECFoxtsU/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kYjhl/ODZlOC02YWIwLTQ3/NmYtODY4ZC0wNDFj/M2VlYzI0MzJkYzNi/ZTE4MjQ0NWNhOTY2/NTRfMDBCOEI2NzUt/RDA4Qy00NzI1LThE/NkUtMDRDNUFBRDQ4/NUQ3LmpwZWc.jpg" />
+</picture>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 80px;"
+                data-index="7"
+              >
+                <link itemprop="image" href="https://img.atlasobscura.com/7zogipxF6pTyA-XUKr_MJX6atPyYZxMF4LwsV5NDLu0/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/auH8QE2ewU6N9MoeDE9ByAM-Iz6SRWvp9zTtr9ScOsc/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/7zogipxF6pTyA-XUKr_MJX6atPyYZxMF4LwsV5NDLu0/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+  <img alt="" loading="lazy" class="w-full bg-gray-100 object-cover cursor-pointer" style="aspect-ratio: 80 / 80;" src="https://img.atlasobscura.com/7zogipxF6pTyA-XUKr_MJX6atPyYZxMF4LwsV5NDLu0/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTI0/ZGRjZC02MzVmLTQz/NGItYmM4Yy0yNjhi/OWI3NDgxZGVkYzNi/ZTE4MjQ0NWNhOTY2/NTRfQUE5QjIzMEIt/MDc5Ny00Q0Y2LUFE/NjYtMzA4MDcyM0Mz/OThELmpwZWc.jpg" />
+</picture>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</sl-dialog></div>
+        </section>
+    <div class="flex justify-center py-10 md:hidden">
+      <div class="flex flex-row gap-6"
+  data-controller="activity-streams list-buttons aon--places--button-group-component"
+  data-action="
+  activity-streams--button:marked@window->aon--places--button-group-component#incrementCount activity-streams--button:unmarked@window->aon--places--button-group-component#decrementCount
+  drawer-component:listUpdated@window->aon--places--button-group-component#updateListCount"
+  data-list-buttons-url-value="/aon/current_user_lists.json"
+  data-activity-streams-url-value="/aon/activity_buttons/activity_streams"
+  data-activity-streams-mark-url-value="/aon/activity_buttons/activity_streams/mark"
+  data-activity-streams-unmark-url-value="/aon/activity_buttons/activity_streams/unmark"
+  data-activity-streams-join-url-value="/join">
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-controller="aon--activity-streams--button-component" data-action="click->aon--activity-streams--button-component#redirectIfGuest aon-toggle-button:toggled->aon--activity-streams--button-component#handleToggled aon-event:activityButtonToggled->analytics#handleAtlasAction" data-aon--activity-streams--button-component-marked-value="false" data-aon--activity-streams--button-component-mark-id-value="place_46606" data-aon--activity-streams--button-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--activity-streams--button-component-resource-id-value="46606" data-aon--activity-streams--button-component-resource-type-value="Place" data-aon--activity-streams--button-component-kind-value="has-done" data-aon--activity-streams--button-component-source-value="Place Page"
+  data-activity-streams-target="button"
+  class="activity-streams--button"
+>
+    <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked click->aon--toggle-button-component#toggle" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="I've Been Here" data-aon--toggle-button-component-inactive-title-value="Been Here?" data-aon--toggle-button-component-active-tooltip-value="I've Been Here" data-aon--toggle-button-component-inactive-tooltip-value="Been Here?" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="as-button-has-done-place_46606"
+      class="aon-toggle-button activity-button btn-aon has-done large "
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="ao-icon ao-icon-flag-full block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number data-aon--places--button-group-component-target="hasDoneCount" class="aon-heading-tiny text-gray-900" value="177"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Been Here</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-controller="aon--activity-streams--button-component" data-action="click->aon--activity-streams--button-component#redirectIfGuest aon-toggle-button:toggled->aon--activity-streams--button-component#handleToggled aon-event:activityButtonToggled->analytics#handleAtlasAction" data-aon--activity-streams--button-component-marked-value="false" data-aon--activity-streams--button-component-mark-id-value="place_46606" data-aon--activity-streams--button-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--activity-streams--button-component-resource-id-value="46606" data-aon--activity-streams--button-component-resource-type-value="Place" data-aon--activity-streams--button-component-kind-value="wants-to" data-aon--activity-streams--button-component-source-value="Place Page"
+  data-activity-streams-target="button"
+  class="activity-streams--button"
+>
+    <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked click->aon--toggle-button-component#toggle" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="I Want to Visit" data-aon--toggle-button-component-inactive-title-value="Want to Visit?" data-aon--toggle-button-component-active-tooltip-value="I Want to Visit" data-aon--toggle-button-component-inactive-tooltip-value="Want to Visit?" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="as-button-wants-to-place_46606"
+      class="aon-toggle-button activity-button btn-aon wants-to large "
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="ao-icon ao-icon-small-star-full block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number 
+      data-aon--places--button-group-component-target="wantsToCount" class="aon-heading-tiny text-gray-900" value="101"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Want to go</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 items-center">
+    <div
+  data-user-lists-popup-component
+  class="inline-block"
+  data-controller="aon--lists-popup-component" data-action="aon-toggle-button:clicked->aon--lists-popup-component#triggerDrawer" data-aon--lists-popup-component-lists-index-url-value="/aon/current_user_lists?create_list=true&popup=true&resource_sgid=eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--lists-popup-component-loaded-value="false" data-aon--lists-popup-component-resource-sgid-value="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2F0bGFzL1BsYWNlLzQ2NjA2P2V4cGlyZXNfaW4iLCJwdXIiOiJkZWZhdWx0In19--9abfeaf8ef424fefc27ce5e2450d53e36ee38ec7" data-aon--lists-popup-component-resource-id-value="46606" data-aon--lists-popup-component-resource-type-value="Place"
+>
+  <div
+    data-list-button-id="lists-popup-button-place-46606"
+    data-list-buttons-target="button"
+    data-list-buttons-listable-id="46606"
+    data-list-buttons-listable-type="place"
+    class="lists-popup--anchor inline-block"
+  >
+      <sl-tooltip data-tooltip content="" class="aon-tooltip">
+    <button
+      data-controller="aon--toggle-button-component" data-action="click->aon--toggle-button-component#clicked" data-aon--toggle-button-component-active-value="false" data-aon--toggle-button-component-active-title-value="Add to List" data-aon--toggle-button-component-inactive-title-value="Add to List" data-aon--toggle-button-component-active-tooltip-value="Add to List" data-aon--toggle-button-component-inactive-tooltip-value="Add to List" data-aon--toggle-button-component-active-class="active" data-aon--toggle-button-component-inactive-class="inactive"
+        data-toggle-button-id="lists-popup-button-place-46606"
+      class="aon-toggle-button activity-button list-button btn-aon in-list large"
+      role="button"
+      aria-pressed="false"
+    >
+        <i class="fa-light fa-list block"></i>
+      <span class="sr-only">Button</span>
+    </button>
+  </sl-tooltip>
+  </div>
+</div>
+    <div class="flex flex-col gap-2 items-center">
+      <sl-format-number 
+      data-aon--places--button-group-component-target="listCount"
+      class="aon-heading-tiny text-gray-900" value="37"></sl-format-number>
+      <span class="aon-label-smaller text-gray-900 text-center">Added to list</span>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="aon-grid my-8">
+        <article
+          class="mdplus:order-1 mdplus:col-span-5 order-2 col-span-full flex flex-col lg:col-span-6 lg:col-start-2"
+        >
+          <section class="mb-10" id="place-about">
+            <h2 class="aon-heading-smallest mb-4 text-gray-900">About</h2>
+            <div
+              class="prose prose-p:aon-body-small prose-p:text-gray-900 prose-p:mb-4 prose-a:aon-body-link place-body max-w-none"
+            >
+              <p>One of Bratislava's major shopping malls, Eurovea Galleria is a vibrant hangout spot located right by the riverfront promenade of the Danube, boasting many shops and restaurants. Throughout the mall, there are numerous statues of circus performers, a delightful feature often taken as a selfie opportunity but otherwise rarely talked about.</p>
+<p>The sculptures were created by English artist Colin Spofforth, several of whose works are publicly showcased in Greater Manchester and Bucharest among others. Based on an original fairytale written by his wife,&nbsp;<em>The Six White Mice</em> tells the story of a magical troupe of circus performers, two brave children, and six white mice revolting against a greedy tyrant.</p>
+<p>Twelve of the characters can be found at the Eurovea mall, including the eccentric Ring Master, playful tightrope walker Isabelle, her protective brothers Zip and Zap, stilt-walking Olga and her fire-eating partner Pat, Yulia the trapeze artist, aquaphobic strongman Aric, Teo the handyman, sad clown Pier with his all-seeing magic mirror, flute-playing boy Zac and his sidekick dog Maggie. If you wish to find them all, there is a map on the official site indicating their locations in the mall.</p>
+            </div>
+              <div id="places-newsletter-module" class="places-newsletter-standalone">
+  <article role="article" class="places-newsletter-standalone-article">
+    <!-- White header section with logo -->
+    <div class="places-newsletter-header">
+      <div class="places-newsletter-branding">
+        <a href="/" 
+           aria-label="Return to the Atlas Obscura home page" 
+           data-action="mouseover->aon--navbar--nav-component#hideAllPopdowns" 
+           class="places-newsletter-branding-link">
+          <i class="ao-icon ao-icon-atlas-icon" aria-hidden="true"></i>
+          <i class="ao-icon ao-icon-atlas-logo-alt" aria-hidden="true" style="font-size: 30px;"></i>
+          <span class="places-newsletter-places">Places</span>
+        </a>
+      </div>
+    </div>
+    <!-- Gray content section -->
+    <div class="places-newsletter-body" style="padding: 20px; padding-right: 30px;">
+      <!-- Heading -->
+      <header>
+        <h2 class="aon-heading-smallest">
+          Discover your next amazing Atlas Place.
+        </h2>
+        <p class="places-newsletter-description" style="font-size: 20px; margin: 15px 0; letter-spacing: .63px;">
+          Get more unusual and extraordinary places each week with the Atlas Obscura Places newsletter.
+        </p>
+      </header>
+      <!-- Form -->
+      <!-- Disclaimer -->
+      <p class="places-newsletter-disclaimer">
+        Your newsletter subscriptions with us are subject to Atlas Obscura's 
+        <a target="_blank" rel="noopener" href="/privacy">Privacy Policy</a> 
+        and 
+        <a target="_blank" rel="noopener" href="/terms">Terms of Use</a>.
+      </p>
+    </div>
+  </article>
+</div>
+          </section>
+          <section
+  class="advertisement-disclaimer hidden sm:flex flex-col items-center justify-center border-none pt-0"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_300v_2" data-aaad="true" data-aa-device="[&quot;desktop&quot;, &quot;tablet&quot;]"></div>
+</section>
+          <section
+  class="advertisement-disclaimer sm:hidden flex flex-col items-center justify-center border-none pt-0"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_mob_300v_2" data-aaad="true" data-aa-device="[&quot;mobile&quot;]"></div>
+</section>
+          <section class="mt-10 divide-y rounded-xl bg-gray-50">
+            <div class="flex flex-col gap-8 px-5 py-8">
+              <h2 class="aon-heading-smallest text-gray-900">
+                Community Contributors
+              </h2>
+                <div class="flex flex-col gap-6">
+                  <div class="aon--avatar-group-component shrink-0">
+    <span class="aon--avatar-component xlarge has-image">
+    <img
+      src="https://img.atlasobscura.com/BIXcz0ePXnX5Gtpe5T3Pt2SJoAwpb-6yQQJGEnUFoyQ/rs:fill:80:80:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDI0LzAyLzExLzIz/LzE1LzQyL2U0YTVl/ZmM4LTc0ZmYtNGI3/YS05Njc1LTRmNTI2/ZTU2NWQ3Ny9EU0Nf/MDUyMi5qcGVn.jpg"
+      alt="Fred Cherrygarden profile photo"
+      class="h-full w-full object-cover"
+      loading="lazy"
+    />
+</span>
+</div>
+                  <div>
+                    <h3
+                      class="aon-label-small mb-2 font-semibold text-gray-900"
+                    >
+                      Added By
+                    </h3>
+                    <p class="aon-subtitle-smallest text-gray-600">
+                      <a class="hover:underline hover:decoration-gray-600" href="/users/fred-cherrygarden/places-added">Fred Cherrygarden</a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+              <div class="flex flex-col gap-6 px-5 py-8">
+                  <div>
+                    <h3
+                      class="aon-label-small mb-2 font-semibold text-gray-900"
+                    >
+                      Published
+                    </h3>
+                    <p class="aon-subtitle-smallest text-gray-600">
+                      November 11, 2022
+                    </p>
+                  </div>
+              </div>
+              <div class="py-8">
+                <h3
+                  class="aon-label-small mb-3 px-5 font-semibold text-gray-900"
+                >
+                  Edit this listing
+                </h3>
+                <a class="flex flex-row gap-4 items-center p-2 mx-2 hover:bg-gray-200" href="/sign-in?cause=p_edit&amp;next=%2Fplaces%2Fthe-six-white-mice%2Fedit">
+                  <i class="fa-light fa-pen text-aon-brown h-5 w-5"></i>
+                  <div class="aon-subtitle-smallest text-gray-900">
+                    Make an Edit
+                  </div>
+</a>                <a class="flex flex-row gap-4 items-center p-2 mx-2 hover:bg-gray-200" href="/sign-in?cause=img&amp;next=%2Fplaces%2Fthe-six-white-mice%2Fadd_photos">
+                  <i class="fa-light fa-camera text-aon-brown h-5 w-5"></i>
+                  <div class="aon-subtitle-smallest text-gray-900">
+                    Add Photos
+                  </div>
+</a>              </div>
+          </section>
+            <section class="mt-10">
+              <h3 class="aon-heading-tinier mb-6 text-gray-900">
+                Related Tags
+              </h3>
+              <div class="flex flex-wrap gap-4">
+                  <a data-turbo="false" class="aon-pill-badge-component" href="/categories/fairytales">
+  <span class=" aon-pill-badge-text">Fairytales</span>
+</a>
+                  <a data-turbo="false" class="aon-pill-badge-component" href="/categories/sculptures">
+  <span class=" aon-pill-badge-text">Sculptures</span>
+</a>
+                  <a data-turbo="false" class="aon-pill-badge-component" href="/categories/statues">
+  <span class=" aon-pill-badge-text">Statues</span>
+</a>
+                  <a data-turbo="false" class="aon-pill-badge-component" href="/categories/art">
+  <span class=" aon-pill-badge-text">Art</span>
+</a>
+              </div>
+            </section>
+        </article>
+        <aside
+          class="mdplus:order-2 mdplus:col-span-3 order-1 col-span-full flex flex-col lg:col-span-4"
+        >
+          <div
+            class="md:rounded-lg md:border md:border-gray-100 md:p-5 md:shadow-lg"
+          >
+            <div id="place-map" class="h-40 w-full bg-gray-100">
+              <div class="aon--place-map-component h-full w-full" data-controller=" aon--place-map-component" data-aon--place-map-component-place-id-value="46606" data-aon--place-map-component-latitude-value="48.140322" data-aon--place-map-component-longitude-value="17.121313" data-aon--place-map-component-is-gastro-value="false" data-aon--place-map-component-title-value="‘The Six White Mice’" data-aon--place-map-component-address-value="10 Pribinova, Bratislava, Bratislavský kraj, Slovakia, 821 09" data-aon--place-map-component-url-value="https://eurovea.sk/en/statues-eurovea" data-aon--place-map-component-more-url-value="/aon/map/places/46606/nearby" data-aon--place-map-component-open-class="fixed inset-0 overflow-hidden bottom-0 left-0 z-[999999]" data-aon--place-map-component-closed-class="relative">
+  <div class="relative flex h-full w-full">
+    <div
+      class="absolute top-2 right-2 z-40 hidden"
+      data-aon--place-map-component-target="buttonContainer"
+    >
+      <button
+        data-action="click->aon--place-map-component#maximizeMap click->analytics#sendEvent" data-aon--place-map-component-target="maximizeButton"
+        data-ga-event-action="Expanded Map"
+        data-ga-event-category="Place Page Engagement"
+        data-ga-event-label="Place Page Map"
+        class="rounded-full border border-gray-300 bg-white/75 p-2 text-gray-900 shadow backdrop-blur hover:bg-white/100"
+      >
+        <div class="flex h-5 w-5 items-center justify-center">
+          <span class="sr-only">Maximize map</span>
+          <i class="fa-thin fa-maximize"></i>
+        </div>
+      </button>
+      <button
+        data-action="click->aon--place-map-component#minimizeMap" data-aon--place-map-component-target="minimizeButton"
+        class="hidden items-center justify-center rounded-full border border-gray-300 bg-white/75 p-2 text-gray-900 shadow backdrop-blur hover:bg-white/100"
+      >
+        <div class="flex h-5 w-5 items-center justify-center">
+          <span class="sr-only">Minimize map</span>
+          <i class="fa-thin fa-xmark"></i>
+        </div>
+      </button>
+    </div>
+    <div
+      class="absolute left-1/2 top-4 z-40 hidden -translate-x-1/2"
+      data-aon--place-map-component-target="showMoreContainer"
+    >
+      <button
+        data-action="click->aon--place-map-component#loadMorePlaces" data-aon--place-map-component-target="showMoreButton"
+        class="aon-secondary-button"
+      >
+        <span>Show More Places</span>
+      </button>
+    </div>
+    <div data-aon--place-map-component-target="map" class="h-full w-full"></div>
+    <template data-aon--place-map-component-target="calloutTemplate">
+      <div
+        data-url="/aon/map/places/ID"
+        class="flex min-h-[275px] w-60 justify-center border bg-white drop-shadow"
+      ></div>
+    </template>
+  </div>
+</div>
+            </div>
+            <div class="mt-4 mb-6 flex flex-col">
+              <sl-tooltip
+                content="Copy Address"
+                placement="top-end"
+                style="--sl-tooltip-arrow-size: 0;"
+              >
+                <address
+                  data-controller="clipboard"
+                  data-action="click->clipboard#copy"
+                  data-clipboard-name-value="Address"
+                  class="group -mx-2 flex flex-row gap-4 rounded py-2 px-2 not-italic hover:cursor-pointer hover:bg-gray-100"
+                >
+                  <span class="h-8 w-4 text-[#A16A3A]" alt="Location map pin" role="img" aria-hidden="false">
+</span>
+                  <div>
+                    <div class="aon-heading-tiniest mb-2 text-gray-900">
+                      ‘The Six White Mice’
+                    </div>
+                    <div
+                      data-clipboard-target="source"
+                      class="aon-subtitle-smallest text-gray-900"
+                    >
+                      10 Pribinova<br>Bratislava, 821 09<br>Slovakia
+                    </div>
+                  </div>
+                  <i
+                    class="fa-light fa-copy text-aon-brown invisible ml-auto h-5 w-5 group-hover:visible"
+                  ></i>
+                </address>
+              </sl-tooltip>
+                <sl-tooltip
+                  content="Copy Coordinates"
+                  placement="top-end"
+                  style="--sl-tooltip-arrow-size: 0;"
+                >
+                  <div
+                    data-controller="clipboard"
+                    data-action="click->clipboard#copy"
+                    data-clipboard-name-value="Coordinates"
+                    class="group -mx-2 flex flex-row items-center gap-4 rounded py-2 px-2 hover:cursor-pointer hover:bg-gray-100"
+                  >
+                    <i class="fa-light fa-compass text-aon-brown h-5 w-5"></i>
+                    <div
+                      data-clipboard-target="source"
+                      class="aon-subtitle-smallest text-gray-900"
+                    >
+                      48.140322, 17.121313
+                    </div>
+                    <i
+                      class="fa-light fa-copy text-aon-brown invisible ml-auto h-5 w-5 group-hover:visible"
+                    ></i>
+                  </div>
+                </sl-tooltip>
+                <sl-tooltip
+                  content="Open Website"
+                  placement="top-end"
+                  style="--sl-tooltip-arrow-size: 0;"
+                >
+                  <div
+                    class="group -mx-2 rounded py-2 px-2 hover:cursor-pointer hover:bg-gray-100"
+                  >
+                    <a target="blank" rel="nofollow noopener noreferrer" class="flex flex-row gap-4 items-center" href="https://eurovea.sk/en/statues-eurovea">
+                      <i class="fa-light fa-globe text-aon-brown h-5 w-5"></i>
+                      <div class="aon-subtitle-smallest text-gray-900">
+                        Visit Website
+                      </div>
+                      <i
+                        class="fa-light fa-arrow-up-right-from-square text-aon-brown invisible ml-auto h-5 w-5 group-hover:visible"
+                      ></i>
+</a>                  </div>
+                </sl-tooltip>
+                <a class="aon-primary-button w-full text-center mt-4" target="blank" rel="nofollow noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=10%20Pribinova%2CBratislava%2C%20821%2009%2CSlovakia">Get Directions</a>
+            </div>
+            <div class="mdplus:block hidden">
+                <hr />
+                <h3 class="aon-heading-tinier mt-6 text-gray-900">
+                  Nearby Places
+                </h3>
+                <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/memorial-to-the-victims-of-communism-bratislava" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/CywnR1bbt4YxuDWXisUL5VMXypcYig_1IgB8v573FyM/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9iMjM5/MzE0NS1lYmYyLTRk/ZmEtYjVmMS1hMTYw/OWFlMzlmNDEzNGIz/OWQ3Yjg1YzllMzI3/ZWZfSU1HXzkxODgu/SlBH.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/memorial-to-the-victims-of-communism-bratislava"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          Memorial to the Victims of Communism
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.22420899013676748"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+    <hr class="mt-6" />
+  <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/the-duck-s-fountain" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/uy0iUj7G3PVEYv64hA4gvOhDGk8pySd4JcCz4SPiWqE/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hMTU0/YjhmOS04ZTBmLTQ5/ZGQtYmExMC0xMGE3/YzBhMDUxODVmY2Q5/YTU2ZjM5MWVlYzVl/M2FfOTdFMjk4RjIt/NzBFOS00OEQxLUI1/OTAtNTdBOUJDRTlC/RjUwLmpwZWc.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/the-duck-s-fountain"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          The Duck’s Fountain
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.25853540437873834"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+    <hr class="mt-6" />
+  <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/church-of-st-elizabeth" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/TtAmquaLYgEgIn1JidNrPkRm5SNtHBiAd_kC3QMUodU/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8wNDFm/ZDNhYy03NzE5LTRh/ZDMtODY1NC1mYWZi/OGZlYjM0NDJlYWVj/NzdkZDRhMjc0MDE3/YTdfNjBBRThGOUIt/OURFNS00RTQ0LUFE/QkMtMEE0QUJDMzc2/OTRBLmpwZWc.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/church-of-st-elizabeth"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          Church of St. Elizabeth
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.29757051802040374"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+                <div class="-mx-5 mt-6 -mb-5 rounded-lg bg-gray-50 p-5">
+                  <h3 class="aon-heading-tinier mb-5 text-gray-900">
+                    Explore the Destination Guide
+                  </h3>
+                  <article
+  class="aon--card-destination-component  "
+>
+  <div
+    data-action="click->analytics#sendEvent"
+    data-ga-event-action="Clicked On: bratislava-slovakia"
+    data-ga-event-category="Destination Guide"
+    data-ga-event-label="@PATH@"
+    class="bg-gray-100"
+  >
+    <a href="/things-to-do/bratislava-slovakia" aria-label="Photo of Bratislava">
+      <div class="image-wrap">
+          <picture>
+            <source media="(max-width: 768px)" srcset="https://img.atlasobscura.com/ZynnXc6f0hH1HfUXGg8D7a7wHJEtDs7kW-9jN3ogAw8/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDIzLzExLzA4LzE3/LzQyLzM3LzNhOTE5/ZmFlLTI3ZjYtNDJh/Zi1iMDU4LTcxNzhi/NGY4NTFkNi9tYXJ0/aW4ta2F0bGVyLTZQ/d3l6UnBmMTN3LXVu/c3BsYXNoLmpwZw.jpg" />
+            <img
+              src="https://img.atlasobscura.com/ZynnXc6f0hH1HfUXGg8D7a7wHJEtDs7kW-9jN3ogAw8/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDIzLzExLzA4LzE3/LzQyLzM3LzNhOTE5/ZmFlLTI3ZjYtNDJh/Zi1iMDU4LTcxNzhi/NGY4NTFkNi9tYXJ0/aW4ta2F0bGVyLTZQ/d3l6UnBmMTN3LXVu/c3BsYXNoLmpwZw.jpg"
+              alt="Photo of Bratislava"
+              class="image"
+            />
+          </picture>
+      </div>
+    </a>
+  </div>
+  <div class="content">
+    <header class="header">
+      <h2
+        data-action="click->analytics#sendEvent"
+        data-ga-event-action="Clicked On: bratislava-slovakia"
+        data-ga-event-category="Destination Guide"
+        data-ga-event-label="@PATH@"
+        class="destination-name"
+      >
+        <a class="destination-link" href="/things-to-do/bratislava-slovakia">Bratislava</a>
+      </h2>
+      <h3 class="destination-eyebrow">
+        Slovakia
+      </h3>
+    </header>
+    <footer class="footer">
+      <div class="statistic-box">
+        <span class="statistic-title">
+          Places
+        </span>
+        <span class="statistic-number">
+          31
+        </span>
+      </div>
+    </footer>
+  </div>
+</article>
+                </div>
+            </div>
+          </div>
+          <section
+  class=" flex-col items-center justify-center border-none w-100 mt-10 hidden md:flex"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_direct_300v_1" data-aaad="true" data-aa-device="[&quot;desktop&quot;]"></div>
+</section>
+          <div class="hidden h-full w-full md:block">
+            <section
+  class=" flex flex-col items-center justify-center border-none w-100 pt-10 sticky top-0"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_sticky_rail_1" data-aaad="true" data-aa-device="[&quot;desktop&quot;]"></div>
+</section>
+          </div>
+        </aside>
+    </div>
+  </div>
+    <section class="aon-container-fluid mdplus:hidden my-10">
+      <h2
+        class="aon-heading-smallest mb-8 border-b border-gray-200 pb-4 text-gray-900"
+      >
+        Nearby Places
+      </h2>
+        <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/memorial-to-the-victims-of-communism-bratislava" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/CywnR1bbt4YxuDWXisUL5VMXypcYig_1IgB8v573FyM/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9iMjM5/MzE0NS1lYmYyLTRk/ZmEtYjVmMS1hMTYw/OWFlMzlmNDEzNGIz/OWQ3Yjg1YzllMzI3/ZWZfSU1HXzkxODgu/SlBH.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/memorial-to-the-victims-of-communism-bratislava"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          Memorial to the Victims of Communism
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.22420899013676748"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+    <hr class="mt-6" />
+  <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/the-duck-s-fountain" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/uy0iUj7G3PVEYv64hA4gvOhDGk8pySd4JcCz4SPiWqE/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hMTU0/YjhmOS04ZTBmLTQ5/ZGQtYmExMC0xMGE3/YzBhMDUxODVmY2Q5/YTU2ZjM5MWVlYzVl/M2FfOTdFMjk4RjIt/NzBFOS00OEQxLUI1/OTAtNTdBOUJDRTlC/RjUwLmpwZWc.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/the-duck-s-fountain"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          The Duck’s Fountain
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.25853540437873834"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+    <hr class="mt-6" />
+  <div class="mt-6">
+    <article class="reversed aon--simple-card">
+    <div
+        data-action="click->analytics#sendEvent"
+        data-ga-event-category="Place Page Recirc"
+        data-ga-event-action="Recirc Item Clicked"
+        data-ga-event-label="Nearby Place"
+      class="h-[100px] w-[100px] flex-none overflow-hidden"
+      aria-hidden="true"
+    >
+          <a href="/places/church-of-st-elizabeth" aria-label="Photo">
+            <img src="https://img.atlasobscura.com/TtAmquaLYgEgIn1JidNrPkRm5SNtHBiAd_kC3QMUodU/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8wNDFm/ZDNhYy03NzE5LTRh/ZDMtODY1NC1mYWZi/OGZlYjM0NDJlYWVj/NzdkZDRhMjc0MDE3/YTdfNjBBRThGOUIt/OURFNS00RTQ0LUFE/QkMtMEE0QUJDMzc2/OTRBLmpwZWc.jpg" alt="" loading="lazy" class="image-zoom-on-hover">
+          </a>
+    </div>
+  <div class="body">
+    <header class="flex flex-col">
+      <h2 class="title">
+          <a
+              data-action="click->analytics#sendEvent"
+              data-ga-event-category="Place Page Recirc"
+              data-ga-event-action="Recirc Item Clicked"
+              data-ga-event-label="Nearby Place"
+            href="/places/church-of-st-elizabeth"
+            class="animate-underline md:hover:bg-[length:0_1px,_100%_1px]"
+          >
+                    <span class="aon-heading-tiniest text-gray-900">
+          Church of St. Elizabeth
+        </span>
+          </a>
+      </h2>
+      <h3 class="eyebrow text-gray-500">
+                Bratislava, Slovakia
+      </h3>
+    </header>
+    <footer class="text-gray-500">
+              <div>
+          <sl-format-number
+            maximum-fraction-digits="2"
+            value="0.29757051802040374"
+          ></sl-format-number>
+          miles away
+        </div>
+    </footer>
+  </div>
+</article>
+  </div>
+    </section>
+    <section class="mdplus:hidden my-10 bg-gray-50 p-5">
+      <h3 class="aon-heading-tinier mb-5 text-gray-900">
+        Explore the Destination Guide
+      </h3>
+      <article
+  class="aon--card-destination-component  "
+>
+  <div
+    data-action="click->analytics#sendEvent"
+    data-ga-event-action="Clicked On: bratislava-slovakia"
+    data-ga-event-category="Destination Guide"
+    data-ga-event-label="@PATH@"
+    class="bg-gray-100"
+  >
+    <a href="/things-to-do/bratislava-slovakia" aria-label="Photo of Bratislava">
+      <div class="image-wrap">
+          <picture>
+            <source media="(max-width: 768px)" srcset="https://img.atlasobscura.com/ZynnXc6f0hH1HfUXGg8D7a7wHJEtDs7kW-9jN3ogAw8/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDIzLzExLzA4LzE3/LzQyLzM3LzNhOTE5/ZmFlLTI3ZjYtNDJh/Zi1iMDU4LTcxNzhi/NGY4NTFkNi9tYXJ0/aW4ta2F0bGVyLTZQ/d3l6UnBmMTN3LXVu/c3BsYXNoLmpwZw.jpg" />
+            <img
+              src="https://img.atlasobscura.com/ZynnXc6f0hH1HfUXGg8D7a7wHJEtDs7kW-9jN3ogAw8/rs:fill:300:200:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS8y/MDIzLzExLzA4LzE3/LzQyLzM3LzNhOTE5/ZmFlLTI3ZjYtNDJh/Zi1iMDU4LTcxNzhi/NGY4NTFkNi9tYXJ0/aW4ta2F0bGVyLTZQ/d3l6UnBmMTN3LXVu/c3BsYXNoLmpwZw.jpg"
+              alt="Photo of Bratislava"
+              class="image"
+            />
+          </picture>
+      </div>
+    </a>
+  </div>
+  <div class="content">
+    <header class="header">
+      <h2
+        data-action="click->analytics#sendEvent"
+        data-ga-event-action="Clicked On: bratislava-slovakia"
+        data-ga-event-category="Destination Guide"
+        data-ga-event-label="@PATH@"
+        class="destination-name"
+      >
+        <a class="destination-link" href="/things-to-do/bratislava-slovakia">Bratislava</a>
+      </h2>
+      <h3 class="destination-eyebrow">
+        Slovakia
+      </h3>
+    </header>
+    <footer class="footer">
+      <div class="statistic-box">
+        <span class="statistic-title">
+          Places
+        </span>
+        <span class="statistic-number">
+          31
+        </span>
+      </div>
+    </footer>
+  </div>
+</article>
+    </section>
+    <section
+  class="advertisement-disclaimer flex flex-col items-center justify-center border-none w-100 pt-0 mdplus:hidden"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_mob_300v_2" data-aaad="true" data-aa-device="[&quot;mobile&quot;]"></div>
+</section>
+    <section class="my-10 lg:my-20">
+      <div class="aon-container-fluid">
+        <h2
+          class="aon-heading-smallest mb-8 border-b border-gray-200 pb-4 text-gray-900"
+        >
+          Related Places
+        </h2>
+      </div>
+    <section
+  data-controller="aon--carousel-component"
+  data-aon--carousel-component-opts-value="{&quot;pagination&quot;:false,&quot;perPage&quot;:1,&quot;perMove&quot;:1,&quot;arrows&quot;:false,&quot;padding&quot;:{&quot;top&quot;:0,&quot;left&quot;:0,&quot;bottom&quot;:0,&quot;right&quot;:&quot;20%&quot;},&quot;mediaQuery&quot;:&quot;min&quot;,&quot;drag&quot;:&quot;free&quot;,&quot;snap&quot;:&quot;true&quot;,&quot;flick&quot;:&quot;300&quot;,&quot;flickMaxPages&quot;:1,&quot;breakpoints&quot;:{&quot;768&quot;:{&quot;perPage&quot;:2,&quot;padding&quot;:{&quot;top&quot;:0,&quot;left&quot;:&quot;1.75rem&quot;,&quot;bottom&quot;:0,&quot;right&quot;:&quot;20%&quot;}},&quot;1024&quot;:{&quot;padding&quot;:{&quot;top&quot;:0,&quot;left&quot;:0,&quot;bottom&quot;:0,&quot;right&quot;:0},&quot;perPage&quot;:3,&quot;perMove&quot;:3,&quot;arrows&quot;:true,&quot;gap&quot;:&quot;2rem&quot;}}}"
+  id="slide-carousel-6e770f59"
+  class="splide aon-carousel-component--default"
+>
+  <div class="splide__arrows default-arrows pointer-events-auto">
+    <button
+      class="splide__arrow splide__arrow--prev lg:top-28 xl:top-36 2xl:top-36 lg:left-6 xl:left-10 2xl:-left-6"
+    >
+      <i class="fa-thin fa-chevron-right"></i>
+    </button>
+    <button
+      class="splide__arrow splide__arrow--next lg:top-28 xl:top-36 2xl:top-36 lg:right-6 xl:right-10 2xl:-right-6"
+    >
+      <i class="fa-thin fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="splide__track">
+    <ul class="splide__list">
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/IwrsYn7XpgCMMI5WiQ6t3bxNo15qku2ff4e5Lnw0vvI/rs:fill:600:400:1/g:ce/c:5988:3992:nowe:3:2/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9jNmMz/YWMxNS05YjNhLTQy/MWItOTQ4Mi05NmUz/MTAyZjcyMDgwNzA5/MWFhY2VmODA2MzMw/N2FfQTJGOUM3QUIt/NkEyNS00N0FDLTg0/QTMtNDVCNTY4REJE/Q0FCLmpwZWc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/n4eGofZd8AmyVU7yzRvCIs9x9_K5piFb4TLngAnNcQI/rs:fill:600:400:1/g:ce/c:5988:3992:nowe:3:2/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9jNmMz/YWMxNS05YjNhLTQy/MWItOTQ4Mi05NmUz/MTAyZjcyMDgwNzA5/MWFhY2VmODA2MzMw/N2FfQTJGOUM3QUIt/NkEyNS00N0FDLTg0/QTMtNDVCNTY4REJE/Q0FCLmpwZWc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/IwrsYn7XpgCMMI5WiQ6t3bxNo15qku2ff4e5Lnw0vvI/rs:fill:600:400:1/g:ce/c:5988:3992:nowe:3:2/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9jNmMz/YWMxNS05YjNhLTQy/MWItOTQ4Mi05NmUz/MTAyZjcyMDgwNzA5/MWFhY2VmODA2MzMw/N2FfQTJGOUM3QUIt/NkEyNS00N0FDLTg0/QTMtNDVCNTY4REJE/Q0FCLmpwZWc.jpg" />
+  <img alt="‘Minor Triumph’" loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/IwrsYn7XpgCMMI5WiQ6t3bxNo15qku2ff4e5Lnw0vvI/rs:fill:600:400:1/g:ce/c:5988:3992:nowe:3:2/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9jNmMz/YWMxNS05YjNhLTQy/MWItOTQ4Mi05NmUz/MTAyZjcyMDgwNzA5/MWFhY2VmODA2MzMw/N2FfQTJGOUM3QUIt/NkEyNS00N0FDLTg0/QTMtNDVCNTY4REJE/Q0FCLmpwZWc.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Seoul, South Korea
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 1" data-ga-event-label="minor-triumph-seesaw-sculpture" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/minor-triumph-seesaw-sculpture">‘Minor Triumph’</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">Children’s timeless joy is remembered in the fast-developing Myeongdong district of Seoul.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/9vA-sSlBeAgRlCzVfQPfiLYemffL6e4Iwq8bVgbTuxk/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85ZDA4/ZjBhNy1hOGJmLTQx/MTItYjgzNy1lNjI3/YWE0N2VhNDE4NGI5/YjA4Yjg2NGQzYjg4/MjJfMjAyNDAyMjRf/MTEyNTA4LmpwZw.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/Ct4eh85ZM20IkQWTcfY8qifzltvYo5Avu2XFnzCeBzg/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85ZDA4/ZjBhNy1hOGJmLTQx/MTItYjgzNy1lNjI3/YWE0N2VhNDE4NGI5/YjA4Yjg2NGQzYjg4/MjJfMjAyNDAyMjRf/MTEyNTA4LmpwZw.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/9vA-sSlBeAgRlCzVfQPfiLYemffL6e4Iwq8bVgbTuxk/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85ZDA4/ZjBhNy1hOGJmLTQx/MTItYjgzNy1lNjI3/YWE0N2VhNDE4NGI5/YjA4Yjg2NGQzYjg4/MjJfMjAyNDAyMjRf/MTEyNTA4LmpwZw.jpg" />
+  <img alt="&#39;Min Indre Svinehund&#39; (&#39;My Inner Beast&#39;)" loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/9vA-sSlBeAgRlCzVfQPfiLYemffL6e4Iwq8bVgbTuxk/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85ZDA4/ZjBhNy1hOGJmLTQx/MTItYjgzNy1lNjI3/YWE0N2VhNDE4NGI5/YjA4Yjg2NGQzYjg4/MjJfMjAyNDAyMjRf/MTEyNTA4LmpwZw.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Frederikssund, Denmark
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 2" data-ga-event-label="min-indre-svinehund-my-inner-beast-frederikssund-denmark" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/min-indre-svinehund-my-inner-beast-frederikssund-denmark">&#39;Min Indre Svinehund&#39; (&#39;My Inner Beast&#39;)</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">This striking pig statue was part of a 1993 guerilla art project against racism.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/FxlmYnt_Bxc0zyxDwqs61eEbWp7kfJCFHN_VRX7th6c/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85NjJj/NDg1My0xMWRkLTRk/ODEtOWQ3YS01N2U4/NzhmODY1MzlkZjZj/MjgzN2MwODZhMmNl/YWRfMjAyMzA4MjZf/MTUyMTA5LmpwZw.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/Tp557xa8ezlP3gFg4AZZ1aOWc8Ecw2SaQRQ9O-7jztE/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85NjJj/NDg1My0xMWRkLTRk/ODEtOWQ3YS01N2U4/NzhmODY1MzlkZjZj/MjgzN2MwODZhMmNl/YWRfMjAyMzA4MjZf/MTUyMTA5LmpwZw.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/FxlmYnt_Bxc0zyxDwqs61eEbWp7kfJCFHN_VRX7th6c/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85NjJj/NDg1My0xMWRkLTRk/ODEtOWQ3YS01N2U4/NzhmODY1MzlkZjZj/MjgzN2MwODZhMmNl/YWRfMjAyMzA4MjZf/MTUyMTA5LmpwZw.jpg" />
+  <img alt="&#39;The Little Match Girl&#39;" loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/FxlmYnt_Bxc0zyxDwqs61eEbWp7kfJCFHN_VRX7th6c/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy85NjJj/NDg1My0xMWRkLTRk/ODEtOWQ3YS01N2U4/NzhmODY1MzlkZjZj/MjgzN2MwODZhMmNl/YWRfMjAyMzA4MjZf/MTUyMTA5LmpwZw.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Greve, Denmark
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 3" data-ga-event-label="den-lille-pige-med-svovlstikkerne-little-match-girl" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/den-lille-pige-med-svovlstikkerne-little-match-girl">&#39;The Little Match Girl&#39;</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">With a bundle of matches in one hand and a mobile phone in the other, this sculpture is a modern take on Hans Christian Andersen&#39;s poignant fairy tale.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/QtA7i3eu_YGxGt3fFrc9MKcNFJoGniuKCH62lgdm51U/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9lOThh/N2I3Yi02NjNlLTRk/NDEtYWM1NC1mMmZk/ZmE0Y2MxOTQ3NmFh/NjMzOTc1Y2UyYjhh/YWZfU2NyZWVuIFNo/b3QgMjAyNC0wMS0x/MyBhdCAxMS41Mi40/NSBQTS5wbmc.png" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/b1JkuAsR4fcjLLyp5YD8vBrDKzxgXLylCoTKhigPtII/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9lOThh/N2I3Yi02NjNlLTRk/NDEtYWM1NC1mMmZk/ZmE0Y2MxOTQ3NmFh/NjMzOTc1Y2UyYjhh/YWZfU2NyZWVuIFNo/b3QgMjAyNC0wMS0x/MyBhdCAxMS41Mi40/NSBQTS5wbmc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/QtA7i3eu_YGxGt3fFrc9MKcNFJoGniuKCH62lgdm51U/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9lOThh/N2I3Yi02NjNlLTRk/NDEtYWM1NC1mMmZk/ZmE0Y2MxOTQ3NmFh/NjMzOTc1Y2UyYjhh/YWZfU2NyZWVuIFNo/b3QgMjAyNC0wMS0x/MyBhdCAxMS41Mi40/NSBQTS5wbmc.png" />
+  <img alt="The moai statue faces Lyall Bay." loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/QtA7i3eu_YGxGt3fFrc9MKcNFJoGniuKCH62lgdm51U/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9lOThh/N2I3Yi02NjNlLTRk/NDEtYWM1NC1mMmZk/ZmE0Y2MxOTQ3NmFh/NjMzOTc1Y2UyYjhh/YWZfU2NyZWVuIFNo/b3QgMjAyNC0wMS0x/MyBhdCAxMS41Mi40/NSBQTS5wbmc.png" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Wellington, New Zealand
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 4" data-ga-event-label="moai-statue-new-zealand" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/moai-statue-new-zealand">Moai Statue</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">One of the iconic moai of Rapa Nui stands guard in Lyall Bay as a symbol of the friendship between New Zealand and Chile.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/JI9I-a_r-cP5Oh1_ksDVSGUBWJTu8ndcKOK2hTvWCHM/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zMGY0/MDExNy1jODc2LTRh/YjktYTMzMS03Mjkw/ZGU3NjUyMTFlYjYy/ZDc2NGIzOGM1YWM0/N2ZfMjAyMzExMThf/MTE0ODUyLmpwZw.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/krx0SAFWLJnFZ4_9KEKbU9L8iuUaX96IRAnOhCCJqzg/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zMGY0/MDExNy1jODc2LTRh/YjktYTMzMS03Mjkw/ZGU3NjUyMTFlYjYy/ZDc2NGIzOGM1YWM0/N2ZfMjAyMzExMThf/MTE0ODUyLmpwZw.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/JI9I-a_r-cP5Oh1_ksDVSGUBWJTu8ndcKOK2hTvWCHM/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zMGY0/MDExNy1jODc2LTRh/YjktYTMzMS03Mjkw/ZGU3NjUyMTFlYjYy/ZDc2NGIzOGM1YWM0/N2ZfMjAyMzExMThf/MTE0ODUyLmpwZw.jpg" />
+  <img alt="&#39;Fideicommissum&#39;" loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/JI9I-a_r-cP5Oh1_ksDVSGUBWJTu8ndcKOK2hTvWCHM/rs:fill:600:400:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zMGY0/MDExNy1jODc2LTRh/YjktYTMzMS03Mjkw/ZGU3NjUyMTFlYjYy/ZDc2NGIzOGM1YWM0/N2ZfMjAyMzExMThf/MTE0ODUyLmpwZw.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Knislinge, Sweden
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 5" data-ga-event-label="fideicommissum-wanas-konst-sweden" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/fideicommissum-wanas-konst-sweden">&#39;Fideicommissum&#39;</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">A bronze, peeing self-portrait protests unequal inheritance rights.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/_Q99_XhpsSL0BQeHyEAw4fGO2ALYxoapc_Eo-fqbg4w/rs:fill:600:400:1/g:ce/c:3024:2016:nowe:0:95/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTNi/MzVlNC1lM2Q4LTQ3/ZDEtOWY4OC00OGI2/ZTMzZmE2YTNhMDZm/N2VjYWViZDlhN2Jl/MGNfSU1HXzIzNDQu/anBlZw.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/-hOjvL0Jl_QYfTjEPLN9YFKAE2Xe98QB5uKqzeHFb60/rs:fill:600:400:1/g:ce/c:3024:2016:nowe:0:95/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTNi/MzVlNC1lM2Q4LTQ3/ZDEtOWY4OC00OGI2/ZTMzZmE2YTNhMDZm/N2VjYWViZDlhN2Jl/MGNfSU1HXzIzNDQu/anBlZw.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/_Q99_XhpsSL0BQeHyEAw4fGO2ALYxoapc_Eo-fqbg4w/rs:fill:600:400:1/g:ce/c:3024:2016:nowe:0:95/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTNi/MzVlNC1lM2Q4LTQ3/ZDEtOWY4OC00OGI2/ZTMzZmE2YTNhMDZm/N2VjYWViZDlhN2Jl/MGNfSU1HXzIzNDQu/anBlZw.jpg" />
+  <img alt="A bronze fast of a female face atop a pedestal with a lighthouse in the background" loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/_Q99_XhpsSL0BQeHyEAw4fGO2ALYxoapc_Eo-fqbg4w/rs:fill:600:400:1/g:ce/c:3024:2016:nowe:0:95/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy82ZTNi/MzVlNC1lM2Q4LTQ3/ZDEtOWY4OC00OGI2/ZTMzZmE2YTNhMDZm/N2VjYWViZDlhN2Jl/MGNfSU1HXzIzNDQu/anBlZw.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        New York, New York
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 6" data-ga-event-label="girl-puzzle-nellie-bly-sculpture-roosevelt-island-nyc" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/girl-puzzle-nellie-bly-sculpture-roosevelt-island-nyc">Girl Puzzle Monument</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">An art installation commemorates journalist Nellie Bly&#39;s undercover reporting inside a New York asylum.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/C3m7OYXSoZoXR5QlK0RAtFlY_yKI-bmUzebOkBI48Qw/rs:fill:600:400:1/g:ce/c:2466:1644:nowe:1182:1092/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8yOGE3/OGIxMi0zZjFhLTRm/NzUtOTRhNy1mNGI5/OGNiZDVkMDNmM2Vm/Njc3OGIxZDJkMjc5/NzVfTHV4ZW1ib3Vy/ZyxfRcyBZ2xpc2Vf/U2FpbnQtSmVhbl8o/TmV1bXXMiG5zdGVy/KV9jb8yCdGXMgV9B/bHpldHRlXygxMDEp/LmpwZw.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/caq5WCWLbXsTOPYq_pQx22mynv_CmTgA-esxGRUripQ/rs:fill:600:400:1/g:ce/c:2466:1644:nowe:1182:1092/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8yOGE3/OGIxMi0zZjFhLTRm/NzUtOTRhNy1mNGI5/OGNiZDVkMDNmM2Vm/Njc3OGIxZDJkMjc5/NzVfTHV4ZW1ib3Vy/ZyxfRcyBZ2xpc2Vf/U2FpbnQtSmVhbl8o/TmV1bXXMiG5zdGVy/KV9jb8yCdGXMgV9B/bHpldHRlXygxMDEp/LmpwZw.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/C3m7OYXSoZoXR5QlK0RAtFlY_yKI-bmUzebOkBI48Qw/rs:fill:600:400:1/g:ce/c:2466:1644:nowe:1182:1092/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8yOGE3/OGIxMi0zZjFhLTRm/NzUtOTRhNy1mNGI5/OGNiZDVkMDNmM2Vm/Njc3OGIxZDJkMjc5/NzVfTHV4ZW1ib3Vy/ZyxfRcyBZ2xpc2Vf/U2FpbnQtSmVhbl8o/TmV1bXXMiG5zdGVy/KV9jb8yCdGXMgV9B/bHpldHRlXygxMDEp/LmpwZw.jpg" />
+  <img alt="The pink mermaid sitting by the Alzette." loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/C3m7OYXSoZoXR5QlK0RAtFlY_yKI-bmUzebOkBI48Qw/rs:fill:600:400:1/g:ce/c:2466:1644:nowe:1182:1092/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8yOGE3/OGIxMi0zZjFhLTRm/NzUtOTRhNy1mNGI5/OGNiZDVkMDNmM2Vm/Njc3OGIxZDJkMjc5/NzVfTHV4ZW1ib3Vy/ZyxfRcyBZ2xpc2Vf/U2FpbnQtSmVhbl8o/TmV1bXXMiG5zdGVy/KV9jb8yCdGXMgV9B/bHpldHRlXygxMDEp/LmpwZw.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Luxembourg, Luxembourg
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 7" data-ga-event-label="melusina-statue" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/melusina-statue">Melusina Statue</a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">This magenta statue commemorates the legendary marriage between a mermaid and the city&#39;s founder.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+        <li class="splide__slide">
+                    <article class="aon--card--main-card-component group relative flex flex-col ">
+    <div class="w-full flex-none relative mb-4">
+      <div class="overflow-hidden relative">
+        <link itemprop="image" href="https://img.atlasobscura.com/h72meadzwPBbj9tmSAP15Ux7qM2UXL5e5M7Zey6VAic/rs:fill:600:400:1/g:ce/c:1491:994:nowe:120:0/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYThk/ZDExYy1kNWFlLTRi/MGYtOTZlYi03YjI3/NzMyY2IxYzIyYmY2/MzcwZTIzNjY4Yjhk/MDFfMjc5NDQ1MTkx/XzEwMTU4NzU2OTAy/NzEyMDgzXzUxMTky/NTgyODkzMDM2MDY5/OTdfbi5qcGc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/75SX0IuN1cAcOqdDnXCAoBYy7zqwGvEXSxQGtD4i0Dg/rs:fill:600:400:1/g:ce/c:1491:994:nowe:120:0/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYThk/ZDExYy1kNWFlLTRi/MGYtOTZlYi03YjI3/NzMyY2IxYzIyYmY2/MzcwZTIzNjY4Yjhk/MDFfMjc5NDQ1MTkx/XzEwMTU4NzU2OTAy/NzEyMDgzXzUxMTky/NTgyODkzMDM2MDY5/OTdfbi5qcGc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/h72meadzwPBbj9tmSAP15Ux7qM2UXL5e5M7Zey6VAic/rs:fill:600:400:1/g:ce/c:1491:994:nowe:120:0/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYThk/ZDExYy1kNWFlLTRi/MGYtOTZlYi03YjI3/NzMyY2IxYzIyYmY2/MzcwZTIzNjY4Yjhk/MDFfMjc5NDQ1MTkx/XzEwMTU4NzU2OTAy/NzEyMDgzXzUxMTky/NTgyODkzMDM2MDY5/OTdfbi5qcGc.jpg" />
+  <img alt="David Livingstone Statue " loading="lazy" class="w-full bg-gray-100 object-cover image-zoom-on-group-hover" style="aspect-ratio: 3/2;" src="https://img.atlasobscura.com/h72meadzwPBbj9tmSAP15Ux7qM2UXL5e5M7Zey6VAic/rs:fill:600:400:1/g:ce/c:1491:994:nowe:120:0/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYThk/ZDExYy1kNWFlLTRi/MGYtOTZlYi03YjI3/NzMyY2IxYzIyYmY2/MzcwZTIzNjY4Yjhk/MDFfMjc5NDQ1MTkx/XzEwMTU4NzU2OTAy/NzEyMDgzXzUxMTky/NTgyODkzMDM2MDY5/OTdfbi5qcGc.jpg" />
+</picture>
+        <div class="absolute top-3 left-3">
+        </div>
+      </div>
+    </div>
+  <div class="">
+    <header class="flex flex-col gap-2 ">
+      <p
+        class="aon-label-smaller text-gray-500 flex-none"
+      >
+        Blantyre, Scotland
+      </p>
+      <h2 class="aon-heading-tinier text-gray-900" data-ga-event-category="Place Page Recirc" data-ga-event-action="Clicked Place Carousel Slide 8" data-ga-event-label="david-livingstone-statue" data-action="click-&gt;analytics#sendEvent"><a class="after:absolute after:inset-0 animate-underline md:hover:bg-underline" data-turbo="false" href="/places/david-livingstone-statue">David Livingstone Statue </a></h2>
+    </header>
+    <p class="aon-body-smaller mt-2 mb-4 lg:mb-6 text-gray-800">The only statue ever crafted by award-winning animator Ray Harryhausen.</p>
+      <footer class="relative z-10 aon-label-smaller mb-4 text-gray-500 ">
+      </footer>
+  </div>
+</article>
+        </li>
+    </ul>
+  </div>
+</section>
+    </section>
+  <section
+  class="advertisement-disclaimer hidden sm:flex flex-col items-center justify-center bg-gray-50"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_970v_2" data-aaad="true" data-aa-device="[&quot;desktop&quot;, &quot;tablet&quot;]"></div>
+</section>
+  <section
+  class="advertisement-disclaimer sm:hidden flex flex-col items-center justify-center bg-gray-50"
+  data-hide-on-search="false"
+>
+  <div data-aa-adunit="/22181265/atlasobscura_mob_320v_2" data-aaad="true" data-aa-device="[&quot;mobile&quot;]"></div>
+</section>
+  <div class="aon-container-fluid my-16 lg:my-20">
+    <a data-turbo="false" data-action="click-&gt;analytics#sendEvent click-&gt;posthog-track#track" data-ga-event-action="Click" data-ga-event-category="Membership Promo Component" data-ga-event-label="Places Show" data-controller="posthog-track" data-posthog-track-event-value="membership_cta_clicked" data-posthog-track-properties-value="{&quot;location&quot;:&quot;promo_component&quot;,&quot;source_page&quot;:&quot;Places Show&quot;}" data-posthog-track-transport-value="sendBeacon" class="group relative w-full h-full" href="/membership">
+  <div class="membership-promo-component-overlay overflow-hidden relative rounded-xl h-[350px] lg:h-[225px] group-hover:shadow-lg">
+      <link itemprop="image" href="https://img.atlasobscura.com/vPRo_z5WSQ_oN13NHxrNg7WGdmJzRmxOfaVOpz7EOhk/rt:fill/w:2000/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS9h/b24vbWVtYmVyc2hp/cC9wcm9tby5qcGc.jpg" />
+<picture data-controller="" data-action="">
+  <source srcset="https://img.atlasobscura.com/1I39flDrUzHfwr1BJgwK3g44FA7sFSEkg8LwmjiY8p0/rt:fill/w:2000/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS9h/b24vbWVtYmVyc2hp/cC9wcm9tby5qcGc.webp" type="image/webp" />
+  <source srcset="https://img.atlasobscura.com/vPRo_z5WSQ_oN13NHxrNg7WGdmJzRmxOfaVOpz7EOhk/rt:fill/w:2000/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS9h/b24vbWVtYmVyc2hp/cC9wcm9tby5qcGc.jpg" />
+  <img alt="Aerial image of Vietnam, displaying the picturesque rice terraces, characterized by their layered, verdant fields." loading="lazy" class="w-full bg-[#183217] h-full object-cover object-right transition-transform duration-700 ease-in-out md:motion-safe:group-hover:scale-110 sm:h-[350px] sm:object-bottom lg:h-[225px] lg:object-[center_80%]" style=";" src="https://img.atlasobscura.com/vPRo_z5WSQ_oN13NHxrNg7WGdmJzRmxOfaVOpz7EOhk/rt:fill/w:2000/g:ce/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS9h/b24vbWVtYmVyc2hp/cC9wcm9tby5qcGc.jpg" />
+</picture>
+      <div class="absolute top-0 py-6 px-4 text-white z-10 flex flex-col gap-6 w-full h-full sm:px-8 lg:px-10 lg:py-8 lg:justify-center">
+        <img class="max-w-[250px] lg:max-w-[225px] lg:absolute lg:top-8" alt="Atlas Obscura Membership" src="https://atlas-dev.s3.amazonaws.com/aon/logos/membership-logo-white.svg" />
+        <div class="flex flex-col gap-3 h-full w-full lg:flex-row lg:gap-0 lg:h-auto lg:items-center">
+          <h2 class="font-ao-sans text-[32px] leading-[110%] tracking-[1px] font-semibold sm:max-w-[303px] lg:max-w-[335px]">Become an Atlas Obscura Member</h2>
+          <hr class="hidden lg:block text-white border w-[70px] rotate-90 my-8" />
+          <p class="font-ao-sans text-[24px] leading-[140%] tracking-[.5px] font-semibold sm:max-w-[303px]">Join our community of curious explorers.</p>
+          <div class="mt-auto sm:self-start lg:flex lg:flex-col lg:justify-center lg:h-full lg:ml-auto lg:mr-11">
+            <span class="aon-text-button bg-white text-center  sm:mt-4 text-[#3C591E] w-full sm:w-auto lg:hidden">Become a Member</span>
+            <span class="hidden lg:block">
+              <i class="fa-light fa-circle-arrow-right text-white text-5xl group-hover:hidden"></i>
+              <i class="fa-solid fa-circle-arrow-right text-white text-5xl hidden group-hover:block"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+  </div>
+</a>
+  </div>
+        </main>
+          <footer class="bg-aon-brown-black pt-10 pb-4 text-white md:py-10">
+  <div class="aon-container-fluid">
+    <section
+      class="col-auto mb-16 grid grid-cols-1 gap-x-4 text-center md:mb-0 md:grid-cols-3 md:text-left"
+    >
+      <header class="mb-8">
+        <p class="aon-label-big mb-4">
+          Get Our Email Newsletter
+        </p>
+        <div id="email-lists-signup">
+                  </div>
+      </header>
+      <header>
+        <p class="aon-label-big mb-2">Follow Us</p>
+        <div
+          class="mb-8 flex items-center justify-around gap-4 md:justify-start"
+        >
+          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="Facebook" class="w-10 h-10 flex items-center justify-center" href="https://www.facebook.com/atlasobscura/">
+            <span class="sr-only">Facebook</span>
+            <i class="fa-brands fa-facebook hover:text-ao-rust text-2xl"></i>
+</a>          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="YouTube" class="w-10 h-10 flex items-center justify-center" href="https://www.youtube.com/user/atlasobscura">
+            <span class="sr-only">YouTube</span>
+            <i class="fa-brands fa-youtube hover:text-ao-rust text-2xl"></i>
+</a>          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="TikTok" class="w-10 h-10 flex items-center justify-center" href="https://www.tiktok.com/@atlas.obscura">
+            <span class="sr-only">TikTok</span>
+            <i class="fa-brands fa-tiktok hover:text-ao-rust text-2xl"></i>
+</a>          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="Instagram" class="w-10 h-10 flex items-center justify-center" href="https://www.instagram.com/atlasobscura/">
+            <span class="sr-only">Instagram</span>
+            <i class="fa-brands fa-instagram hover:text-ao-rust text-2xl"></i>
+</a>          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="Pinterest" class="w-10 h-10 flex items-center justify-center" href="https://www.pinterest.com/atlasobscura/_saved/">
+            <span class="sr-only">Pinterest</span>
+            <i class="fa-brands fa-pinterest hover:text-ao-rust text-2xl"></i>
+</a>          <a data-action="click-&gt;analytics#sendEvent" data-ga-event-category="Footer" data-ga-event-action="Clicked Social" data-ga-event-label="RSS Feed" class="w-10 h-10 flex items-center justify-center" href="/feeds/latest">
+            <span class="sr-only">RSS Feed</span>
+            <i class="fa-solid fa-square-rss hover:text-ao-rust text-2xl"></i>
+</a>        </div>
+      </header>
+      <header>
+        <p class="aon-label-big mb-4">Get the app</p>
+        <a class="hidden md:inline-flex aon-white-button gap-2 fill-ao-rust" href="https://app.atlasobscura.com">
+          Download the App
+</a>        <div class="flex items-center justify-center gap-3 md:hidden">
+          <a href="https://apps.apple.com/us/app/atlas-obscura-travel-guide/id1563250221">
+            <img
+              class="inline"
+              src="https://img.atlasobscura.com/zC0JMejKGWd67FxsKvxRcFuf38tdXli31kuvS-yKXSM/q:81/sm:1/scp:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS9t/aXNjL2ludGVybmFs/LW9uZS1vZmZzL2Fw/cGxlX2xvZ28uc3Zn"
+              alt="Download on the Apple App Store"
+            />
+</a>
+          <a href="https://play.google.com/store/apps/details?id=com.atlasobscura.android&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+            <img
+              alt="Get it on Google Play"
+              src="https://images.atlasobscura.com/aon/logos/google-play-badge.png"
+              class="h-10"
+            />
+</a>        </div>
+      </header>
+    </section>
+    <section
+      class="col-auto mb-10 grid grid-cols-1 gap-x-4 divide-y divide-[#4E4638] sm:grid-cols-3 sm:divide-y-0 lg:grid-cols-6"
+    >
+        <div class="relative" role="navigation" aria-label="Places">
+          <input
+            id="footer-accordion-places"
+            type="checkbox"
+            class="peer hidden"
+          />
+          <label
+            for="footer-accordion-places"
+            class="aon-label-big relative z-10 block py-6 hover:cursor-pointer sm:hover:cursor-auto"
+          >
+            Places
+          </label>
+          <i
+            class="fa-light fa-chevron-down absolute right-[1em] top-6 text-base leading-none peer-checked:hidden sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <i
+            class="fa-light fa-chevron-up absolute right-[1em] top-6 hidden text-base leading-none peer-checked:block sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <ul class="mb-6 hidden flex-col gap-2 peer-checked:flex sm:flex">
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/articles/all-places-in-the-atlas-on-one-map">All Places</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/places?sort=published_at">Latest Places</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/places?sort=likes_count">Most Popular</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/cool-places-to-eat">Places to Eat</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/random">Random</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/search/search_nearby">Nearby</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/places/new">Add a Place</a>
+              </li>
+          </ul>
+        </div>
+        <div class="relative" role="navigation" aria-label="Editorial">
+          <input
+            id="footer-accordion-editorial"
+            type="checkbox"
+            class="peer hidden"
+          />
+          <label
+            for="footer-accordion-editorial"
+            class="aon-label-big relative z-10 block py-6 hover:cursor-pointer sm:hover:cursor-auto"
+          >
+            Editorial
+          </label>
+          <i
+            class="fa-light fa-chevron-down absolute right-[1em] top-6 text-base leading-none peer-checked:hidden sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <i
+            class="fa-light fa-chevron-up absolute right-[1em] top-6 hidden text-base leading-none peer-checked:block sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <ul class="mb-6 hidden flex-col gap-2 peer-checked:flex sm:flex">
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/articles">Stories</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/unique-food">Food &amp; Drink</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/itineraries">Itineraries</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/lists">Lists</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/videos">Video</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/podcast">Podcast</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/newsletters">Newsletters</a>
+              </li>
+          </ul>
+        </div>
+        <div class="relative" role="navigation" aria-label="Trips">
+          <input
+            id="footer-accordion-trips"
+            type="checkbox"
+            class="peer hidden"
+          />
+          <label
+            for="footer-accordion-trips"
+            class="aon-label-big relative z-10 block py-6 hover:cursor-pointer sm:hover:cursor-auto"
+          >
+            Trips
+          </label>
+          <i
+            class="fa-light fa-chevron-down absolute right-[1em] top-6 text-base leading-none peer-checked:hidden sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <i
+            class="fa-light fa-chevron-up absolute right-[1em] top-6 hidden text-base leading-none peer-checked:block sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <ul class="mb-6 hidden flex-col gap-2 peer-checked:flex sm:flex">
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="true" href="/unusual-trips">All Trips</a>
+              </li>
+          </ul>
+        </div>
+        <div class="relative" role="navigation" aria-label="Community">
+          <input
+            id="footer-accordion-community"
+            type="checkbox"
+            class="peer hidden"
+          />
+          <label
+            for="footer-accordion-community"
+            class="aon-label-big relative z-10 block py-6 hover:cursor-pointer sm:hover:cursor-auto"
+          >
+            Community
+          </label>
+          <i
+            class="fa-light fa-chevron-down absolute right-[1em] top-6 text-base leading-none peer-checked:hidden sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <i
+            class="fa-light fa-chevron-up absolute right-[1em] top-6 hidden text-base leading-none peer-checked:block sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <ul class="mb-6 hidden flex-col gap-2 peer-checked:flex sm:flex">
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/membership">Membership</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" data-nolt="modal" href="https://atlas-obscura-digital-product.nolt.io">Feedback &amp; Ideas</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/community-guidelines">Community Guidelines</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/product-blog">Product Blog</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/unique-gifts">Unique Gifts</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/jobs">Work With Us</a>
+              </li>
+          </ul>
+        </div>
+        <div class="relative" role="navigation" aria-label="Company">
+          <input
+            id="footer-accordion-company"
+            type="checkbox"
+            class="peer hidden"
+          />
+          <label
+            for="footer-accordion-company"
+            class="aon-label-big relative z-10 block py-6 hover:cursor-pointer sm:hover:cursor-auto"
+          >
+            Company
+          </label>
+          <i
+            class="fa-light fa-chevron-down absolute right-[1em] top-6 text-base leading-none peer-checked:hidden sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <i
+            class="fa-light fa-chevron-up absolute right-[1em] top-6 hidden text-base leading-none peer-checked:block sm:hidden sm:peer-checked:hidden"
+          ></i>
+          <ul class="mb-6 hidden flex-col gap-2 peer-checked:flex sm:flex">
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="/about">About</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/faq">FAQ</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" data-turbo="false" href="https://studio-obscura.atlasobscura.com/studio-obscura/index.html">Advertise With Us</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/advertising-acceptability-guidelines">Advertising Guidelines</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/privacy">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/cookies">Cookie Policy</a>
+              </li>
+              <li>
+                <a class="text-white inline-block leading-4 text-lg tracking-wide hover:underline" href="/terms">Terms of Use</a>
+              </li>
+          </ul>
+        </div>
+    </section>
+    <a class="inline-flex items-center sm:hidden" data-turbo="false" href="/">
+      <span class="sr-only">Atlas Obscura</span>
+</a>    <p class="mt-2 text-sm leading-none tracking-wide text-gray-300">
+      &copy; 2026 Atlas Obscura. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+<button
+  data-controller="new-window"
+  data-action="click->new-window#open"
+  data-new-window-href-value="/contact_form"
+  data-new-window-title-value="Contact Atlas Obscura"
+  data-new-window-options-value="width=600,height=700,toolbar=no,menubar=no,scrollbars"
+  class="font-ao-sans bg-ao-tan block w-full cursor-pointer p-[13px] text-center text-sm leading-none text-gray-900 hover:bg-gray-300"
+>
+  Questions or Feedback? <span class="underline">Contact Us</span>
+</button>
+      </div>
+    </div>
+    <sl-drawer label="Drawer" id="system-drawer">
+      <div class="drawer-content">
+        <i
+          role="status"
+          aria-busy="true"
+          class="fa-solid fa-circle-notch fa-spin text-gray-700"
+        ></i>
+      </div>
+    </sl-drawer>
+    <!-- Adara -->
+    <img src='https://tag.yieldoptimizer.com/ps/analytics?pxid=149095&' width='1' height='1'>
+      <!-- Arrivalist -->
+      <img src="https://dc.arrivalist.com/px/?pixel_id=2207&a_source=Atlas_Obscura&a_medium=Site_Visit&a_campaign=Run_Of_Site&a_content=NA&a_type=Owned" width="1" height="1" style="display:none" alt="" />
+    <!-- Begin comScore Tag -->
+    <!-- End comScore Tag -->
+    <div id="regwall" hidden
+     data-regwall-content-type="place"
+     data-regwall-content-id="46606"
+     data-regwall-cutoff=".place-body p:nth-of-type(2), .place-body ~ *, #place-about ~ *"
+     data-regwall-copy="{&quot;keep_reading&quot;:{&quot;heading&quot;:&quot;Keep Reading. It’s Free.&quot;,&quot;body&quot;:&quot;Create a free account to uncover the rest of this place’s story and save places you want to visit.&quot;,&quot;cta&quot;:&quot;Continue Reading&quot;},&quot;unlock&quot;:{&quot;heading&quot;:&quot;Create a Free Account or Log In&quot;,&quot;body&quot;:&quot;Unlock the rest of this extraordinary place.\n\nPlus, save places you’ve been, want to go, and more.&quot;,&quot;cta&quot;:&quot;Continue&quot;}}">
+  <div class="regwall-card">
+    <h2 class="regwall-heading">Keep Reading</h2>
+    <div class="regwall-body">Create a free Atlas Obscura account to unlock the rest of this story and explore more extraordinary places.</div>
+    <a class="regwall-cta" data-regwall-cta rel="nofollow"
+       href="/join?intent=%2Fplaces%2Fthe-six-white-mice&amp;regwall=place">Create a Free Account or Log In</a>
+  </div>
+</div>
+</body>
+</html>
