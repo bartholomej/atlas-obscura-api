@@ -338,11 +338,11 @@ The REST server is a [Hono](https://hono.dev) app (`server/app.ts`) with two ent
 - `server/node.ts` runs on Node.js (`yarn server`, Docker) and fetches with got-scraping.
 - `server/worker.ts` runs on Cloudflare Workers (`yarn worker:dev`, `yarn worker:deploy`) and fetches with
   plain `fetch`. Responses are cached at the edge with the Cache API: `/places-all` for 12 hours,
-  `/place-full` and `/place-short` for 24 hours, search and user for 1 hour.
+  `/place-full` and `/place-short` for 24 hours, search and user for 1 hour (set in `server/app.ts`).
 
 Configuration is the same in both: `API_KEY`, `API_KEY_NAME`, `CORS_ORIGINS` (comma separated, `*` for
-any) and `VERBOSE`. On Workers, put `API_KEY` in a secret (`npx wrangler secret put API_KEY`) and the rest
-in `vars` in `wrangler.jsonc`.
+any) and `VERBOSE`. On Workers, put `API_KEY` in a secret (`npx wrangler secret put API_KEY`) and the rest,
+if you need it, in `vars` in `wrangler.jsonc`.
 
 When `API_KEY` is set, send it as `Authorization: Bearer <key>`. The `API_KEY_NAME` header
 (`x-api-key` by default) is still accepted for older clients.
