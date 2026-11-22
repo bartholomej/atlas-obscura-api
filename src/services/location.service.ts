@@ -8,6 +8,10 @@ import { AOLocationResult } from './../interfaces/locations.interface.js';
 import { AOPlaceExtend, AOPlaceShort } from './../interfaces/placeId.interface.js';
 import { AOPlacesAll } from './../interfaces/places-all.interface.js';
 
+// The JSON ends with the semicolon that closes its line, so a semicolon inside a title does not cut it
+const embeddedJson = (html: string, name: string): RegExpMatchArray | null =>
+  html.match(new RegExp(`AtlasObscura\\.${name} = (.*?);\\s*(?:</script>|$)`, 'm'));
+
 export class PlacesScraper {
   constructor(private readonly fetchPage: FetchPage) {}
 
@@ -23,11 +27,7 @@ export class PlacesScraper {
   ): Promise<AOLocationResult> {
     const url = urlSearch(coords, page);
     const response = await this.fetchPage(url, options?.headers);
-    const html = parse(response).innerHTML;
-
-    const data = html.match(/AtlasObscura\.place_search = (.*?);/);
-
-    return parseResults<AOLocationResult>(data);
+    return parseResults<AOLocationResult>(embeddedJson(response, 'place_search'));
   }
 
   public async placeByIdShort(id: number, options?: AOFetchOptions): Promise<AOPlaceShort> {
@@ -87,11 +87,7 @@ export class PlacesScraper {
   public async user(user: string, options?: AOFetchOptions): Promise<AOUser> {
     const url = urlUser(user);
     const response = await this.fetchPage(url, options?.headers);
-    const html = parse(response).innerHTML;
-
-    const data = html.match(/AtlasObscura\.user_profile = (.*?);/);
-
-    const usr = parseResults<{ user: AOUser }>(data);
+    const usr = parseResults<{ user: AOUser }>(embeddedJson(response, 'user_profile'));
 
     return usr.user;
   }

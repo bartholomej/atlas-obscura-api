@@ -89,6 +89,15 @@ describe('AtlasObscura with an injected fetcher (no network)', () => {
     expect(result).toEqual({ total: 1, results: [{ id: 46288 }] });
   });
 
+  test('search keeps results with a semicolon in their text', async () => {
+    const { client } = createClient({
+      [urlSearch({ lat: 36.13, lng: -109.47 }, 1)]:
+        '<script>\n  AtlasObscura.place_search = {"total":1,"results":[{"subtitle":"Old; odd"}]};\n</script>'
+    });
+    const result = await client.search({ lat: 36.13, lng: -109.47 });
+    expect(result).toEqual({ total: 1, results: [{ subtitle: 'Old; odd' }] });
+  });
+
   test('user reads the embedded user_profile JSON', async () => {
     const { client } = createClient();
     expect(await client.user('bart')).toEqual({ username: 'bart' });
