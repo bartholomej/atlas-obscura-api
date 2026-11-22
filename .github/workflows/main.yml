@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: 📦 Enable Corepack
         run: corepack enable
 
       - name: 🔧 Use Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 26
           registry-url: 'https://registry.npmjs.org'
@@ -25,11 +25,19 @@ jobs:
       - name: 🏗️ Build app
         run: yarn build
 
+      - name: 🔎 Typecheck library and server
+        run: yarn tsc --noEmit && yarn tsc:server
+
+      - name: 🏗️ Build Node server and Cloudflare Worker (dry run)
+        run: yarn build:server && yarn wrangler deploy --dry-run --outdir "$RUNNER_TEMP/worker"
+        env:
+          WRANGLER_SEND_METRICS: false
+
       - name: 🧪 Tests
         run: yarn test --coverage
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v6
+        uses: codecov/codecov-action@v7
         with:
           fail_ci_if_error: true
           verbose: true

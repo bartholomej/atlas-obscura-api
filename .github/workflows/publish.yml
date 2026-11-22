@@ -14,17 +14,18 @@ jobs:
     name: 📦 NPM Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: 📦 Enable Corepack
         run: corepack enable
 
       - name: 🔧 Use Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 26
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn'
+          # No dependency cache in the job that holds the OIDC publish token (cache poisoning)
+          package-manager-cache: false
 
       - name: 📦 Install dependencies
         run: yarn install --immutable
@@ -36,7 +37,7 @@ jobs:
         run: yarn test --coverage
 
       - name: 📊 Upload coverage to Codecov
-        uses: codecov/codecov-action@v6
+        uses: codecov/codecov-action@v7
         with:
           fail_ci_if_error: true
           verbose: true
@@ -57,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 🏷️ Docker Metadata extraction
         id: meta
