@@ -1,7 +1,7 @@
 import { parse } from 'node-html-parser';
 import { fetchPage } from '../fetchers/index.js';
 import { AOUser } from '../interfaces/user.interface.js';
-import { parseResults } from '../utils.js';
+import { parsePlacesAll, parseResults } from '../utils.js';
 import { URL_PLACES_ALL, urlPlaceId, urlSearch, urlUser } from '../vars.js';
 import { AOCoordinates, AOFetchOptions } from './../interfaces/global.js';
 import { AOLocationResult } from './../interfaces/locations.interface.js';
@@ -11,11 +11,7 @@ import { AOPlacesAll } from './../interfaces/places-all.interface.js';
 export class PlacesScraper {
   public async placesAll(options?: AOFetchOptions): Promise<AOPlacesAll[]> {
     const response = await fetchPage(URL_PLACES_ALL, options?.headers);
-    const html = parse(response).innerHTML;
-
-    const data = html.match(/AtlasObscura\.all_places = (.*?);/);
-
-    return parseResults<AOPlacesAll[]>(data);
+    return parsePlacesAll(response);
   }
 
   public async search(coords: AOCoordinates, page = 1, options?: AOFetchOptions): Promise<AOLocationResult> {

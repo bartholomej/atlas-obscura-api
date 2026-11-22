@@ -1,5 +1,11 @@
 import { describe, expect, test } from 'vitest';
-import { urlPlaceId, urlSearch } from './../src/vars';
+import { URL_PLACES_ALL, urlPlaceId, urlSearch } from './../src/vars';
+
+describe('Vars places all url', () => {
+  test('Points to the map endpoint', () => {
+    expect(URL_PLACES_ALL).toBe('https://www.atlasobscura.com/aon/map/places/all');
+  });
+});
 
 describe('Vars id url', () => {
   test('Assemble id url', () => {

@@ -1,5 +1,4 @@
-export const URL_PLACES_ALL =
-  'https://www.atlasobscura.com/articles/all-places-in-the-atlas-on-one-map';
+export const URL_PLACES_ALL = 'https://www.atlasobscura.com/aon/map/places/all';
 
 export const urlSearch = (coord: { lat: number; lng: number }, page?: number): string =>
   `https://www.atlasobscura.com/search?utf8=%E2%9C%93&q=&location=&nearby=true&lat=${coord.lat
