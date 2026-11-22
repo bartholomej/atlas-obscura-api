@@ -329,6 +329,21 @@ docker run -p 3000:3000 atlas-obscura-api
 - `/place-full/456`
 - `/user/bartholomej`
 
+Upstream failures answer `502` with a JSON error, never a `200` with `null`.
+
+## ☁️ Server: Node.js or Cloudflare Workers
+
+The REST server is a [Hono](https://hono.dev) app (`server/app.ts`) with two entry points:
+
+- `server/node.ts` runs on Node.js (`yarn server`, Docker) and fetches with got-scraping.
+- `server/worker.ts` runs on Cloudflare Workers (`yarn worker:dev`, `yarn worker:deploy`) and fetches with
+  plain `fetch`. Responses are cached at the edge with the Cache API: `/places-all` for 12 hours,
+  `/place-full` and `/place-short` for 24 hours, search and user for 1 hour.
+
+Configuration is the same in both: `API_KEY`, `API_KEY_NAME`, `CORS_ORIGINS` (comma separated, `*` for
+any) and `VERBOSE`. On Workers, put `API_KEY` in a secret (`npx wrangler secret put API_KEY`) and the rest
+in `vars` in `wrangler.jsonc`.
+
 ## Used By
 
 - Mobile app: Atlas Obscura: Offline → [Play Store](https://play.google.com/store/apps/details?id=com.aquasoup.atlasobscura)

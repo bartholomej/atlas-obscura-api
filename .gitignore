@@ -63,6 +63,10 @@ typings/
 # dotenv environment variables file
 .env
 
+# Cloudflare Workers
+.wrangler
+.dev.vars*
+
 # next.js build output
 .next
 /dist

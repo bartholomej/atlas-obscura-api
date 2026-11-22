@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atlas-obscura-api",
+  "main": "server/worker.ts",
+  "compatibility_date": "2026-11-01",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "API_KEY_NAME": "x-api-key",
+    "CORS_ORIGINS": "",
+    "VERBOSE": "false"
+  }
+  // API_KEY is a secret: `npx wrangler secret put API_KEY`
+  // The Cache API does nothing on *.workers.dev, so attach a custom domain, either in the dashboard
+  // (Settings → Domains & Routes) or here: "routes": [{ "pattern": "api.example.com", "custom_domain": true }]
+}
