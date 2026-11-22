@@ -344,6 +344,13 @@ Configuration is the same in both: `API_KEY`, `API_KEY_NAME`, `CORS_ORIGINS` (co
 any) and `VERBOSE`. On Workers, put `API_KEY` in a secret (`npx wrangler secret put API_KEY`) and the rest
 in `vars` in `wrangler.jsonc`.
 
+When `API_KEY` is set, send it as `Authorization: Bearer <key>`. The `API_KEY_NAME` header
+(`x-api-key` by default) is still accepted for older clients.
+
+```bash
+curl -H "Authorization: Bearer $API_KEY" https://your-server/places-all
+```
+
 ## Used By
 
 - Mobile app: Atlas Obscura: Offline → [Play Store](https://play.google.com/store/apps/details?id=com.aquasoup.atlasobscura)

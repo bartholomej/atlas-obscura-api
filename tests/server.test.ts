@@ -96,6 +96,27 @@ describe('Server (Hono)', () => {
     expect(ok.status).toBe(200);
   });
 
+  test('API key as a standard Bearer token', async () => {
+    vi.stubEnv('API_KEY', 'secret');
+
+    const ok = await app.request('/places-all', { headers: { Authorization: 'Bearer secret' } });
+    expect(ok.status).toBe(200);
+
+    const lowercase = await app.request('/places-all', { headers: { Authorization: 'bearer secret' } });
+    expect(lowercase.status).toBe(200);
+
+    const wrong = await app.request('/places-all', { headers: { Authorization: 'Bearer nope' } });
+    expect(wrong.status).toBe(401);
+    expect((await wrong.json()).error).toBe(Errors.API_KEY_INVALID);
+    expect(wrong.headers.get('www-authenticate')).toContain('invalid_token');
+
+    const missing = await app.request('/places-all');
+    expect(missing.headers.get('www-authenticate')).toBe('Bearer realm="atlas-obscura-api"');
+
+    const otherScheme = await app.request('/places-all', { headers: { Authorization: 'Basic c2VjcmV0' } });
+    expect((await otherScheme.json()).error).toBe(Errors.API_KEY_MISSING);
+  });
+
   test('CORS only for listed origins', async () => {
     vi.stubEnv('CORS_ORIGINS', 'https://allowed.example');
 

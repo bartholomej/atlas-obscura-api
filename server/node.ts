@@ -15,13 +15,16 @@ serve({ fetch: createApp(atlasObscura).fetch, port }, () => {
   if (!process.env.API_KEY) {
     console.log(
       '\x1b[31m%s\x1b[0m',
-      '⚠️ Server is OPEN!\n- Your server will be open to the world and potentially everyone can use it without any restriction.\n- To enable some basic protection, set API_KEY environment variable with a value and provide the same value in request header: ' +
-        API_KEY_NAME
+      '⚠️ Server is OPEN!\n- Your server will be open to the world and potentially everyone can use it without any restriction.\n- To enable some basic protection, set the API_KEY environment variable and send the same value as "Authorization: Bearer <key>" (or in the ' +
+        API_KEY_NAME +
+        ' header).'
     );
   } else {
     console.log(
       '\x1b[32m%s\x1b[0m',
-      '✔️ Server is protected (somehow).\n- Your API_KEY is set and will be checked for each request header: ' + API_KEY_NAME
+      '✔️ Server is protected (somehow).\n- Your API_KEY is set. Send it as "Authorization: Bearer <key>" (or in the ' +
+        API_KEY_NAME +
+        ' header).'
     );
   }
 });

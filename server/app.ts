@@ -2,6 +2,7 @@ import { Context, Hono } from 'hono';
 import { env } from 'hono/adapter';
 import { cache } from 'hono/cache';
 import { cors } from 'hono/cors';
+import { timingSafeEqual } from 'hono/utils/buffer';
 import { ContentfulStatusCode } from 'hono/utils/http-status';
 import packageJson from '../package.json' with { type: 'json' };
 import { AtlasObscura } from '../src/atlas-obscura.js';
@@ -50,6 +51,9 @@ const cached = (maxAge: number) =>
   });
 
 const settings = (c: Context) => env<ServerEnv>(c);
+
+const readBearer = (authorization?: string) =>
+  /^Bearer\s+(\S+)\s*$/i.exec(authorization ?? '')?.[1];
 
 function logMessage(severity: Severity, log: ErrorLog, c?: Context) {
   const colors = {
@@ -112,19 +116,24 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
   );
 
   // --- Optional API key check ---
+  // Standard `Authorization: Bearer <key>`; the API_KEY_NAME header (x-api-key) still works for older clients.
   app.use(async (c, next) => {
     const { API_KEY, API_KEY_NAME = 'x-api-key' } = settings(c);
-    const apiKey = c.req.header(API_KEY_NAME);
-    if (API_KEY && !apiKey) {
+    if (!API_KEY) return next();
+
+    const apiKey = readBearer(c.req.header('Authorization')) ?? c.req.header(API_KEY_NAME);
+    if (!apiKey) {
+      c.header('WWW-Authenticate', 'Bearer realm="atlas-obscura-api"');
       return fail(c, 401, {
         error: Errors.API_KEY_MISSING,
-        message: `Missing API key in request header: ${API_KEY_NAME}`
+        message: `Missing API key. Send it as "Authorization: Bearer <key>" (or in the ${API_KEY_NAME} header)`
       });
     }
-    if (API_KEY && apiKey !== API_KEY) {
+    if (!(await timingSafeEqual(apiKey, API_KEY))) {
+      c.header('WWW-Authenticate', 'Bearer realm="atlas-obscura-api", error="invalid_token"');
       return fail(c, 401, {
         error: Errors.API_KEY_INVALID,
-        message: `Invalid API key in request header: ${API_KEY_NAME}`
+        message: 'Invalid API key'
       });
     }
     return next();
