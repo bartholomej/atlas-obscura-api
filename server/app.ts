@@ -77,9 +77,7 @@ function logMessage(severity: Severity, log: ErrorLog, c?: Context) {
   };
   const time = new Date().toISOString();
   const reqInfo = c ? `${c.req.method}: ${new URL(c.req.url).pathname}` : '';
-  const reqIp = c
-    ? c.req.header('cf-connecting-ip') || c.req.header('x-forwarded-for') || ''
-    : '';
+  const reqIp = c ? c.req.header('cf-connecting-ip') || c.req.header('x-forwarded-for') || '' : '';
   const msg = `${colors[severity]}[${paddedSeverity[severity]}]${colors.reset} ${time} | IP: ${reqIp} ${symbols[severity]} ${log.error ? log.error + ':' : ''} ${log.message} 🔗 ${reqInfo}`;
 
   if (severity === 'success') {
@@ -93,7 +91,12 @@ function logMessage(severity: Severity, log: ErrorLog, c?: Context) {
   }
 }
 
-const fail = (c: Context, status: ContentfulStatusCode, log: ErrorLog, severity: Severity = 'error') => {
+const fail = (
+  c: Context,
+  status: ContentfulStatusCode,
+  log: ErrorLog,
+  severity: Severity = 'error'
+) => {
   logMessage(severity, log, c);
   return c.json(log, status);
 };
@@ -184,7 +187,10 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
       logMessage('success', { error: null, message: `${Endpoint.PLACE_SHORT}: ${id}` }, c);
       return c.json(place);
     } catch (error) {
-      return fail(c, 502, { error: Errors.PLACE_FETCH_FAILED, message: 'Failed to fetch place data: ' + error });
+      return fail(c, 502, {
+        error: Errors.PLACE_FETCH_FAILED,
+        message: 'Failed to fetch place data: ' + error
+      });
     }
   });
 
@@ -195,7 +201,10 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
       logMessage('success', { error: null, message: `${Endpoint.PLACE_FULL}: ${id}` }, c);
       return c.json(place);
     } catch (error) {
-      return fail(c, 502, { error: Errors.PLACE_FETCH_FAILED, message: 'Failed to fetch place data: ' + error });
+      return fail(c, 502, {
+        error: Errors.PLACE_FETCH_FAILED,
+        message: 'Failed to fetch place data: ' + error
+      });
     }
   });
 
@@ -207,7 +216,10 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
       logMessage('success', { error: null, message: `${Endpoint.SEARCH}: ${lat},${lng}` }, c);
       return c.json(result);
     } catch (error) {
-      return fail(c, 502, { error: Errors.SEARCH_FETCH_FAILED, message: 'Failed to fetch search data: ' + error });
+      return fail(c, 502, {
+        error: Errors.SEARCH_FETCH_FAILED,
+        message: 'Failed to fetch search data: ' + error
+      });
     }
   });
 
@@ -219,7 +231,10 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
       logMessage('success', { error: null, message: Endpoint.PLACES_ALL }, c);
       return c.json(places);
     } catch (error) {
-      return fail(c, 502, { error: Errors.PLACES_FETCH_FAILED, message: 'Failed to fetch places data: ' + error });
+      return fail(c, 502, {
+        error: Errors.PLACES_FETCH_FAILED,
+        message: 'Failed to fetch places data: ' + error
+      });
     }
   });
 
@@ -231,12 +246,20 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
       logMessage('success', { error: null, message: `${Endpoint.USER}: ${id}` }, c);
       return c.json(user);
     } catch (error) {
-      return fail(c, 502, { error: Errors.USER_FETCH_FAILED, message: 'Failed to fetch user data: ' + error });
+      return fail(c, 502, {
+        error: Errors.USER_FETCH_FAILED,
+        message: 'Failed to fetch user data: ' + error
+      });
     }
   });
 
   app.notFound((c) =>
-    fail(c, 404, { error: Errors.PAGE_NOT_FOUND, message: 'The requested endpoint could not be found.' }, 'warn')
+    fail(
+      c,
+      404,
+      { error: Errors.PAGE_NOT_FOUND, message: 'The requested endpoint could not be found.' },
+      'warn'
+    )
   );
 
   return app;

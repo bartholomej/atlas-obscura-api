@@ -8,7 +8,7 @@ export interface AOPlaceShort {
   country: string;
   location: string;
   url: string;
-  hide_from_maps?: string;
+  hide_from_maps?: boolean;
   physical_status: string;
   thumbnail_url: string;
   thumbnail_url_3x2: string;
@@ -30,4 +30,4 @@ export interface AOTag {
   link: string;
 }
 
-export interface AOPlace extends AOPlaceShort, AOPlaceExtend { }
+export interface AOPlace extends AOPlaceShort, AOPlaceExtend {}

@@ -14,6 +14,10 @@ export default defineConfig({
   exports: false,
   fixedExtension: false,
   // unbundle: true,
-  plugins: [distPackage({ outDir, removeFields: ['packageManager', 'lint-staged', 'devDependencies', 'scripts'] })],
+  plugins: [
+    distPackage({
+      outDir,
+      removeFields: ['packageManager', 'lint-staged', 'devDependencies', 'scripts']
+    })
+  ]
 });
-

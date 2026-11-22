@@ -12,7 +12,7 @@ export const parsePlacesAll = (body: string): AOPlacesAll[] => {
 
   try {
     data = JSON.parse(body);
-  } catch (error) {
+  } catch {
     console.error('Error parsing all places');
     return null;
   }
@@ -44,7 +44,7 @@ export const parseResults = <T>(matches: RegExpMatchArray): T => {
   if (matches && matches[1]?.length) {
     try {
       locations = JSON.parse(matches[1]);
-    } catch (error) {
+    } catch {
       console.error('Error parsing all places');
     }
   }

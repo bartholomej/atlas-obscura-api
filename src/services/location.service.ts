@@ -9,14 +9,18 @@ import { AOPlaceExtend, AOPlaceShort } from './../interfaces/placeId.interface.j
 import { AOPlacesAll } from './../interfaces/places-all.interface.js';
 
 export class PlacesScraper {
-  constructor(private readonly fetchPage: FetchPage) { }
+  constructor(private readonly fetchPage: FetchPage) {}
 
   public async placesAll(options?: AOFetchOptions): Promise<AOPlacesAll[]> {
     const response = await this.fetchPage(URL_PLACES_ALL, options?.headers);
     return parsePlacesAll(response);
   }
 
-  public async search(coords: AOCoordinates, page = 1, options?: AOFetchOptions): Promise<AOLocationResult> {
+  public async search(
+    coords: AOCoordinates,
+    page = 1,
+    options?: AOFetchOptions
+  ): Promise<AOLocationResult> {
     const url = urlSearch(coords, page);
     const response = await this.fetchPage(url, options?.headers);
     const html = parse(response).innerHTML;
@@ -33,11 +37,14 @@ export class PlacesScraper {
     let place: AOPlaceShort = null;
 
     try {
-      place = JSON.parse(data);
-      if (place && typeof place.hide_from_maps === 'string') {
-        (place as any).hide_from_maps = place.hide_from_maps === 'true';
-      }
-    } catch (error) {
+      // The JSON endpoint sends hide_from_maps as "true"/"false"
+      const raw: Omit<AOPlaceShort, 'hide_from_maps'> & { hide_from_maps?: string | boolean } =
+        JSON.parse(data);
+      place =
+        raw && typeof raw.hide_from_maps === 'string'
+          ? { ...raw, hide_from_maps: raw.hide_from_maps === 'true' }
+          : (raw as AOPlaceShort);
+    } catch {
       console.error('Error parsing placeById', id);
     }
     return place;

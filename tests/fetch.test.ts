@@ -9,7 +9,9 @@ describe('fetch fetcher (React Native / browser)', () => {
   });
 
   test('Returns the body and sends custom headers next to the defaults', async () => {
-    const fetchMock = vi.fn().mockResolvedValue({ ok: true, status: 200, text: async () => 'body' });
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue({ ok: true, status: 200, text: async () => 'body' });
     vi.stubGlobal('fetch', fetchMock);
 
     const body = await fetchPage('https://example.com', { 'X-Test': '1' });
@@ -23,7 +25,10 @@ describe('fetch fetcher (React Native / browser)', () => {
   });
 
   test('Bad status returns "Error"', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, status: 403, text: async () => '' }));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue({ ok: false, status: 403, text: async () => '' })
+    );
     vi.spyOn(console, 'error').mockImplementation(() => {});
 
     expect(await fetchPage('https://example.com')).toBe('Error');
@@ -50,5 +55,19 @@ describe('PlacesScraper with an injected fetcher', () => {
     vi.spyOn(console, 'error').mockImplementation(() => {});
     const places = await new PlacesScraper(async () => 'Error').placesAll();
     expect(places).toBe(null);
+  });
+
+  test('placeByIdShort turns hide_from_maps into a boolean', async () => {
+    const scraper = (hide: string) =>
+      new PlacesScraper(async () => `{"id":46288,"hide_from_maps":${hide}}`);
+
+    expect((await scraper('"true"').placeByIdShort(46288)).hide_from_maps).toBe(true);
+    expect((await scraper('"false"').placeByIdShort(46288)).hide_from_maps).toBe(false);
+    expect((await scraper('false').placeByIdShort(46288)).hide_from_maps).toBe(false);
+  });
+
+  test('placeByIdShort is null when the response is not JSON', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    expect(await new PlacesScraper(async () => 'Error').placeByIdShort(1)).toBe(null);
   });
 });

@@ -102,7 +102,9 @@ describe('Server (Hono)', () => {
     const ok = await app.request('/places-all', { headers: { Authorization: 'Bearer secret' } });
     expect(ok.status).toBe(200);
 
-    const lowercase = await app.request('/places-all', { headers: { Authorization: 'bearer secret' } });
+    const lowercase = await app.request('/places-all', {
+      headers: { Authorization: 'bearer secret' }
+    });
     expect(lowercase.status).toBe(200);
 
     const wrong = await app.request('/places-all', { headers: { Authorization: 'Bearer nope' } });
@@ -113,7 +115,9 @@ describe('Server (Hono)', () => {
     const missing = await app.request('/places-all');
     expect(missing.headers.get('www-authenticate')).toBe('Bearer realm="atlas-obscura-api"');
 
-    const otherScheme = await app.request('/places-all', { headers: { Authorization: 'Basic c2VjcmV0' } });
+    const otherScheme = await app.request('/places-all', {
+      headers: { Authorization: 'Basic c2VjcmV0' }
+    });
     expect((await otherScheme.json()).error).toBe(Errors.API_KEY_MISSING);
   });
 

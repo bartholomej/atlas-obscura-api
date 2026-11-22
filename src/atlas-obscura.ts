@@ -6,7 +6,7 @@ import { AOUser } from './interfaces/user.interface.js';
 import { PlacesScraper } from './services/location.service.js';
 
 export class AtlasObscura {
-  constructor(private locationService: PlacesScraper) { }
+  constructor(private locationService: PlacesScraper) {}
 
   public async search(coords: AOCoordinates, options?: AOFetchOptions): Promise<AOLocationResult> {
     return this.locationService.search(coords, 1, options);

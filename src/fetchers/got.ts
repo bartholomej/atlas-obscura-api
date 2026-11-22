@@ -13,25 +13,27 @@ export const fetchPage: FetchPage = async (url, headersCustom) => {
         ],
         devices: ['desktop'],
         locales: ['en-US'],
-        operatingSystems: ['windows', 'macos'],
+        operatingSystems: ['windows', 'macos']
       },
       headers: {
         'Cache-Control': 'no-cache',
-        ...headersCustom,
+        ...headersCustom
       },
       // Optional: HTTP2 is often faster and less suspicious for modern sites,
       // but sometimes causes stability issues. Try true if false doesn't work.
-      http2: true,
+      http2: true
     });
 
     return response.body;
-
-  } catch (error: any) {
+  } catch (error) {
     // Better error logging to debug 403s
-    if (error.response) {
-      console.error(`atlas-obscura-api: Request failed with status code ${error.response.statusCode} for url: ${url}`);
+    const statusCode = (error as { response?: { statusCode?: number } }).response?.statusCode;
+    if (statusCode) {
+      console.error(
+        `atlas-obscura-api: Request failed with status code ${statusCode} for url: ${url}`
+      );
     } else {
-      console.error('fetchPage error:', error.message);
+      console.error('fetchPage error:', error instanceof Error ? error.message : error);
     }
 
     return 'Error';

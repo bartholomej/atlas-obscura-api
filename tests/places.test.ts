@@ -14,7 +14,7 @@ describe('Live: placeShort', () => {
     const place = await atlasObscura.placeShort(46288);
     expect(place.city).toBe('Chinle');
     expect(place.id).toBe(46288);
-    expect((place as any).description).toBe(undefined);
+    expect((place as Partial<AOPlace>).description).toBe(undefined);
   });
 });
 
