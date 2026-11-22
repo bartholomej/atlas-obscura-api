@@ -1,8 +1,12 @@
 import { serve } from '@hono/node-server';
-import 'dotenv/config';
+import { existsSync } from 'node:fs';
 import packageJson from '../package.json' with { type: 'json' };
 import { atlasObscura } from '../src/index.js';
 import { createApp, Endpoint } from './app.js';
+
+if (existsSync('.env')) {
+  process.loadEnvFile('.env');
+}
 
 const port = Number(process.env.PORT) || 3000;
 const API_KEY_NAME = process.env.API_KEY_NAME || 'x-api-key';

@@ -1,5 +1,5 @@
 # Build stage
-FROM node:24-alpine AS build
+FROM node:26-alpine AS build
 
 WORKDIR /usr/src/app
 
@@ -15,7 +15,7 @@ COPY . .
 RUN yarn build && yarn build:server
 
 # Production stage
-FROM node:24-alpine AS production
+FROM node:26-alpine AS production
 
 WORKDIR /usr/src/app
 ENV NODE_ENV=production
@@ -28,7 +28,7 @@ RUN corepack enable \
     && corepack prepare yarn@4 --activate
 
 RUN yarn workspaces focus --production  \
-    && yarn add hono@^4.13.20 @hono/node-server@^2.1.11 dotenv@^17.4.2 \
+    && yarn add hono@^4.13.20 @hono/node-server@^2.1.11 \
     && yarn cache clean
 
 EXPOSE 3000
