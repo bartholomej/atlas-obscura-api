@@ -185,6 +185,23 @@ describe('Server (Hono)', () => {
 describe('Worker entry (fetch build)', () => {
   afterEach(() => {
     vi.unstubAllGlobals();
+    vi.unstubAllEnvs();
+    vi.restoreAllMocks();
+  });
+
+  test('accepts only a Bearer token, not the deprecated x-api-key', async () => {
+    vi.stubEnv('API_KEY', 'secret');
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const legacy = await worker.request('/', { headers: { 'x-api-key': 'secret' } });
+    expect(legacy.status).toBe(401);
+    const body = await legacy.json();
+    expect(body.error).toBe(Errors.API_KEY_MISSING);
+    expect(body.message).not.toContain('x-api-key');
+
+    const bearer = await worker.request('/', { headers: { Authorization: 'Bearer secret' } });
+    expect(bearer.status).toBe(200);
   });
 
   test('places-all goes through plain fetch', async () => {

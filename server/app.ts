@@ -101,7 +101,15 @@ const fail = (
   return c.json(log, status);
 };
 
-export const createApp = (atlasObscura: AtlasObscura): Hono => {
+export type AppOptions = {
+  /** Also accept the key in the API_KEY_NAME header (x-api-key). Deprecated, kept for existing Docker users. */
+  legacyKeyHeader?: boolean;
+};
+
+export const createApp = (
+  atlasObscura: AtlasObscura,
+  { legacyKeyHeader = true }: AppOptions = {}
+): Hono => {
   // strict: false keeps Express behaviour, where /places-all and /places-all/ are the same route
   const app = new Hono({ strict: false });
 
@@ -119,17 +127,20 @@ export const createApp = (atlasObscura: AtlasObscura): Hono => {
   );
 
   // --- Optional API key check ---
-  // Standard `Authorization: Bearer <key>`; the API_KEY_NAME header (x-api-key) still works for older clients.
   app.use(async (c, next) => {
     const { API_KEY, API_KEY_NAME = 'x-api-key' } = settings(c);
     if (!API_KEY) return next();
 
-    const apiKey = readBearer(c.req.header('Authorization')) ?? c.req.header(API_KEY_NAME);
+    const apiKey =
+      readBearer(c.req.header('Authorization')) ??
+      (legacyKeyHeader ? c.req.header(API_KEY_NAME) : undefined);
     if (!apiKey) {
       c.header('WWW-Authenticate', 'Bearer realm="atlas-obscura-api"');
       return fail(c, 401, {
         error: Errors.API_KEY_MISSING,
-        message: `Missing API key. Send it as "Authorization: Bearer <key>" (or in the ${API_KEY_NAME} header)`
+        message: legacyKeyHeader
+          ? `Missing API key. Send it as "Authorization: Bearer <key>" (or in the deprecated ${API_KEY_NAME} header)`
+          : 'Missing API key. Send it as "Authorization: Bearer <key>"'
       });
     }
     if (!(await timingSafeEqual(apiKey, API_KEY))) {

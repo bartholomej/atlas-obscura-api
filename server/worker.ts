@@ -2,4 +2,5 @@
 import { atlasObscura } from '../src/index.fetch.js';
 import { createApp } from './app.js';
 
-export default createApp(atlasObscura);
+// A new deployment has no clients that send x-api-key, so only Bearer is accepted
+export default createApp(atlasObscura, { legacyKeyHeader: false });

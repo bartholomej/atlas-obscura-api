@@ -344,8 +344,9 @@ Configuration is the same in both: `API_KEY`, `API_KEY_NAME`, `CORS_ORIGINS` (co
 any) and `VERBOSE`. On Workers, put `API_KEY` in a secret (`npx wrangler secret put API_KEY`) and the rest,
 if you need it, in `vars` in `wrangler.jsonc`.
 
-When `API_KEY` is set, send it as `Authorization: Bearer <key>`. The `API_KEY_NAME` header
-(`x-api-key` by default) is still accepted for older clients.
+When `API_KEY` is set, send it as `Authorization: Bearer <key>`. The Worker accepts only that. The Node.js
+server (Docker) also accepts the `API_KEY_NAME` header (`x-api-key` by default) for older clients; it is
+deprecated and will be removed in the next major version.
 
 ```bash
 curl -H "Authorization: Bearer $API_KEY" https://your-server/places-all
